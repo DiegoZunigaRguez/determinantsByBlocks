@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cuda",
+    "\\cuda\\CudaDeterminante",
+    "\\cuda\\CudaDeterminante\\CudaDeterminante"
+  ],
+  "SelectedNode": "\\cuda\\CudaDeterminante\\CudaDeterminante\\kernel.cu",
+  "PreviewInSolutionExplorer": false
+}
