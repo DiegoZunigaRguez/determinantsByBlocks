@@ -6,4 +6,7 @@ control de versiones:
 Diego Zúñiga crea el repositorio de github donde se almacenará el proyecto.
 Abraham Hernández crea el proyecto base de react. 
 
+>15-03-2023
+Abraham Hernandez realiza los cambios para realizar la aplicacion responsive
+
 ##Pasos para la ejecución del proyecto en react
