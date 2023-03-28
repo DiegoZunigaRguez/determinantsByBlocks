@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
     }
     int n =  atoi(argv[1]);
     cout<<"Determinante de una matriz "<<n<<"x"<<n<<endl;
-    int range = 127;
+    int range = 5;
     char mode, algoritmo, countFlag;
     cout<<"Ejecutar algoritmo en modo AUTO (a/A) o MANUAL(m/M) : ";
     cin>>mode;
