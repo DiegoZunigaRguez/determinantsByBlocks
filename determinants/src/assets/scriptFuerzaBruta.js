@@ -1,5 +1,3 @@
-//Primero se obtiene la variable entrada que es el numero de filas y columnas para ambas matrices
-// eslint-disable-next-line
 var entrada = document.getElementById("input");
 
 //Esta funcion sirve para que el usuario de enter al teclado y se inserte el numero alojado
