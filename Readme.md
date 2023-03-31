@@ -17,6 +17,9 @@ Diego Zúñiga hace un push para subir la última versión estable del código d
 >29-03-2023
 Abraham Hernández hace push con actualización del Readme principal
 
+>31-03-2023
+Abraham Hernandez sube los documentos pertinentes para el documento tecnico ubicado en la carpeta "Documentos"
+
 ## Pasos para compilación de código en C++
 compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
 ejecutar con .\<nombre> <n>
