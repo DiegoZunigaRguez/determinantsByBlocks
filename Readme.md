@@ -20,6 +20,9 @@ Abraham Hernández hace push con actualización del Readme principal
 >31-03-2023
 Abraham Hernandez sube los documentos pertinentes para el documento tecnico ubicado en la carpeta "Documentos"
 
+>02-04-2023
+Abraham Hernandez sube documentos correspondientes a la documentación de TT2
+
 ## Pasos para compilación de código en C++
 compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
 ejecutar con .\<nombre> <n>
