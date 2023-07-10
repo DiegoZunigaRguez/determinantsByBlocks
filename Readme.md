@@ -23,6 +23,9 @@ Abraham Hernandez sube los documentos pertinentes para el documento tecnico ubic
 >02-04-2023
 Abraham Hernandez sube documentos correspondientes a la documentación de TT2
 
+>10-07-2023
+Se genera la pantalla de inicio de la aplicación web, tanto para su versión de computadora como el responsivo
+
 ## Pasos para compilación de código en C++
 compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
 ejecutar con .\<nombre> <n>

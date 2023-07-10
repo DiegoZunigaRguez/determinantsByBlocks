@@ -20,11 +20,11 @@ int main(int argc, char *argv[]){
     }
     int n =  atoi(argv[1]);
     cout<<"Determinante de una matriz "<<n<<"x"<<n<<endl;
-    int range = 5;
+    int range = 10;
     char mode, algoritmo, countFlag;
     cout<<"Ejecutar algoritmo en modo AUTO (a/A) o MANUAL(m/M) : ";
     cin>>mode;
-    cout<<"Algoritmo de TT (t/T) o algoritmo de Lagrange (L/l) : ";
+    cout<<"Algoritmo de TT (t/T) o algoritmo de Laplace (L/l) : ";
     cin>>algoritmo;
     cout<<"Contar el numero de determinantes calculados? (s/n) : ";
     cin>>countFlag;

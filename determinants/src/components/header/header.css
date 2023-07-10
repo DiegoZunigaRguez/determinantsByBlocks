@@ -92,7 +92,7 @@
         bottom: .5rem;
         font-size: 1.5rem;
         cursor: pointer;
-        color: var(--title-color);
+        color: var(--letter);
     }
 
     .nav__close:hover {

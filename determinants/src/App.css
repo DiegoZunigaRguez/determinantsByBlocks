@@ -106,13 +106,13 @@ textarea {
 
 body {
   background-color: var(--BBlue);
-  color: var(--text-color);
+  color: var(--letter);
 }
 
 h1,
 h2,
 h3 {
-  color: var(--title-color);
+  color: var(--letter);
   font-weight: var(--font-semi-bold);
 }
 
@@ -184,6 +184,7 @@ img {
 
 .button__icon {
   margin-left: var(--mb-0-5);
+  color: var(--letter);
 }
 
 .button--flex {
