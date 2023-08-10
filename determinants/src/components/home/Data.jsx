@@ -3,7 +3,7 @@ const Data = () => {
   return (
     <div className="home__data">
       <h1 className="home__title">
-      Calculadora de determinantes 2x2 y 3x3 par matrices de 4x4 y 5x5
+        Calculadora de determinantes 2x2 y 3x3 para matrices de 4x4 y 5x5
         <svg
           width="36"
           height="36"
@@ -56,11 +56,14 @@ const Data = () => {
       </h1>
       <h3 className="home__subtitle">Trabajo Terminal TT2023-B003</h3>
       <p className="home__description">
-        Soy una persona a la que le gusta trabajar en equipo, me resulta fácil
-        organizar mis actividades para cumplir con mis obligaciones y
-        responsabilidades, además soy capaz de analizar y proponer soluciones a
-        problemas, pues me gusta observar la situación cubriendo todas las bases
-        y ángulos.
+        ¡Bienvenido a nuestra innovadora Calculadora de Determinantes! Descubre
+        un nuevo y eficiente método de cálculo de determinantes en nuestra
+        página web. Nuestra herramienta te permite calcular determinantes de
+        matrices de cualquier tamaño utilizando este novedoso enfoque. Además de
+        su velocidad y precisión, nuestro nuevo método de cálculo ofrece una
+        experiencia intuitiva y amigable para el usuario. La interfaz de usuario
+        elegante y fácil de usar te guiará a través de cada paso del proceso,
+        asegurándote una experiencia fluida y sin complicaciones.
       </p>
       <a href="#contact" className="button button--flex">
         Dinos tus sugerencias
