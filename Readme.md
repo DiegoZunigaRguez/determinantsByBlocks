@@ -26,6 +26,12 @@ Abraham Hernandez sube documentos correspondientes a la documentación de TT2
 >10-07-2023
 Se genera la pantalla de inicio de la aplicación web, tanto para su versión de computadora como el responsivo
 
+>09-08-2023
+1. Se crea una rama para la primera version de la pagina web
+2. Se crea una rama para la segunda version de la pagina web
+3. Se crea la pantalla de inicio
+4. Se hace responsiva la pantalla de inicio
+
 ## Pasos para compilación de código en C++
 compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
 ejecutar con .\<nombre> <n>

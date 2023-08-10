@@ -210,6 +210,10 @@ img {
     width: 22px;
     height: 22px;
   }
+
+  .button--flex{
+    left: 5rem;
+  }
 }
 
 /*For medium devices*/
@@ -219,7 +223,7 @@ img {
   }
 
   .section{
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 0;
   }
 
   .section__subtitle{
@@ -237,6 +241,10 @@ img {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
+  }
+
+  .button--flex{
+    left: 5rem;
   }
 
 }
