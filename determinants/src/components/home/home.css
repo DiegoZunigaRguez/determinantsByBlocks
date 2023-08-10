@@ -1,10 +1,21 @@
+Body{
+    /* concepto-preparacion-examen-publico 1 */
+    background-image: url(../../assets/concepto-preparacion-examen-publico.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.section__home{
+    padding: 3rem 0 2rem;
+}
+
 .home__container {
     row-gap: 3rem;
 }
 
 .home__content {
-    grid-template-columns: 10px repeat(2, 1fr);
-    padding-top: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 8.5rem;
     column-gap: 2rem;
     align-items: center;
 }
@@ -24,6 +35,8 @@
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-0-25);
     text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 10.8rem;
 }
 
 .home__hand {
@@ -178,13 +191,13 @@
 
 /*For small devices*/
 @media screen and (max-width: 350px) {
-    .home__img{
+    .home__img {
         width: 180px;
         height: 180px;
         left: 3rem;
     }
 
-    .home__hand{
+    .home__hand {
         width: 22px;
         height: 22px;
     }
