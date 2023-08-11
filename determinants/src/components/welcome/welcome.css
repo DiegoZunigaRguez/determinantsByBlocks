@@ -219,8 +219,8 @@
     }
 
     .first__message{
-        top: 700px;
-        left: 25px;
+        top: 750px;
+        left: 40px;
         width: 325px;
     }
 
@@ -237,16 +237,40 @@
     }
 
     .second__message p{
-        font-size: 21px;
+        font-size: 24px;
     }
 }
 
+    @media screen and (max-width: 480px) {
+        .first__message{
+            top: 900px;
+            left: 24px;
+            width: 330px;
+        }
+
+        .first__message p{
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .second__message{
+            top: 135px;
+            left: 10px;
+            margin-left: 0;
+            width: 330px;
+        }
+
+        .second__message p{
+            font-size: 24px;
+        }
+    }
+
 /*For small devices*/
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 380px) {
     .first__message{
-        top: 700px;
-        left: 25px;
-        width: 325px;
+        top: 770px;
+        left: 15px;
+        width: 330px;
     }
 
     .first__message p{
@@ -255,10 +279,10 @@
     }
 
     .second__message{
-        top: 90px;
+        top: 70px;
         left: 6px;
         margin-left: 0;
-        width: 325px;
+        width:310px;
     }
 
     .second__message p{
