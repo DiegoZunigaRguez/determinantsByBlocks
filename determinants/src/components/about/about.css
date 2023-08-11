@@ -1,0 +1,14 @@
+.about{
+    background-color: #F1E8DB;
+}
+
+.message{
+    padding: 3rem;
+    text-align: center;
+}
+
+.message p{
+    font-size: 33px;
+    color: black;
+    font-weight: bold;
+}
