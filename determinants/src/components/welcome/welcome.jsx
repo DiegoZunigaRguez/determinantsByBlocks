@@ -1,17 +1,17 @@
 import React from 'react';
-import './home.css';
-import Data from './Data';
+import './welcome.css';
+import Message from './message';
 
-function Home() {
+const Welcome = () => {
   return (
-    <section className='section home' id='home'>
+    <section className='section welcome' id='welcome'>
         <div className='home__container container grid'>
             <div className='home__content grid'>
-                <Data/>
+                <Message/>
             </div>
         </div>
     </section>
   )
 }
 
-export default Home
+export default Welcome

@@ -6,7 +6,7 @@ const Data = () => {
         BIENVENIDO A ESCOMATE
       </h1>
       
-      <a href="#contact" className="button button--flex">
+      <a href="#welcome" className="button button--flex">
         Desliza
         <svg
           className="button__icon"

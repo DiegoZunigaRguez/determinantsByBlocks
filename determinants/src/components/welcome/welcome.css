@@ -1,12 +1,12 @@
-.home{
+.welcome {
     /* concepto-preparacion-examen-publico 1 */
-    background-image: url(../../assets/concepto-preparacion-examen-publico.png);
+    background-image: url(../../assets/welcome.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 90vh;
 }
 
-.section__home{
+.section__home {
     padding: 3rem 0 2rem;
 }
 
@@ -121,6 +121,35 @@
 .home__scroll-arrow {
     font-size: 1.25rem;
     color: var(--title-color);
+}
+
+.first__message {
+    position: absolute;
+    top: 1000px;
+    left: 150px;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.first__message p {
+    font-size: 96px;
+    font-weight: bold;
+    text-align: justify;
+    color: #872600;
+}
+
+.second__message {
+    position: relative;
+    top: 50px;
+    left: 200px;
+    margin-left: 400px;
+}
+
+.second__message p {
+    color: black;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
 }
 
 /*Breakpoints*/
