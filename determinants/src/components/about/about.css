@@ -45,8 +45,18 @@
 
 .info p{
     text-align: justify;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: lighter;
+}
+
+.info p a{
+    color: var(--RHeader);
+    font-weight: bold;
+}
+
+.info math{
+    color: black;
+    font-size: 18px;
 }
 
 @media screen and (max-width: 1024px) {
