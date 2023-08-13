@@ -20,10 +20,15 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 >12-08-2023
 1. Se crea la pantalla de desarrolladores
 2. Se realiza la codificacion de la pantalla
+3. Se realiza las modificaciones necesarias para la version movil
+4. Se continua con la codificacion de la pantalla about
+5. Se crea la pantalla donde se tendra la informacion acerca de los determinantes
+6. Se crea la pantalla de simulacion
 
-## Pasos para compilación de código en C++
-compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
-ejecutar con .\<nombre> <n>
+>13-08-2023
+1. Se realizan cambios en la parte movil de la aplicacion
+2. Se hacen cambios en la pantalla de inicio
+3. Se hacen cambios en los botones para darles animacion
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"

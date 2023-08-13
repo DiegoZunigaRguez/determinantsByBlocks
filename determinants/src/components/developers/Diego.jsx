@@ -4,7 +4,7 @@ import DiegoPhoto from './DiegoPhoto';
 
 const Diego = () => {
   return (
-    <div className=''>
+    <div className='dev__content'>
         <div className='dev__container'>
             <DiegoPhoto/>
         </div>

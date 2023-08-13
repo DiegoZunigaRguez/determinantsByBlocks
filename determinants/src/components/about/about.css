@@ -1,14 +1,73 @@
 .about{
     background-color: #F1E8DB;
+    height: 100vh;
 }
 
-.message{
-    padding: 3rem;
+.message__about{
+    padding: 2rem;
     text-align: center;
 }
 
-.message p{
+.message__about p{
     font-size: 33px;
     color: black;
     font-weight: bold;
+}
+
+.button__download{
+    position: relative;
+    top: 1.5rem;
+    font-size: 20px;
+    background-color: var(--RHeader);
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.button__download a{
+    color: white;
+}
+
+.button__download:hover{
+    transform: translate(-5px,-10px);
+    
+    box-shadow: 10px 10px rgba(225, 144, 49, 0.65);
+    transition: 0.5s;
+}
+
+.button__download a:hover{
+    color: var(--title-color-dark);
+}
+
+.info{
+    padding-top: 3rem;
+}
+
+.info p{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 1024px) {
+    .about{
+        background-color: #F1E8DB;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about{
+        background-color: #F1E8DB;
+        height: 100%;
+    }
+}
+
+/*For small devices*/
+@media screen and (max-width: 380px) {
+    .about{
+        background-color: var(--BBackground);
+        height: 100%;
+        width: 330px;
+    }
 }

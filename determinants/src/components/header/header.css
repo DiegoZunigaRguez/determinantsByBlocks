@@ -112,9 +112,14 @@
 
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 380px) {
+    .header{
+        width: 330px;
+    }
+
     .nav__menu {
         padding: 2rem 0.25rem 4rem;
+        width: 330px;
     }
 
     .nav__list {
