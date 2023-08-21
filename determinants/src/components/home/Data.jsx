@@ -1,4 +1,6 @@
 import React from "react";
+import './home.css';
+
 const Data = () => {
   return (
     <div className="home__data">
