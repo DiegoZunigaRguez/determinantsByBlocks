@@ -1,11 +1,10 @@
 import React from "react";
 const Data = () => {
   return (
-    <div className="home__data">
+    <div>
       <h1 className="home__title">
         BIENVENIDO A ESCOMATE
       </h1>
-      
       <a href="#welcome" className="button button--flex">
         Desliza
         <svg

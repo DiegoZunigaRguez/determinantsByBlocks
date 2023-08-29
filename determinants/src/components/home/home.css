@@ -6,25 +6,16 @@
     height: 100vh;
 }
 
-.section__home {
-    padding: 3rem 0 2rem;
-}
-
-.home__container {
-    row-gap: 3rem;
-}
-
-.home__content {
-    padding-top: 5rem;
-    padding-bottom: 8.5rem;
-    column-gap: 2rem;
-    align-items: center;
+.home div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    float: left;
+    transform: translate(-50%,-50%);
 }
 
 .home__title {
-    position: absolute;
-    transform: translate(30%, 50%);
-    /* Asegura que el div ocupe al menos el 100% del viewport vertical */
+    color: white;
     text-align: center;
     animation: escribiendo 6s infinite, pleca 0.5s step-end infinite alternate;
     white-space: nowrap;
@@ -53,26 +44,21 @@
 }
 
 .button--flex {
-    /* Estilos centrados */
-    position: relative;
-    transform: translate(0%, 500%);
-    /* Estilos hover */
-    color: var(--title-color-dark);
+    color: var(--letter);
     transition: 0.5s;
+    text-decoration: none;
 }
 
 .button--flex:hover {
-    position: relative;
     color: var(--hover);
     box-shadow: 10px 10px rgba(225, 144, 49, 0.65);
     transition: 0.5s;
-    transform: translate(-5%, 400%);
 }
 
 /*Breakpoints*/
 /*For large devices*/
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/*@media only screen and (max-width: 600px) {
     .home__title {
         animation: none;
         width: 250px;
@@ -91,11 +77,9 @@
     }
 
     .button--flex {
-        /* Estilos centrados */
         position: relative;
         transform: translate(0%, 680%);
-        /* Estilos hover */
-        color: var(--title-color-dark);
+        color: var(--letter);
         transition: 0.5s;
     }
 
@@ -107,9 +91,9 @@
         transform: translate(-5%, 680%);
     }
 }
-
+*/
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/*@media only screen and (min-width: 600px) {
     .home__title {
         animation: none;
         width: 250px;
@@ -128,11 +112,9 @@
     }
 
     .button--flex {
-        /* Estilos centrados */
         position: relative;
         transform: translate(0%, 680%);
-        /* Estilos hover */
-        color: var(--title-color-dark);
+        color: var(--letter);
         transition: 0.5s;
     }
 
@@ -144,12 +126,12 @@
         transform: translate(-5%, 680%);
     }
 }
-
+*/
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+/*@media only screen and (min-width: 768px) {}*/
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/*@media only screen and (min-width: 992px) {
     .home {
         background-image: url(../../assets/concepto-preparacion-examen-publico.png);
         background-repeat: no-repeat;
@@ -157,25 +139,18 @@
     }
 
     .home__title {
-        position: absolute;
-        transform: translate(10%, 200%);
-        /* Asegura que el div ocupe al menos el 100% del viewport vertical */
         text-align: center;
         animation: escribiendo 6s infinite, pleca 0.5s step-end infinite alternate;
         white-space: nowrap;
         overflow: hidden;
         border-right: solid 3px;
         font-size: var(--big-font-size);
-        margin-bottom: var(--mb-0-25);
     }
 
     .button--flex {
-        /* Estilos centrados */
-        position: relative;
-        transform: translate(0%, 500%);
-        /* Estilos hover */
-        color: var(--title-color-dark);
+        color: var(--letter);
         transition: 0.5s;
+        font-weight: bold;
     }
 
     .button--flex:hover {
@@ -183,9 +158,8 @@
         color: var(--hover);
         box-shadow: 10px 10px rgba(225, 144, 49, 0.65);
         transition: 0.5s;
-        transform: translate(-5%, 400%);
     }
 }
-
+*/
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
