@@ -1,17 +1,13 @@
-import React from 'react';
-import './home.css';
-import Data from './Data';
+import React from "react";
+import "./home.css";
+import Data from "./Data";
 
 function Home() {
   return (
-    <section className='section home' id='home'>
-        <div className='home__container container grid'>
-            <div className='home__content grid'>
-                <Data/>
-            </div>
-        </div>
+    <section className="home" id="home">
+      <Data />
     </section>
-  )
+  );
 }
 
-export default Home
+export default Home;

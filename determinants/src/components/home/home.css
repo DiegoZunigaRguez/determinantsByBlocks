@@ -1,4 +1,4 @@
-.home{
+.home {
     /* concepto-preparacion-examen-publico 1 */
     background-image: url(../../assets/concepto-preparacion-examen-publico.png);
     background-size: 100% 100%;
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-.section__home{
+.section__home {
     padding: 3rem 0 2rem;
 }
 
@@ -22,96 +22,170 @@
 }
 
 .home__title {
-    position: relative;
-    top: 10rem;
-    left: 6rem;
-    width: 500px;
+    position: absolute;
+    transform: translate(30%, 50%);
+    /* Asegura que el div ocupe al menos el 100% del viewport vertical */
     text-align: center;
     animation: escribiendo 6s infinite, pleca 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: solid 3px;
-    font-size:  var(--big-font-size);
+    font-size: var(--big-font-size);
     margin-bottom: var(--mb-0-25);
 }
 
 @keyframes escribiendo {
-    0%, 100%{
+
+    0%,
+    100% {
         width: 0;
     }
 
-    40%, 60%{
+    40%,
+    60% {
         width: 800px;
     }
 
-    90%{
+    90% {
         width: 0;
     }
 
 }
 
-.button--flex{
+.button--flex {
+    /* Estilos centrados */
     position: relative;
-    top: 22.5rem;
-    font-weight: bold;
+    transform: translate(0%, 500%);
+    /* Estilos hover */
+    color: var(--title-color-dark);
+    transition: 0.5s;
 }
 
-.button--flex:hover{
-    transform: translate(-5px,-10px);
-    color: var(--title-color-dark);
+.button--flex:hover {
+    position: relative;
+    color: var(--hover);
     box-shadow: 10px 10px rgba(225, 144, 49, 0.65);
     transition: 0.5s;
+    transform: translate(-5%, 400%);
 }
 
 /*Breakpoints*/
 /*For large devices*/
-@media screen and (max-width: 992px) {
-   
-}
-
-/*For medium devices*/
-@media screen and (max-width: 768px) {
-    .home__content {
-        grid-template-columns: 0.5fr 3fr;
-        padding-top: 3.5rem;
-    }
-
-    .home__img {
-        order: initial;
-        justify-self: initial;
-    }
-
-    .home__data {
-        grid-column: 1/3;
-    }
-
-    .home__img {
-        box-shadow: inset 0 0 0 6px rgb(255 255 255/30%);
-        width: 200px;
-        height: 200px;
-    }
-
-    .home__scroll {
-        display: none;
-    }
-}
-
-/*For small devices*/
-@media screen and (max-width: 380px) {
-    .home{
-        height: 100%;
-        width: 330px;
-    }
-
-    .home__title{
-        position: relative;
-        left: 11%;
-        width: 70%;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .home__title {
+        animation: none;
+        width: 250px;
+        align-items: center;
+        transform: translate(16%, 96%);
         font-size: var(--big-font-size);
+        white-space: unset;
+        overflow: unset;
+        border: unset;
     }
 
-    .button--flex{
+    .home {
+        background-image: url(../../assets/fondocelular.png);
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    .button--flex {
+        /* Estilos centrados */
         position: relative;
-        left: 16%;
+        transform: translate(0%, 680%);
+        /* Estilos hover */
+        color: var(--title-color-dark);
+        transition: 0.5s;
+    }
+
+    .button--flex:hover {
+        position: relative;
+        color: var(--hover);
+        box-shadow: 10px 10px rgba(225, 144, 49, 0.65);
+        transition: 0.5s;
+        transform: translate(-5%, 680%);
     }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .home__title {
+        animation: none;
+        width: 250px;
+        align-items: center;
+        transform: translate(35%, 96%);
+        font-size: var(--big-font-size);
+        white-space: unset;
+        overflow: unset;
+        border: unset;
+    }
+
+    .home {
+        background-image: url(../../assets/fondocelular.png);
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    .button--flex {
+        /* Estilos centrados */
+        position: relative;
+        transform: translate(0%, 680%);
+        /* Estilos hover */
+        color: var(--title-color-dark);
+        transition: 0.5s;
+    }
+
+    .button--flex:hover {
+        position: relative;
+        color: var(--hover);
+        box-shadow: 10px 10px rgba(225, 144, 49, 0.65);
+        transition: 0.5s;
+        transform: translate(-5%, 680%);
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .home {
+        background-image: url(../../assets/concepto-preparacion-examen-publico.png);
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    .home__title {
+        position: absolute;
+        transform: translate(10%, 200%);
+        /* Asegura que el div ocupe al menos el 100% del viewport vertical */
+        text-align: center;
+        animation: escribiendo 6s infinite, pleca 0.5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: solid 3px;
+        font-size: var(--big-font-size);
+        margin-bottom: var(--mb-0-25);
+    }
+
+    .button--flex {
+        /* Estilos centrados */
+        position: relative;
+        transform: translate(0%, 500%);
+        /* Estilos hover */
+        color: var(--title-color-dark);
+        transition: 0.5s;
+    }
+
+    .button--flex:hover {
+        position: relative;
+        color: var(--hover);
+        box-shadow: 10px 10px rgba(225, 144, 49, 0.65);
+        transition: 0.5s;
+        transform: translate(-5%, 400%);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

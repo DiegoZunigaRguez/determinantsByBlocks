@@ -58,15 +58,13 @@
 /*Breakpoints*/
 /*For large devices*/
 @media screen and (max-width: 992px) {
+    .footer{
+        width: 100%;
+    }
+
     .footer__social-link {
         padding: 0.25rem;
         border-radius: 0.25rem;
         font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .footer{
-        width: 330px;
     }
 }

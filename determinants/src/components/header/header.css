@@ -1,56 +1,168 @@
-.header {
-    font-family: QuicksandBold;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: var(--z-fixed);
-    background-color: var(--RHeader);
-    font-size: var(--big-font-size);
-}
-
-.nav {
-    height: var(--header-height);
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 1rem;
+    color: #fff;
+    position: fixed;
+    background-color: var(--RHeader);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.nav__logo,
-.nav__toggle {
-    color: var(--letter);
-    font-weight: var(--font-medium);
+.contenedor {
+    max-width: 1110px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: var(--z-fixed);
 }
 
-.nav__list {
+.back {
+    padding: 32px 0;
+    background-color: var(--RHeader);
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    column-gap: 2rem;
-}
-
-.nav__link {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    font-size: var(--small-font-size);
-    color: var(--letter);
-    font-weight: var(--font-medium);
-    transition: .3s;
+    justify-content: space-between;
+    z-index: 1000;
 }
 
-.nav__icon,
-.nav__close,
-.nav__toggle {
+.logo {
+    font-size: 36px;
+    color: var(--letter);
+    font-weight: bold;
+}
+
+.logo:hover {
+    color: var(--hover);
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: var(--letter);
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: var(--hover);
+}
+
+#menu {
     display: none;
 }
 
-/*Active link*/
-.active-link,
-.nav__link:hover {
-    color: var(--title-color-dark);
+.menu-icon {
+    width: 25px;
 }
 
-@media screen and (max-width: 768px) {
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/*@media only screen and (max-width: 600px) {
+    .menu {
+        padding: 19px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .back {
+        padding: 40px 0;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--hover);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .menu .navbar ul li a:hover {
+        color: var(--RHeader);
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+}*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .menu {
+        padding: 19px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .back {
+        padding: 40px 0;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #C9C9C9;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .menu .navbar ul li:hover {
+        background-color: var(--RHeader);
+    }
+
+    .menu .navbar ul li a {
+        color: var(--RHeader);
+    }
+
+    .menu .navbar ul li a:hover {
+        color: var(--letter);
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/*@media screen and (max-width: 768px) {
     .header {
         top: initial;
         bottom: 0;
@@ -125,5 +237,4 @@
     .nav__list {
         column-gap: 0;
     }
-}
-
+}*/

@@ -26,18 +26,10 @@
 :root {
   --header-height: 4.5rem;
   /*Colores*/
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: #EEC42D;
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --hover: #EEC42D;
   --letter: #FFF;
-  --stratos: #001B48;
 	--RHeader: #872600;
 	--BBackground: #F1E8DB;
-	--Mglory: #97CADB;
-	--Botticelli: #D6EBEE;
 
   /*Tipografia*/
   --body-font: "Poppins", sans-serif;
@@ -90,10 +82,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100vh;
 }
 
 body,
@@ -128,6 +123,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  z-index: 1;
 }
 
 img {
@@ -234,9 +230,4 @@ img {
   :root{
     --big-font-size: 2.25rem;
   }
-
-  .button--flex{
-    left: 5rem;
-  }
-
 }
