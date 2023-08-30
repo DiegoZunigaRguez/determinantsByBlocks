@@ -6,20 +6,17 @@
 
 @font-face {
   font-family: QuicksandRegular;
-  src: url('./assets/QuicksandBold.ttf')
-  		 format('truetype');
+  src: url('./assets/QuicksandBold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: QuicksandLigth;
-  src: url('./assets/QuicksandLight.ttf')
-  		 format('truetype');
+  src: url('./assets/QuicksandLight.ttf') format('truetype');
 }
 
 @font-face {
   font-family: QuicksandBold;
-  src: url('./assets/QuicksandBold.ttf')
-  		 format('truetype');
+  src: url('./assets/QuicksandBold.ttf') format('truetype');
 }
 
 /*Variables de CSS*/
@@ -28,8 +25,8 @@
   /*Colores*/
   --hover: #EEC42D;
   --letter: #FFF;
-	--RHeader: #872600;
-	--BBackground: #F1E8DB;
+  --RHeader: #872600;
+  --BBackground: #F1E8DB;
 
   /*Tipografia*/
   --body-font: "Poppins", sans-serif;
@@ -82,86 +79,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
 }
 
-html {
+html{
   scroll-behavior: smooth;
-  height: 100vh;
-}
-
-body,
-button,
-input,
-textarea {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-}
-
-body {
-  background-color: var(--BBlue);
-  color: var(--letter);
-}
-
-h1,
-h2,
-h3 {
-  color: var(--letter);
-  font-weight: var(--font-semi-bold);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  z-index: 1;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/*Reusable CSS Classes*/
-.section {
-  padding: 3rem 0 2rem;
-}
-
-.section__title {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: 1.5rem;
-}
-
-.section__title,
-.section__subtitle {
-  text-align: center;
-}
-
-/*Layout*/
-.container {
-  max-width: 968px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
 }
 
 /*Buttons*/
@@ -172,6 +93,7 @@ img {
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-size: 28px;
+  font-weight: bold;
 }
 
 .button__icon {
@@ -182,52 +104,11 @@ img {
 .button--flex {
   display: inline-flex;
   align-items: center;
-  position: relative;
-  left: 22rem;
+  text-decoration: none;
 }
 
-/*Breakpoints*/
-/*For large devices*/
-@media screen and (max-width: 992px) {
-  .container {
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
-  }
-
-  .button{
-    padding: 1rem 1.75rem;
-  }
-
-  .button__icon{
-    width: 22px;
-    height: 22px;
-  }
-
-  .button--flex{
-    left: 5rem;
-  }
-}
-
-/*For medium devices*/
-@media screen and (max-width: 768px) {
-  body{
-    margin: 0 0 var(--header-height) 0;
-  }
-
-  .section{
-    padding: 2rem 0 0;
-  }
-
-  .section__subtitle{
-    margin-bottom: var(--mb-3);
-  }
-}
-
-@media screen and (max-width: 576px) {}
-
-/*For small devices*/
-@media screen and (max-width: 380px) {
-  :root{
-    --big-font-size: 2.25rem;
-  }
+.button--flex:hover {
+  color: var(--hover);
+  box-shadow: 10px 10px rgba(225, 144, 49, 0.65);
+  transition: 0.5s;
 }
