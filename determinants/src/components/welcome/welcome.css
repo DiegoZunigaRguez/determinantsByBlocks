@@ -1,145 +1,105 @@
 .welcome {
     /* concepto-preparacion-examen-publico 1 */
     background-image: url(../../assets/welcome.png);
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
     height: 100vh;
-}
-
-.section__home {
-    padding: 3rem 0 2rem;
-}
-
-.home__container {
-    row-gap: 3rem;
-}
-
-.home__content {
-    padding-top: 5rem;
-    padding-bottom: 8.5rem;
-    column-gap: 2rem;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.first__message {
-    position: absolute;
-    top: 1050px;
-    left: 150px;
-    width: 400px;
-    margin-top: 10px;
-}
-
-.first__message p {
-    font-size: 96px;
-    font-weight: bold;
-    text-align: justify;
-    color: #872600;
-}
-
-.second__message {
-    position: relative;
-    top: 100px;
-    left: 200px;
-    margin-left: 400px;
-}
-
-.second__message p {
-    color: black;
-    font-size: 27px;
-    font-weight: bold;
+.message__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
-/*Breakpoints*/
-/*For large devices*/
-@media screen and (max-width: 992px) {
-    .home__content {
-        grid-template-columns: 100px repeat(2, 1fr);
-        column-gap: 1.25rem;
-    }
+.left-column {
+    flex: 1;
+    padding-right: 20px;
+    /* Espacio entre las columnas */
 }
 
-/*For medium devices*/
-@media screen and (max-width: 768px) {
-    .home__content {
-        grid-template-columns: 0.5fr 3fr;
-        padding-top: 3.5rem;
-    }
+.right-column {
+    flex: 1;
+    padding-left: 20px;
+}
 
-    .first__message {
-        top: 750px;
-        left: 40px;
-        width: 325px;
-    }
+.message__title {
+    font-size: 96px;
+    color: var(--RHeader);
+}
 
-    .first__message p {
-        font-size: 40px;
-        text-align: center;
-    }
-
-    .second__message {
-        top: 70px;
-        left: 6px;
-        margin-left: 0;
-        width: 325px;
-    }
-
-    .second__message p {
-        font-size: 24px;
-    }
+.message__mes {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 3rem;
 }
 
 @media screen and (max-width: 768px) {
-    .first__message {
-        top: 900px;
-        left: 24px;
-        width: 330px;
-    }
-
-    .first__message p {
-        font-size: 40px;
-        text-align: center;
-    }
-
-    .second__message {
-        top: 135px;
-        left: 10px;
-        margin-left: 0;
-        width: 330px;
-    }
-
-    .second__message p {
-        font-size: 24px;
-    }
-}
-
-/*For small devices*/
-@media screen and (max-width: 380px) {
     .welcome{
-        height: 100%;
-        width: 330px;
+        background-image: url(../../assets/welcome_responsive.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
     }
 
-    .first__message {
-        top: 770px;
-        left: 24px;
-        width: 246px;
+    .message__content {
+        flex-direction: column;
+        max-height: 90vh;
     }
 
-    .first__message p {
-        font-size: 40px;
-        text-align: center;
+    .left-column{
+        padding-left: 8px;
     }
 
-    .second__message {
-        top: 100px;
-        left: 10px;
-        margin-left: 0;
-        width: 246px !important;
+    .right-column {
+        padding-left: 5px;
     }
 
-    .second__message p {
-        font-size: 24px;
-        padding-bottom: 10px;
+    .message__title {
+        font-size: 45px;
+    }
+    
+    .message__mes{
+        margin-top: 1rem;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome{
+        background-image: url(../../assets/welcome_responsive.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .message__content {
+        flex-direction: column;
+    }
+
+    .left-column{
+        padding-left: 8px;
+    }
+
+    .right-column {
+        padding-left: 5px;
+    }
+
+    .message__title {
+        font-size: 37.5px;
+    }
+    
+    .message__mes{
+        margin-top: 1rem;
+        font-size: 20px;
     }
 }

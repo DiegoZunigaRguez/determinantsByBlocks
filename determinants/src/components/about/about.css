@@ -1,83 +1,39 @@
-.about{
-    background-color: #F1E8DB;
-    height: 100vh;
+.about {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto; /* Centrar horizontalmente */
+  text-align: center; /* Centrar texto */
+  padding-top: 5rem;
+  background-color: var(--BBackground);
 }
 
-.message__about{
-    padding: 2rem;
-    text-align: center;
-}
-
-.message__about p{
-    font-size: 33px;
-    color: black;
-    font-weight: bold;
-}
-
-.button__download{
-    position: relative;
-    top: 1.5rem;
-    font-size: 20px;
-    background-color: var(--RHeader);
-    padding: 1rem 1rem;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.button__download a{
-    color: white;
-}
-
-.button__download:hover{
-    transform: translate(-5px,-10px);
-    
-    box-shadow: 10px 10px rgba(225, 144, 49, 0.65);
-    transition: 0.5s;
-}
-
-.button__download a:hover{
-    color: var(--title-color-dark);
-}
-
-.info{
-    padding-top: 3rem;
-}
-
-.info p{
-    text-align: justify;
-    font-size: 19px;
-    font-weight: lighter;
-}
-
-.info p a{
+.about__title{
     color: var(--RHeader);
-    font-weight: bold;
 }
 
-.info math{
-    color: black;
-    font-size: 18px;
+.about__text{
+    text-align: justify;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
 }
 
-@media screen and (max-width: 1024px) {
-    .about{
-        background-color: #F1E8DB;
-        height: 100vh;
-    }
-}
+/* Estilos específicos para dispositivos más pequeños */
+@media (max-width: 768px) {
+  /* Ajustar el ancho máximo y el margen para pantallas pequeñas */
+  .content {
+  }
+  /* Cambiar el tamaño de fuente para mejorar la legibilidad */
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
 
-@media screen and (max-width: 768px) {
-    .about{
-        background-color: #F1E8DB;
-        height: 100%;
-    }
-}
-
-/*For small devices*/
-@media screen and (max-width: 380px) {
-    .about{
-        background-color: var(--BBackground);
-        height: 100%;
-        width: 330px;
-    }
+  /* Centrar el botón */
+  button {
+    display: block;
+    margin: 0 auto;
+  }
 }

@@ -16,6 +16,7 @@ header {
     margin: 0 auto;
     position: fixed;
     z-index: var(--z-fixed);
+    font-family: 'Archivo', sans-serif;
 }
 
 .back {
@@ -80,9 +81,6 @@ ul{
     display: none;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
     .menu {
         padding: 19px;
@@ -126,5 +124,5 @@ ul{
     #menu:checked~.navbar {
         display: initial;
     }
-}
 
+}

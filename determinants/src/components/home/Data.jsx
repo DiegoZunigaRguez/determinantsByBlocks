@@ -1,7 +1,7 @@
 import React from "react";
 const Data = () => {
   return (
-    <div>
+    <div className="home__content">
       <h1 className="home__title">
         BIENVENIDO A ESCOMATE
       </h1>

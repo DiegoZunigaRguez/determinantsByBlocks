@@ -1,66 +1,21 @@
-import React from 'react';
-import './dev.css';
-import DiegoPhoto from './DiegoPhoto';
+import React from "react";
+import "./dev.css";
+import DiegoPhoto from "../../assets/Diego.jpg";
 
 const Diego = () => {
   return (
-    <div className='dev__content'>
-        <div className='dev__container'>
-            <DiegoPhoto/>
-        </div>
-        <h3 className='skills__title'>Diego Zúñiga Rodríguez</h3>
-        <div className='skills__content'>
-        <div className='skills__box'>
-            <div className='skills__group'>
-                <div className='skills__data'>
-                    <i class="bx bx-badge-check"></i>
-                    <div>
-                        <h3 className='skills__name'>PHP</h3>
-                        <span className='skills__level'>Intermedio</span>
-                    </div>
-                </div>
-                <div className='skills__data'>
-                    <i class="bx bx-badge-check"></i>
-                    <div>
-                        <h3 className='skills__name'>NodeJS</h3>
-                        <span className='skills__level'>Básico</span>
-                    </div>
-                </div>
-                <div className='skills__data'>
-                    <i class="bx bx-badge-check"></i>
-                    <div>
-                        <h3 className='skills__name'>Java</h3>
-                        <span className='skills__level'>Intermedio</span>
-                    </div>
-                </div>
-            </div>
-            <div className='skills__group'>
-                <div className='skills__data'>
-                    <i class="bx bx-badge-check"></i>
-                    <div>
-                        <h3 className='skills__name'>C#</h3>
-                        <span className='skills__level'>Intermedio</span>
-                </div>
-                </div>
-                <div className='skills__data'>
-                    <i class="bx bx-badge-check"></i>
-                    <div>
-                        <h3 className='skills__name'>MySQL</h3>
-                        <span className='skills__level'>Intermedio</span>
-                    </div>
-                </div>
-                <div className='skills__data'>
-                    <i class="bx bx-badge-check"></i>
-                    <div>
-                        <h3 className='skills__name'>SQL</h3>
-                        <span className='skills__level'>Intermedio</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div className="card">
+      <div className="circle">
+        <img src={DiegoPhoto} alt="" srcset="" className="circle__imagen" />
+      </div>
+      <h2>Diego Zúñiga Rodríguez</h2>
+      <ul className="info-list">
+        <li>
+          <b>Carrera:</b> Ingeniería en sistemas computacionales
+        </li>
+      </ul>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Diego
+export default Diego;
