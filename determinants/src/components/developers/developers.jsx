@@ -5,13 +5,15 @@ import Diego from './Diego';
 
 const developers = () => {
   return (
-    <section className='section dev' id='developers'>
-        <h2 className="section__title dev__title">Desarrolladores</h2>
-        <div className='skills__container container grid'>
-            <Abraham/>
-            <Diego/>
-        </div>
-    </section>
+    <div className="developers" id='developers'>
+      <div className="developers__header">
+        <h1>Desarrolladores</h1>
+      </div>
+      <div className="developers__card">
+        <Abraham/>
+        <Diego/>
+      </div>
+    </div>
   )
 }
 

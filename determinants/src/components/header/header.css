@@ -16,6 +16,7 @@ header {
     margin: 0 auto;
     position: fixed;
     z-index: var(--z-fixed);
+    font-family: 'Archivo', sans-serif;
 }
 
 .back {
@@ -123,4 +124,5 @@ ul{
     #menu:checked~.navbar {
         display: initial;
     }
+
 }
