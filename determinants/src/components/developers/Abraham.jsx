@@ -6,7 +6,7 @@ const Abraham = () => {
   return (
     <div className="card">
       <div className="circle">
-        <img src={AbrahamPhoto} alt="" srcset="" className="circle__imagen" />
+        <img srcSet={AbrahamPhoto} alt="" className="circle__imagen" />
       </div>
       <h2>Abraham Hernández Alvarado</h2>
       <ul className="info-list">

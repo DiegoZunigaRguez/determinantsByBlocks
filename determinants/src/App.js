@@ -5,6 +5,7 @@ import Home from './components/home/Home';
 import Welcome from './components/welcome/welcome';
 import About from './components/about/about';
 import Developers from './components/developers/developers';
+import Determinants from './components/determinants/det';
 /*import Footer from './components/footer/footer';
 import Determinants from './components/determinants/det';
 import Simulation from './components/simulation/Simulation';*/
@@ -18,6 +19,7 @@ function App() {
       <Home/>
       <Welcome/>
       <About/>
+      <Determinants/>
       <Developers/>
     </>
   );

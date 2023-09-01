@@ -13,7 +13,10 @@
     margin-bottom: 80px;
     color: var(--RHeader);
     font-weight: bold;
-    font-size: 35px;
+}
+
+.developers__header h1{
+    font-size: 45px;
 }
 
 .developers__card {
@@ -85,9 +88,12 @@
     }
 
     .developers__header{
-        font-size: 20px;
         margin-top: 95px;
         margin-bottom: 20px;
+    }
+
+    .developers__header h1{
+        font-size: 40px;
     }
 
     .developers__card{
