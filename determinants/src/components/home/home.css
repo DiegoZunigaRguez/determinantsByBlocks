@@ -50,8 +50,6 @@
 .button--flex {
     margin-top: 10rem;
 }
-
-
 /* Media queries para dispositivos más pequeños */
 @media screen and (max-width: 768px) {
 

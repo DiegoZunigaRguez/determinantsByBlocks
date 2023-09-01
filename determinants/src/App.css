@@ -67,6 +67,7 @@ html {
   color: var(--letter);
   padding: 1.25rem 2rem;
   border-radius: 1rem;
+  border-color: var(--RHeader);
   font-size: 28px;
   font-weight: bold;
 }
