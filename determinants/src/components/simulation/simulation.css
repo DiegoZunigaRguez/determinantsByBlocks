@@ -1,22 +1,76 @@
-.simulation{
-  background-color: var(--BBackground);
+/* Estilo general del contenedor */
+.simulation__container {
+  width: 100%;
   height: 100vh;
-}
-
-.message__simulation{
-  padding: 4rem;
-}
-
-.message__simulation p{
-  font-size: 33px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  color: black;
+  background-color: var(--BBackground);
+}
+
+/* Estilo del título h1 */
+.simulation__title {
+  font-size: 45px;
+  margin-bottom: 10px;
+  margin-top: 3rem;
+  color: var(--RHeader);
+}
+
+/* Estilo del párrafo */
+.simulation__text {
+  font-size: 26px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 
-@media screen and (max-width: 380px) {
-  .simulation{
-    height: 100%;
-    width: 330px;
-  }
+/* Estilo del menú desplegable (select) */
+.simulation__options {
+  font-size: 24px;
+  background-color: #E19031;
+  color: var(--letter);
+  border-radius: 17px;
+  padding: 1rem;
+  border-color: #E19031;
+  font-weight: bold;
+}
+
+.simulation__options::after{
+  border-color: #E19031;
+}
+
+/* Estilo del determinante */
+.determinant {
+  display: inline-block;
+  border-left: 2px solid #B5B4B3;
+  border-right: 2px solid #B5B4B3;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* Estilo de una fila de la matriz */
+.matrix-row {
+  display: flex;
+}
+
+/* Estilo de las celdas de entrada (input) */
+input[type="number"] {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  margin: 0.5rem;
+  border-radius: 10px;
+  border-color: white;
+}
+
+/* Estilo de los botones */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
 }
