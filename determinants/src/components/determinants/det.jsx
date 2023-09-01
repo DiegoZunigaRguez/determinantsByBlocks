@@ -36,13 +36,17 @@ function Det() {
   };
 
   return (
-    <div className="dev__container">
-      <h1>Título</h1>
-      <p>Párrafo de contenido.</p>
+    <div className="dev__container" id="determinants">
+      <h1>Determinantes</h1>
+      <p className="dev__text">
+        Te mostraremos información acerca de los métodos más comúnes para el
+        cálculo de determinantes con algunos ejemplos para que los tengas en
+        consideración.
+      </p>
       <div className="dev__button-container">
-        <button onClick={() => toggleCard(1)}>Botón 1</button>
-        <button onClick={() => toggleCard(2)}>Botón 2</button>
-        <button onClick={() => toggleCard(3)}>Botón 3</button>
+        <button className="dev__button" onClick={() => toggleCard(1)}>Regla de Laplace</button>
+        <button className="dev__button" onClick={() => toggleCard(2)}>Regla de Sarrus</button>
+        <button className="dev__button" onClick={() => toggleCard(3)}>Matriz Triangular</button>
       </div>
       <div className={`dev__card ${selectedCard === 1 ? "active" : ""}`}>
         <div className="dev__card-content">
