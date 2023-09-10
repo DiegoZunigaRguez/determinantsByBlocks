@@ -26,47 +26,59 @@ function Simulation() {
 
   return (
     <div className="simulation__container" id="simulation">
-      <h1 className="simulation__title">Generador de Determinantes</h1>
-      <p className="simulation__text">
-        Aquí tienes la simulación haciendo uso del algoritmo que se te presentó
-        anteriormente, lo único que necesitas para visualizar es colocar la
-        dimensión de la matriz y los datos, únicamente se puede utilizar una
-        matriz entre dimensión 4x4 y 6x6.
-      </p>
-      <select
-        className="simulation__options"
-        value={matrixSize}
-        onChange={handleMatrixSizeChange}
-      >
-        <option value={0} defaultChecked>
-          Selecciona
-        </option>
-        <option value={4}>Matriz 4x4</option>
-        <option value={5}>Matriz 5x5</option>
-        <option value={6}>Matriz 6x6</option>
-      </select>
-      <br />
-      <div className="determinant">
-        {matrix.map((row, rowIndex) => (
-          <div key={rowIndex} className="matrix-row">
-            {row.map((cell, columnIndex) => (
-              <input
-                key={columnIndex}
-                type="number"
-                value={cell}
-                onChange={(e) => {
-                  const updatedMatrix = [...matrix];
-                  updatedMatrix[rowIndex][columnIndex] = e.target.value;
-                  setMatrix(updatedMatrix);
-                }}
-              />
-            ))}
-          </div>
-        ))}
+      <div className="desktop">
+        <h1 className="simulation__title">Simulación</h1>
+        <p className="simulation__text">
+          Aquí tienes la simulación haciendo uso del algoritmo que se te
+          presentó anteriormente, lo único que necesitas para visualizar es
+          colocar la dimensión de la matriz y los datos, únicamente se puede
+          utilizar una matriz entre dimensión 4x4 y 6x6.
+        </p>
+        <select
+          className="simulation__options"
+          value={matrixSize}
+          onChange={handleMatrixSizeChange}
+        >
+          <option value={0} defaultChecked>
+            Selecciona
+          </option>
+          <option value={4}>Matriz 4x4</option>
+          <option value={5}>Matriz 5x5</option>
+          <option value={6}>Matriz 6x6</option>
+        </select>
+        <br />
+        <div className="determinant">
+          {matrix.map((row, rowIndex) => (
+            <div key={rowIndex} className="matrix-row">
+              {row.map((cell, columnIndex) => (
+                <input
+                  key={columnIndex}
+                  type="number"
+                  value={cell}
+                  onChange={(e) => {
+                    const updatedMatrix = [...matrix];
+                    updatedMatrix[rowIndex][columnIndex] = e.target.value;
+                    setMatrix(updatedMatrix);
+                  }}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+        <br />
+        <button className="button" onClick={handleRandomFill}>
+          Rellenar Aleatoriamente
+        </button>
+        <button className="button">Iniciar simulacion</button>
       </div>
-      <br />
-      <button className="button" onClick={handleRandomFill}>Rellenar Aleatoriamente</button>
-      <button className="button">Iniciar simulacion</button>
+      <div className="mobile">
+        <h1 className="simulation__title">Simulación</h1>
+        <p className="simulation__text">
+          ¡Lo sentimos! Pero por el momento la visualización de la simulación en
+          dispositivos móviles no esta disponible. Agradecemos tu interés en
+          este proyecto, puedes visualizar este apartado desde tu computadora.
+        </p>
+      </div>
     </div>
   );
 }

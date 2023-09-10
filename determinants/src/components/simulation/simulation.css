@@ -8,6 +8,10 @@
   background-color: var(--BBackground);
 }
 
+.mobile{
+  display: none;
+}
+
 /* Estilo del título h1 */
 .simulation__title {
   font-size: 45px;
@@ -73,4 +77,14 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+  .desktop{
+    display: none;
+  }
+
+  .mobile{
+    display: block;
+  }
 }
