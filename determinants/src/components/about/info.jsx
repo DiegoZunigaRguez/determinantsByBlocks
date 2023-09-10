@@ -4,7 +4,7 @@ import MathExpression from "./MathExpression";
 
 const info = () => {
   return (
-    <div className="info">
+    <div>
       <p>
         Aunque el teorema de expansión de Laplace proporciona un mecanismo
         poderoso para el cálculo de determinantes de cualquier tamaño, según
@@ -15,7 +15,6 @@ const info = () => {
         en ese sentido creemos que la motivación de los estudiantes con respecto
         a este tema podría mejorar utilizando nuestro método.
       </p>
-      <br />
       <p>
         Por ejemplo, el número de determinantes de matrices de 2x2, que se
         necesita calcular en la expansión del Determinante de una Matriz de 3x3
@@ -30,7 +29,6 @@ const info = () => {
         el cálculo de los determinantes en general para cualquier tamaño de
         matriz.
       </p>
-      <br />
       <p>
         A continuación, se presenta la expresión generalizada para matrices NxN,
         por lo que supongamos una matriz "A" de tamaño NxN, tenemos la siguiente

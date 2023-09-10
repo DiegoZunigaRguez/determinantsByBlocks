@@ -17,78 +17,64 @@ function Det() {
         consideración.
       </p>
       <div className="dev__button-container">
-        <button className="dev__button" onClick={() => toggleCard(1)}>Regla de Laplace</button>
-        <button className="dev__button" onClick={() => toggleCard(2)}>Regla de Sarrus</button>
-        <button className="dev__button" onClick={() => toggleCard(3)}>Matriz Triangular</button>
+        <button className="dev__button" onClick={() => toggleCard(1)}>
+          Regla de Laplace
+        </button>
+        <button className="dev__button" onClick={() => toggleCard(2)}>
+          Regla de Sarrus
+        </button>
+        <button className="dev__button" onClick={() => toggleCard(3)}>
+          Matriz Triangular
+        </button>
       </div>
       <div className={`dev__card ${selectedCard === 1 ? "active" : ""}`}>
         <div className="dev__card-content">
-          <h2>Tarjeta 1</h2>
+          <h2>Regla de Laplace</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy text ever since the 1500s, when
-            an unknown printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries, but
-            also the leap into electronic typesetting, remaining essentially
-            unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including
-            versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the
-            leap into electronic typesetting, remaining essentially unchanged.
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book. It has survived not only five
-            centuries, but also the leap into electronic typesetting, remaining
-            essentially unchanged. It was popularised in the 1960s with the
-            release of Letraset sheets containing Lorem Ipsum passages, and more
-            recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum.
+            El teorema de Laplace es un algoritmo que nos proporciona el camino
+            para encontrar el determinante de una matriz. El teorema de Laplace
+            también es llamada expansión por menores y expansión por los
+            cofactores. El teorema de Laplace se nombra después en honor al
+            matemático francés Peter Simon Laplace (1749-1827). Pierre-Simon,
+            marqués de Laplace ; Beaumont-en-Auge, Francia, 1749 - París, 1827.
+            Matemático francés. Hijo de un granjero, inició sus estudios
+            primarios en la escuela local, pero gracias a la intervención de
+            D'Alembert, quien había quedado profundamente impresionado por un
+            escrito del joven sobre los principios de la mecánica, pudo
+            trasladarse a la capital, donde consiguió una plaza en la École
+            Militaire. Continuador de la mecánica newtoniana, hizo un gran
+            aporte para el posterior descubrimiento de lo que hoy se conoce como
+            transformada de Laplace, así también descubrió la muy conocida y
+            famosa ecuación de Laplace; en el área de la estadística sentó las
+            bases de la teoría i=analítica de la probabilidad; y como astrónomo
+            planteó la teoría nebular sobre la formación del sistema solar.
+            Compartió la doctrina filosófica del determinismo científico. A
+            continuación, se presenta un ejemplo teórico de la regla de Laplace:
           </p>
         </div>
       </div>
       <div className={`dev__card ${selectedCard === 2 ? "active" : ""}`}>
         <div className="dev__card-content">
-          <h2>Tarjeta 2</h2>
+          <h2>Regla de Sarrus</h2>
           <p>
-            Contenido de la tarjeta 2. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Maecenas tristique justo in ligula fringilla, ac
-            dignissim purus vulputate. Sed vel scelerisque velit.
+            La regla de Sarrus es un método que permite calcular rápidamente el
+            determinante de una matriz cuadrada con tamaño de 3×3 únicamente. En
+            otras palabras, la regla de Sarrus consiste en dibujar dos conjuntos
+            de dos triángulos opuestos mediante los elementos de la matriz. El
+            primer conjunto serán 2 triángulos que cruzarán la diagonal
+            principal y el segundo conjunto serán 2 triángulos que cruzarán la
+            diagonal secundaria.
           </p>
         </div>
       </div>
       <div className={`dev__card ${selectedCard === 3 ? "active" : ""}`}>
         <div className="dev__card-content">
-          <h2>Tarjeta 3</h2>
+          <h2>Matriz Triangular</h2>
           <p>
-            Contenido de la tarjeta 3. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Maecenas tristique justo in ligula fringilla, ac
-            dignissim purus vulputate. Sed vel scelerisque velit.
+            Se tiene el siguiente teorema Sea A=(a_ij )una matriz de nxn
+            triangular superior o inferior.Entonces det⁡〖A=a_11 a_22 a_33…a_nn
+            〗 Esto es,el dterminante de una matriz triangular es igual al
+            producto de sus compenetes en la diagonal priuncipal.
           </p>
         </div>
       </div>
