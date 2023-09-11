@@ -30,6 +30,15 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 2. Se hacen cambios en la pantalla de inicio
 3. Se hacen cambios en los botones para darles animacion
 
+>23-08-2023
+1. Se crea una nueva rama donde se almacena la nueva versión
+
+>11-09-2023
+1. Se reacomoda la estructura de los componentes
+2. Se añaden información a cada uno de los métodos de determinantes
+3. Se anexan diferentes componentes (archivos .jsx) para poder tener un código más limpio
+4. Se hace la responsividad de cada uno de los componentes de las formulas matematicas
+
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
 2. Para compilar y generar una versión para productivo "npm build"
