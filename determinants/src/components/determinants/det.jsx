@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import "./det.css"; // Asegúrate de que el nombre del archivo CSS sea "Det.css" o el que desees
+import "./det.css"; 
+import Laplace from "./Laplace";
+import Sarrus from "./Sarrus";
 
 function Det() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -29,42 +31,12 @@ function Det() {
       </div>
       <div className={`dev__card ${selectedCard === 1 ? "active" : ""}`}>
         <div className="dev__card-content">
-          <h2>Regla de Laplace</h2>
-          <p>
-            El teorema de Laplace es un algoritmo que nos proporciona el camino
-            para encontrar el determinante de una matriz. El teorema de Laplace
-            también es llamada expansión por menores y expansión por los
-            cofactores. El teorema de Laplace se nombra después en honor al
-            matemático francés Peter Simon Laplace (1749-1827). Pierre-Simon,
-            marqués de Laplace ; Beaumont-en-Auge, Francia, 1749 - París, 1827.
-            Matemático francés. Hijo de un granjero, inició sus estudios
-            primarios en la escuela local, pero gracias a la intervención de
-            D'Alembert, quien había quedado profundamente impresionado por un
-            escrito del joven sobre los principios de la mecánica, pudo
-            trasladarse a la capital, donde consiguió una plaza en la École
-            Militaire. Continuador de la mecánica newtoniana, hizo un gran
-            aporte para el posterior descubrimiento de lo que hoy se conoce como
-            transformada de Laplace, así también descubrió la muy conocida y
-            famosa ecuación de Laplace; en el área de la estadística sentó las
-            bases de la teoría i=analítica de la probabilidad; y como astrónomo
-            planteó la teoría nebular sobre la formación del sistema solar.
-            Compartió la doctrina filosófica del determinismo científico. A
-            continuación, se presenta un ejemplo teórico de la regla de Laplace:
-          </p>
+          <Laplace/>
         </div>
       </div>
       <div className={`dev__card ${selectedCard === 2 ? "active" : ""}`}>
         <div className="dev__card-content">
-          <h2>Regla de Sarrus</h2>
-          <p>
-            La regla de Sarrus es un método que permite calcular rápidamente el
-            determinante de una matriz cuadrada con tamaño de 3×3 únicamente. En
-            otras palabras, la regla de Sarrus consiste en dibujar dos conjuntos
-            de dos triángulos opuestos mediante los elementos de la matriz. El
-            primer conjunto serán 2 triángulos que cruzarán la diagonal
-            principal y el segundo conjunto serán 2 triángulos que cruzarán la
-            diagonal secundaria.
-          </p>
+          <Sarrus/>
         </div>
       </div>
       <div className={`dev__card ${selectedCard === 3 ? "active" : ""}`}>
