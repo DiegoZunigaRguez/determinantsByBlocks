@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./det.css"; 
-import Laplace from "./Laplace";
-import Sarrus from "./Sarrus";
+import Laplace from "./Laplace/Laplace";
+import Sarrus from "./Sarrus/Sarrus";
+import Triangular from "./Triangular/Triangular";
 
 function Det() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -41,13 +42,7 @@ function Det() {
       </div>
       <div className={`dev__card ${selectedCard === 3 ? "active" : ""}`}>
         <div className="dev__card-content">
-          <h2>Matriz Triangular</h2>
-          <p>
-            Se tiene el siguiente teorema Sea A=(a_ij )una matriz de nxn
-            triangular superior o inferior.Entonces det⁡〖A=a_11 a_22 a_33…a_nn
-            〗 Esto es,el dterminante de una matriz triangular es igual al
-            producto de sus compenetes en la diagonal priuncipal.
-          </p>
+          <Triangular/>
         </div>
       </div>
     </div>
