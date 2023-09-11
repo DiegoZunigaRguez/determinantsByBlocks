@@ -1,46 +1,70 @@
-# Trabajo Terminal Cálculo para dterminantes de 4x4 y 5x5#
-================================================================
-## Bitacora de cambios en el repositorio
-----------------------------------------------------------------
-En la presente rama se anexan la bitacora para la pagina web y tener un control de versionamiento
+# Getting Started with Create React App
 
->09-08-2023
-1. Se crea una rama para la primera version de la pagina web
-2. Se crea una rama para la segunda version de la pagina web
-3. Se crea la pantalla de inicio
-4. Se hace responsiva la pantalla de inicio
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
->11-08-2023
-1. Se crea la pantalla welcome
-2. Se sube la primera version de la pantalla
-3. Se deploya en netlify
-4. Se hacen los cambios de responsive para celular
-5. Se crea la pantalla about
+## Available Scripts
 
->12-08-2023
-1. Se crea la pantalla de desarrolladores
-2. Se realiza la codificacion de la pantalla
-3. Se realiza las modificaciones necesarias para la version movil
-4. Se continua con la codificacion de la pantalla about
-5. Se crea la pantalla donde se tendra la informacion acerca de los determinantes
-6. Se crea la pantalla de simulacion
+In the project directory, you can run:
 
->13-08-2023
-1. Se realizan cambios en la parte movil de la aplicacion
-2. Se hacen cambios en la pantalla de inicio
-3. Se hacen cambios en los botones para darles animacion
+### `npm start`
 
->23-08-2023
-1. Se crea una nueva rama donde se almacena la nueva versión
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
->11-09-2023
-1. Se reacomoda la estructura de los componentes
-2. Se añaden información a cada uno de los métodos de determinantes
-3. Se anexan diferentes componentes (archivos .jsx) para poder tener un código más limpio
-4. Se hace la responsividad de cada uno de los componentes de las formulas matematicas
-5. Se colocan videos sobre los temas
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Pasos para la ejecución del proyecto en react
-1. Para iniciar la aplicación se requiere del cómando "npm start"
-2. Para compilar y generar una versión para productivo "npm build"
-3. Para subir a productivo "netlify deploy --prod" y colocar "./build" para tomar la versión de productivo generada con anterioridad
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
