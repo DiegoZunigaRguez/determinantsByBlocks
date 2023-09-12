@@ -6,6 +6,7 @@ import LaplaceExpansion from "./LaplaceExpansion";
 import Steps from "./Steps";
 import Theory from "./Theory";
 import VideoPlayer from "./VideoPlayer";
+import LaplaceExample from "./LaplaceExample";
 
 const Laplace = () => {
   return (
@@ -22,6 +23,7 @@ const Laplace = () => {
       <LaplaceExpansion/>
       <br />
       <h2>Ejemplo</h2>
+      <LaplaceExample/>
       <h2>Recursos de consulta</h2>
       <VideoPlayer/>
     </div>
