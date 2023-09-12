@@ -1,8 +1,8 @@
 import React from "react";
 import "../det.css";
 import Mobilematrix from "./mobile/mobilematrix";
-import LaplaceExpression from "./LaplaceExpression";
-import LaplaceExpansion from "./LaplaceExpansion";
+import Mobileexpansion from "./mobile/mobileexpansion";
+import Mobileexpresion from "./mobile/mobileexpresion";
 import Steps from "./Steps";
 import Theory from "./Theory";
 import VideoPlayer from "./VideoPlayer";
@@ -15,12 +15,12 @@ const Laplace = () => {
       <Theory/>
       <Mobilematrix/>
       <Steps/>
-      <LaplaceExpression/>
+      <Mobileexpansion/>
       <p className="after-formula">
         La fórmula para el teorema de Laplace de una matriz A del n×n se muestra
         en la siguiente expresión:
       </p>
-      <LaplaceExpansion/>
+      <Mobileexpresion/>
       <br />
       <h2>Ejemplo</h2>
       <LaplaceExample/>

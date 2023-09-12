@@ -241,8 +241,6 @@ iframe {
   color: var(--letter);
   border-radius: 10px;
   padding: 10px;
-  position: relative;
-  right: -130px;
 }
 
 .formula__imagen {
@@ -323,7 +321,7 @@ iframe {
   }
 
   .formula__imagen{
-    width: auto;
+    width: 400px;
     height: auto;
   }
 }
