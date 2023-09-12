@@ -21,7 +21,6 @@ const Definition = () => {
     <div>
       <h2>Regla de Laplace</h2>
       <Theory />
-      <br />
       <button onClick={togglePopup} className="pop-button">Mostrar matriz 3x3</button>
       {isPopupOpen && (
         <>
@@ -34,6 +33,7 @@ const Definition = () => {
           </div>
         </>
       )}
+      <br />
       <Steps />
       <LaplaceExpression />
       <p className="after-formula">

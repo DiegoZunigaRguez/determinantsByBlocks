@@ -139,4 +139,8 @@
     padding: 2rem 1rem 1rem;
     font-size: 18px;
   }
+
+  .about__card{
+    max-height: calc(100vh - 475px);
+  }
 }
