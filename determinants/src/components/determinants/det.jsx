@@ -3,6 +3,8 @@ import "./det.css";
 import Laplace from "./Laplace/Laplace";
 import Sarrus from "./Sarrus/Sarrus";
 import Triangular from "./Triangular/Triangular";
+import Definition from "./Laplace/mobile/definition";
+import VideoPlayer from "./Laplace/VideoPlayer";
 
 function Det() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -62,19 +64,19 @@ function Det() {
                   className={`tab-button ${selectedGame === 0 ? "active" : ""}`}
                   onClick={() => toggleGameCard(0)}
                 >
-                  Pestaña 1
+                  Definición
                 </button>
                 <button
                   className={`tab-button ${selectedGame === 1 ? "active" : ""}`}
                   onClick={() => toggleGameCard(1)}
                 >
-                  Pestaña 2
+                  Ejemplo
                 </button>
                 <button
                   className={`tab-button ${selectedGame === 2 ? "active" : ""}`}
                   onClick={() => toggleGameCard(2)}
                 >
-                  Pestaña 3
+                  Recursos
                 </button>
               </div>
               <div className="card-content">
@@ -83,108 +85,7 @@ function Det() {
                     selectedGame === 0 ? "active" : ""
                   }`}
                 >
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.Lorem
-                    Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a
-                    galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially
-                    unchanged. It was popularised in the 1960s with the release
-                    of Letraset sheets containing Lorem Ipsum passages, and more
-                    recently with desktop publishing software like Aldus
-                    PageMaker including versions of Lorem Ipsum.Lorem Ipsum is
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s, when an unknown printer took a galley of
-                    type and scrambled it to make a type specimen book. It has
-                    survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It
-                    was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum.Lorem Ipsum is simply
-                    dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since
-                    the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. It has survived
-                    not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with
-                    desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of
-                    the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with
-                    desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of
-                    the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with
-                    desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of
-                    the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with
-                    desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of
-                    the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with
-                    desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of
-                    the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with
-                    desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of
-                    the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with
-                    desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
-                  </p>
+                  <Definition/>
                 </div>
                 <div
                   className={`tab-content ${
@@ -198,7 +99,7 @@ function Det() {
                     selectedGame === 2 ? "active" : ""
                   }`}
                 >
-                  Contenido de la Pestaña 3
+                  <VideoPlayer/>
                 </div>
               </div>
             </div>
@@ -212,19 +113,19 @@ function Det() {
                   className={`tab-button ${selectedGame === 0 ? "active" : ""}`}
                   onClick={() => toggleGameCard(0)}
                 >
-                  Pestaña 1
+                  Definición
                 </button>
                 <button
                   className={`tab-button ${selectedGame === 1 ? "active" : ""}`}
                   onClick={() => toggleGameCard(1)}
                 >
-                  Pestaña 2
+                  Ejemplo
                 </button>
                 <button
                   className={`tab-button ${selectedGame === 2 ? "active" : ""}`}
                   onClick={() => toggleGameCard(2)}
                 >
-                  Pestaña 3
+                  Recursos
                 </button>
               </div>
               <div className="card-content">
@@ -261,19 +162,19 @@ function Det() {
                   className={`tab-button ${selectedGame === 0 ? "active" : ""}`}
                   onClick={() => toggleGameCard(0)}
                 >
-                  Pestaña 1
+                  Definición
                 </button>
                 <button
                   className={`tab-button ${selectedGame === 1 ? "active" : ""}`}
                   onClick={() => toggleGameCard(1)}
                 >
-                  Pestaña 2
+                  Ejemplo
                 </button>
                 <button
                   className={`tab-button ${selectedGame === 2 ? "active" : ""}`}
                   onClick={() => toggleGameCard(2)}
                 >
-                  Pestaña 3
+                  Recursos
                 </button>
               </div>
               <div className="card-content">

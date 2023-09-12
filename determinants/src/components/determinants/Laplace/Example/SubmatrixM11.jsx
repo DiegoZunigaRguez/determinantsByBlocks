@@ -1,5 +1,4 @@
 import React from "react";
-import '../det.css'
 
 const SubmatrixM11 = () => {
   return (

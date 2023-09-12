@@ -179,6 +179,23 @@ iframe {
     white-space: normal;
 }
 
+.tab-content h2{
+    font-size: 20px;
+    /* Tamaño de fuente del título de la tarjeta */
+    margin-bottom: 10px;
+    /* Espaciado inferior */
+    color: var(--RHeader);
+    font-weight: bold;
+}
+
+.tab-content p{
+    font-size: 16px;
+    /* Tamaño de fuente del texto de la tarjeta */
+    margin-bottom: 20px;
+    /* Espaciado inferior */
+    text-align: justify;
+}
+
 .tab-content.active {
     display: block;
 }
