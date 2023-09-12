@@ -18,7 +18,7 @@
 .about__advice {
   text-align: center;
   padding: 2rem;
-  font-size: 33px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -27,7 +27,6 @@
 }
 
 .button--flex__about {
-  margin-top: 10px;
   border-color: var(--RHeader);
 }
 
@@ -47,31 +46,27 @@
 }
 
 .about__card{
-    /* Ocultar la tarjeta de forma predeterminada */
-    max-height: calc(100vh - 200px);
-    /* Altura máxima de la tarjeta (ajustada para el contenido) */
-    overflow-y: auto;
-    /* Agregar scroll vertical si es necesario */
-    border: 1px solid #ccc;
-    /* Borde de la tarjeta */
-    border-radius: 5px;
-    /* Bordes redondeados */
-    padding: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    /* Espaciado interior */
-    background-color: #fff;
-    /* Color de fondo de la tarjeta */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra de la tarjeta */
+  max-height: calc(100vh - 200px);
+  /* Altura máxima de la tarjeta (ajustada para el contenido) */
+  overflow-y: auto;
+  /* Agregar scroll vertical si es necesario */
+  border: 1px solid #ccc;
+  /* Borde de la tarjeta */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  padding: 20px;
+  /* Espaciado interior */
+  background-color: #fff;
+  /* Color de fondo de la tarjeta */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra de la tarjeta */
+  margin-top: 1rem;
 }
 
 .about__card-content{
   max-height: 300px;
-    /* Altura máxima para el contenido */
-    overflow-y: auto;
-    /* Agregar scroll vertical si es necesario */
+  /* Altura máxima para el contenido */
+  /* Agregar scroll vertical si es necesario */
 }
 
 .about__card-content h2{
@@ -92,6 +87,20 @@
 }
 
 /* Estilos específicos para dispositivos más pequeños */
+@media (min-width: 1800px) {
+  .about__card {
+    max-height: calc(100vh - 300px);
+    /* Ajusta la altura máxima para pantallas más grandes */
+  }
+}
+
+@media (min-width: 1100px) {
+  .about__card {
+    max-height: calc(100vh - 400px);
+    /* Ajusta la altura máxima para pantallas más grandes */
+  }
+}
+
 @media (max-width: 768px) {
 
   /* Ajustar el ancho máximo y el margen para pantallas pequeñas */

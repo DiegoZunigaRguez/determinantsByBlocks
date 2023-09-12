@@ -1,6 +1,6 @@
 import React from "react";
 import "../det.css";
-import Matrix3x3 from "./matrix3x3";
+import Mobilematrix from "./mobile/mobilematrix";
 import LaplaceExpression from "./LaplaceExpression";
 import LaplaceExpansion from "./LaplaceExpansion";
 import Steps from "./Steps";
@@ -10,10 +10,10 @@ import LaplaceExample from "./Example/LaplaceExample";
 
 const Laplace = () => {
   return (
-    <div>
+    <div className="Laplace">
       <h2>Regla de Laplace</h2>
       <Theory/>
-      <Matrix3x3/>
+      <Mobilematrix/>
       <Steps/>
       <LaplaceExpression/>
       <p className="after-formula">

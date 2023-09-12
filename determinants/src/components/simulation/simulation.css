@@ -22,7 +22,7 @@
 
 /* Estilo del párrafo */
 .simulation__text {
-  font-size: 26px;
+  font-size: 20px;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -47,8 +47,8 @@
   display: inline-block;
   border-left: 2px solid #B5B4B3;
   border-right: 2px solid #B5B4B3;
-  padding: 10px;
   margin: 20px;
+  height: fit-content;
 }
 
 /* Estilo de una fila de la matriz */
@@ -69,14 +69,27 @@ input[type="number"] {
 }
 
 /* Estilo de los botones */
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
+.button {
+  background-color: var(--RHeader);
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   margin-right: 10px;
+}
+
+@media (min-width: 1100px) {
+  .simulation__text{
+    font-size: 20px;
+  }
+
+  .simulation__options{
+    font-size: 20px;
+  }
+
+  .button{
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {

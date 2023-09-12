@@ -65,7 +65,6 @@ function Simulation() {
             </div>
           ))}
         </div>
-        <br />
         <button className="button" onClick={handleRandomFill}>
           Rellenar Aleatoriamente
         </button>
