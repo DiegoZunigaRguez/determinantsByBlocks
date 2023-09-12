@@ -1,261 +1,301 @@
 /* Estilo general del contenedor */
 .dev__container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    height: 100vh;
-    background-color: var(--BBackground);
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  height: 100vh;
+  background-color: var(--BBackground);
 }
 
 /* Estilo del título h1 */
 .dev__container h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
-    margin-top: 3rem;
-    color: var(--RHeader);
+  font-size: 45px;
+  margin-bottom: 10px;
+  margin-top: 3rem;
+  color: var(--RHeader);
 }
 
 /* Estilo del párrafo */
 .dev__text {
-    font-size: 33px;
-    margin-bottom: 20px;
-    font-weight: bold;
+  font-size: 33px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 /* Estilo del contenedor de botones */
 .dev__button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* Estilo de los botones */
 .dev__button {
-    /* padding: 10px 20px;*/
-    padding: 1.25rem 2rem;
-    color: #fff;
-    border: none;
-    border-radius: 1rem;
-    cursor: pointer;
-    background-color: var(--RHeader);
-    font-weight: bold;
-    font-size: 20px;
+  /* padding: 10px 20px;*/
+  padding: 1.25rem 2rem;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: var(--RHeader);
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* Estilo de la tarjeta */
 .dev__card {
-    display: none;
-    /* Ocultar la tarjeta de forma predeterminada */
-    max-height: calc(100vh - 200px);
-    /* Altura máxima de la tarjeta (ajustada para el contenido) */
-    overflow-y: auto;
-    /* Agregar scroll vertical si es necesario */
-    border: 1px solid #ccc;
-    /* Borde de la tarjeta */
-    border-radius: 5px;
-    /* Bordes redondeados */
-    padding: 20px;
-    /* Espaciado interior */
-    background-color: #fff;
-    /* Color de fondo de la tarjeta */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra de la tarjeta */
+  display: none;
+  /* Ocultar la tarjeta de forma predeterminada */
+  max-height: calc(100vh - 200px);
+  /* Altura máxima de la tarjeta (ajustada para el contenido) */
+  overflow-y: auto;
+  /* Agregar scroll vertical si es necesario */
+  border: 1px solid #ccc;
+  /* Borde de la tarjeta */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  padding: 20px;
+  /* Espaciado interior */
+  background-color: #fff;
+  /* Color de fondo de la tarjeta */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra de la tarjeta */
 }
 
 /* Estilo de la tarjeta activa */
 .dev__card.active {
-    display: block;
-    /* Mostrar la tarjeta cuando está activa */
+  display: block;
+  /* Mostrar la tarjeta cuando está activa */
 }
 
 /* Estilo del contenido de la tarjeta */
 .dev__card-content {
-    max-height: 300px;
-    /* Altura máxima para el contenido */
-    overflow-y: auto;
-    /* Agregar scroll vertical si es necesario */
+  max-height: 300px;
+  /* Altura máxima para el contenido */
+  overflow-y: auto;
+  /* Agregar scroll vertical si es necesario */
 }
 
 /* Estilo de los títulos de las tarjetas */
 .dev__card-content h2 {
-    font-size: 20px;
-    /* Tamaño de fuente del título de la tarjeta */
-    margin-bottom: 10px;
-    /* Espaciado inferior */
-    color: var(--RHeader);
-    font-weight: bold;
+  font-size: 20px;
+  /* Tamaño de fuente del título de la tarjeta */
+  margin-bottom: 10px;
+  /* Espaciado inferior */
+  color: var(--RHeader);
+  font-weight: bold;
 }
 
 /* Estilo del texto de las tarjetas */
 .dev__card-content p {
-    font-size: 16px;
-    /* Tamaño de fuente del texto de la tarjeta */
-    margin-bottom: 20px;
-    /* Espaciado inferior */
-    text-align: justify;
+  font-size: 16px;
+  /* Tamaño de fuente del texto de la tarjeta */
+  margin-bottom: 20px;
+  /* Espaciado inferior */
+  text-align: justify;
 }
 
 /* Estilo de la tarjeta activa */
 .dev__card.active {
-    display: block;
-    /* Mostrar la tarjeta cuando está activa */
+  display: block;
+  /* Mostrar la tarjeta cuando está activa */
 }
 
 /*Estilos para los videos*/
 .video-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .video-item {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    /* Proporción 16:9 para el iframe */
-    /* Proporción 16:9 para el iframe */
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  /* Proporción 16:9 para el iframe */
+  /* Proporción 16:9 para el iframe */
 }
 
 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*Para los ejemplos*/
 .mobile {
-    display: none;
+  display: none;
 }
 
 /* Estilos CSS */
 /* Estilos CSS para dispositivos móviles */
 .card-tabs-container {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 5px;
-    max-width: 400px;
-    /* Establece el ancho máximo de la tarjeta */
-    overflow: hidden;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  max-width: 400px;
+  /* Establece el ancho máximo de la tarjeta */
+  overflow: hidden;
 }
 
 .card-tab {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tab-button {
-    flex: 1;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 5px;
-    /* Espaciado uniforme entre los botones */
+  flex: 1;
+  background-color: var(--RHeader);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  /* Espaciado uniforme entre los botones */
 }
 
-
 .tab-button.active {
-    background-color: #e74c3c;
+  background-color: var(--letter);
+  color: var(--RHeader);
+  font-weight: bold;
 }
 
 .tab-content {
-    display: none;
-    padding: 10px;
-    background-color: #f2f2f2;
-    max-height: 300px !important;
-    /* Altura máxima antes de que aparezca el scroll */
-    overflow-y: auto;
-    /* Agregar una barra de desplazamiento vertical si es necesario */
-    word-wrap: break-word;
-    /* Rompe las palabras largas para que se ajusten al contenedor */
-    white-space: normal;
+  display: none;
+  padding: 10px;
+  background-color: var(--letter);
+  max-height: 300px !important;
+  /* Altura máxima antes de que aparezca el scroll */
+  overflow-y: auto;
+  /* Agregar una barra de desplazamiento vertical si es necesario */
+  word-wrap: break-word;
+  /* Rompe las palabras largas para que se ajusten al contenedor */
+  white-space: normal;
 }
 
-.tab-content h2{
-    font-size: 20px;
-    /* Tamaño de fuente del título de la tarjeta */
-    margin-bottom: 10px;
-    /* Espaciado inferior */
-    color: var(--RHeader);
-    font-weight: bold;
+.tab-content h2 {
+  font-size: 20px;
+  /* Tamaño de fuente del título de la tarjeta */
+  margin-bottom: 10px;
+  /* Espaciado inferior */
+  color: var(--RHeader);
+  font-weight: bold;
 }
 
-.tab-content p{
-    font-size: 16px;
-    /* Tamaño de fuente del texto de la tarjeta */
-    margin-bottom: 20px;
-    /* Espaciado inferior */
-    text-align: justify;
+.tab-content p {
+  font-size: 16px;
+  /* Tamaño de fuente del texto de la tarjeta */
+  margin-bottom: 20px;
+  /* Espaciado inferior */
+  text-align: justify;
 }
 
 .tab-content.active {
-    display: block;
+  display: block;
+}
+
+/* Estilo para el botón de abrir el popup */
+.pop-button {
+  background-color: var(--RHeader);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilo para el overlay (fondo semitransparente) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 1000;
+  cursor: pointer; /* Cambia el cursor al hacer hover */
+}
+
+/* Estilo para el popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001; /* Mayor que el z-index del overlay */
+}
+
+/* Estilo para el botón de cerrar el popup */
+.popup button {
+    background-color: var(--RHeader);
+}
+
+.formula__imagen {
+  width: 100%;
+  height: auto;
 }
 
 /* Estilos para pantallas pequeñas (máximo 768px de ancho) */
 @media (max-width: 768px) {
+  /* Ajusta el tamaño del título h1 para pantallas pequeñas */
+  .dev__container h1 {
+    font-size: 40px;
+  }
 
-    /* Ajusta el tamaño del título h1 para pantallas pequeñas */
-    .dev__container h1 {
-        font-size: 40px;
-    }
+  /* Ajusta el tamaño del texto del párrafo para pantallas pequeñas */
+  .dev__container p {
+    font-size: 20px;
+  }
 
-    /* Ajusta el tamaño del texto del párrafo para pantallas pequeñas */
-    .dev__container p {
-        font-size: 20px;
-    }
+  /* Ajusta el tamaño de los botones para pantallas pequeñas */
+  .button-container .button {
+    padding: 8px 16px;
+  }
 
-    /* Ajusta el tamaño de los botones para pantallas pequeñas */
-    .button-container .button {
-        padding: 8px 16px;
-    }
-
-    .desktop {
-        display: block;
-    }
+  .desktop {
+    display: block;
+  }
 }
 
 /* Estilos para pantallas muy pequeñas (máximo 480px de ancho) */
 @media (max-width: 480px) {
+  /* Ajusta el tamaño del título h1 para pantallas muy pequeñas */
+  .dev__container h1 {
+    font-size: 40px;
+    margin-top: 4rem;
+  }
 
-    /* Ajusta el tamaño del título h1 para pantallas muy pequeñas */
-    .dev__container h1 {
-        font-size: 40px;
-        margin-top: 4rem;
-    }
+  /* Ajusta el tamaño del texto del párrafo para pantallas muy pequeñas */
+  p {
+    font-size: 12px;
+  }
 
-    /* Ajusta el tamaño del texto del párrafo para pantallas muy pequeñas */
-    p {
-        font-size: 12px;
-    }
+  .button-container {
+    width: 80%;
+  }
 
-    .button-container {
-        width: 80%;
-    }
+  /* Ajusta el tamaño de los botones para pantallas muy pequeñas */
+  .dev__button {
+    padding: 6px 12px;
+    font-size: 18px;
+  }
 
-    /* Ajusta el tamaño de los botones para pantallas muy pequeñas */
-    .dev__button {
-        padding: 6px 12px;
-        font-size: 18px;
-    }
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    .video-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .mobile {
+    display: block;
+  }
 
-    .mobile {
-        display: block;
-    }
-
-    .desktop {
-        display: none;
-    }
+  .desktop {
+    display: none;
+  }
 }

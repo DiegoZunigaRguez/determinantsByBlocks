@@ -1,17 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import Theory from "../Theory";
-import Matrix3x3 from "../matrix3x3";
+import MobileMatrix from "./mobilematrix";
 import Steps from "../Steps";
 import LaplaceExpression from "../LaplaceExpression";
 import LaplaceExpansion from "../LaplaceExpansion";
-import '../../det.css';
+import "../../det.css";
 
-const definition = () => {
+const Definition = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
     <div>
       <h2>Regla de Laplace</h2>
       <Theory />
-      <Matrix3x3 />
+      <br />
+      <button onClick={togglePopup} className="pop-button">Mostrar matriz 3x3</button>
+      {isPopupOpen && (
+        <>
+          <div className="overlay" onClick={closePopup}></div>
+          <div className="popup">
+            <button onClick={closePopup}>
+              X
+            </button>
+            <MobileMatrix />
+          </div>
+        </>
+      )}
       <Steps />
       <LaplaceExpression />
       <p className="after-formula">
@@ -24,4 +46,4 @@ const definition = () => {
   );
 };
 
-export default definition;
+export default Definition;
