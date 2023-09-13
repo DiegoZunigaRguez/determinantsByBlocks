@@ -5,7 +5,7 @@ import '../../det.css';
 const mobilematrix = () => {
   return (
     <div>
-        <img srcSet={Matrix} alt="" className="formula__imagen" />
+        <img srcSet={Matrix} alt="" className="formula__imagen__easy" />
     </div>
   )
 }

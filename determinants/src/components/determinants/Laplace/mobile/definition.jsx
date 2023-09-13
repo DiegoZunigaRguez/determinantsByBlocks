@@ -32,7 +32,9 @@ const Definition = () => {
           <div className="overlay" onClick={closePopup}></div>
           <div className="popup">
             <button onClick={closePopup}>X</button>
-            <MobileMatrix />
+            <div className="popup-content">
+              <MobileMatrix />
+            </div>
           </div>
         </>
       )}
@@ -49,7 +51,9 @@ const Definition = () => {
           <div className="overlay" onClick={closePopup}></div>
           <div className="popup">
             <button onClick={closePopup}>X</button>
-            <Mobileexpansion />
+            <div className="popup-content">
+              <Mobileexpansion />
+            </div>
           </div>
         </>
       )}
@@ -69,7 +73,9 @@ const Definition = () => {
           <div className="overlay" onClick={closePopup}></div>
           <div className="popup">
             <button onClick={closePopup}>X</button>
-            <Mobileexpresion />
+            <div className="popup-content">
+              <Mobileexpresion />
+            </div>
           </div>
         </>
       )}
