@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./det.css";
 import Laplace from "./Laplace/Laplace";
 import Sarrus from "./Sarrus/Sarrus";
+import SarrusDefinition from "./Sarrus/mobile/definition";
 import Triangular from "./Triangular/Triangular";
 import Definition from "./Laplace/mobile/definition";
 import VideoPlayer from "./Laplace/VideoPlayer";
@@ -135,7 +136,7 @@ function Det() {
                     selectedGame === 0 ? "active" : ""
                   }`}
                 >
-                  Contenido de la Pestaña 1
+                  <SarrusDefinition/>
                 </div>
                 <div
                   className={`tab-content ${

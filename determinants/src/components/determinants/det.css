@@ -248,6 +248,7 @@ iframe {
   margin-top: 40px; /* Deja espacio para el botón de cerrar en la esquina superior izquierda */
 }
 
+
 .formula__imagen__easy {
   width: 200px;
   height: auto;
@@ -287,6 +288,11 @@ iframe {
 
   .desktop {
     display: block;
+  }
+
+  .popup-content p{
+    margin: 1rem;
+    font-size: 12px;
   }
 }
 
@@ -338,5 +344,10 @@ iframe {
   .formula__imagen__easy{
     width: calc(100vw - 50px);
     height: auto;
+  }
+
+  .popup-content p{
+    margin: 1rem;
+    font-size: 16px;
   }
 }
