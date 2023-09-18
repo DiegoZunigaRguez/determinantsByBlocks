@@ -5,7 +5,9 @@ import Sarrus from "./Sarrus/Sarrus";
 import SarrusDefinition from "./Sarrus/mobile/definition";
 import Triangular from "./Triangular/Triangular";
 import Definition from "./Laplace/mobile/definition";
-import VideoPlayer from "./Laplace/VideoPlayer";
+import VideoPlayerLaplace from "./Laplace/VideoPlayer";
+import VideoPlayerSarrus from "./Sarrus/VideoPlayer";
+import VideoPlayerTriangular from "./Triangular/VideoPlayer";
 import Mobileexample from "./Laplace/mobile/mobileexample";
 
 function Det() {
@@ -101,7 +103,7 @@ function Det() {
                     selectedGame === 2 ? "active" : ""
                   }`}
                 >
-                  <VideoPlayer/>
+                  <VideoPlayerLaplace/>
                 </div>
               </div>
             </div>
@@ -150,7 +152,7 @@ function Det() {
                     selectedGame === 2 ? "active" : ""
                   }`}
                 >
-                  Contenido de la Pestaña 3
+                  <VideoPlayerSarrus/>
                 </div>
               </div>
             </div>
@@ -199,7 +201,7 @@ function Det() {
                     selectedGame === 2 ? "active" : ""
                   }`}
                 >
-                  Contenido de la Pestaña 3
+                  <VideoPlayerTriangular/>
                 </div>
               </div>
             </div>

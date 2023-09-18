@@ -1,10 +1,10 @@
 import React from "react";
-import MatrixExample from "../mobile/mobilematrix5";
-import Mobilesubmatrix1 from "../mobile/mobilesubmatrix1";
-import Mobilesubmatrix2 from "../mobile/mobilesubmatrix2";
-import Mobilesubmatrix3 from "../mobile/mobilesubmatrix3";
-import Mobilesubmatrix4 from "../mobile/mobilesubmatrix4";
-import Mobilematrixexpansion from "../mobile/mobilematrixexpansion";
+import Matrix from "../../../../assets/A4.png";
+import M11 from "../../../../assets/M11.png";
+import M12 from "../../../../assets/M12.png";
+import M13 from "../../../../assets/M13.png";
+import M14 from "../../../../assets/M14.png";
+import Expansion from "../../../../assets/expansion.png";
 import M111 from "../../../../assets/M111.png";
 import M112 from "../../../../assets/M112.png";
 import M113 from "../../../../assets/M113.png";
@@ -28,7 +28,7 @@ const LaplaceExample = () => {
         Primero, definimos una matriz de dimensión 4x4 como se muestra a
         continuación:
       </p>
-      <MatrixExample />
+      <img srcSet={Matrix} alt="" className="formula__imagen__easy" />
       <p>
         Posterior a ello, generamos las submatrices siguiendo la expresión
         anterior:
@@ -39,7 +39,7 @@ const LaplaceExample = () => {
         posición. Una vez hecho esto, procedemos a tomar la matriz de dimensión
         3x3 que no esta incluida por dicha fila y columna.
       </p>
-      <Mobilesubmatrix1 />
+      <img srcSet={M11} alt="" className="formula__imagen" />
       <br />
       <p>
         Para la segunda submatriz, tomamos la primera posición es decir el valor
@@ -48,7 +48,7 @@ const LaplaceExample = () => {
         3x3 que no esta incluida por dicha fila y columna. Es importante
         recordar que en esta posición el signo se cambia.
       </p>
-      <Mobilesubmatrix2 />
+      <img srcSet={M12} alt="" className="formula__imagen" />
       <br />
       <p>
         Para la tercera submatriz, tomamos la primera posición es decir el valor
@@ -56,7 +56,7 @@ const LaplaceExample = () => {
         posición. Una vez hecho esto, procedemos a tomar la matriz de dimensión
         3x3 que no esta incluida por dicha fila y columna.
       </p>
-      <Mobilesubmatrix3 />
+      <img srcSet={M13} alt="" className="formula__imagen" />
       <br />
       <p>
         Para la cuarta submatriz, tomamos la primera posición es decir el valor
@@ -65,12 +65,12 @@ const LaplaceExample = () => {
         3x3 que no esta incluida por dicha fila y columna. Es importante
         recordar que en esta posición el signo se cambia.
       </p>
-      <Mobilesubmatrix4 />
+      <img srcSet={M14} alt="" className="formula__imagen" />
       <br />
       <p>
         Una vez hecho esa expansión por separado podemos definirlo como sigue:
       </p>
-      <Mobilematrixexpansion />
+      <img srcSet={Expansion} alt="" className="formula__imagen" />
       <br />
       <p>
         Como se puede observar, el calculo de determinantes aún no se puede
@@ -78,24 +78,24 @@ const LaplaceExample = () => {
         respectiva expansión de laplace.
       </p>
       <p>Para la primera matriz de 3x3, se tiene lo siguiente:</p>
-      <img srcSet={M111} alt="" className="formula__imagen__easy" />
-      <img srcSet={M112} alt="" className="formula__imagen__easy" />
-      <img srcSet={M113} alt="" className="formula__imagen__easy" />
+      <img srcSet={M111} alt="" className="formula__imagen__result" />
+      <img srcSet={M112} alt="" className="formula__imagen__result" />
+      <img srcSet={M113} alt="" className="formula__imagen__result" />
       <br />
       <p>Para la segunda</p>
-      <img srcSet={M121} alt="" className="formula__imagen__easy" />
-      <img srcSet={M122} alt="" className="formula__imagen__easy" />
-      <img srcSet={M123} alt="" className="formula__imagen__easy" />
+      <img srcSet={M121} alt="" className="formula__imagen__result" />
+      <img srcSet={M122} alt="" className="formula__imagen__result" />
+      <img srcSet={M123} alt="" className="formula__imagen__result" />
       <br />
       <p>Para la tercera</p>
-      <img srcSet={M131} alt="" className="formula__imagen__easy" />
-      <img srcSet={M132} alt="" className="formula__imagen__easy" />
-      <img srcSet={M133} alt="" className="formula__imagen__easy" />
+      <img srcSet={M131} alt="" className="formula__imagen__result" />
+      <img srcSet={M132} alt="" className="formula__imagen__result" />
+      <img srcSet={M133} alt="" className="formula__imagen__result" />
       <br />
       <p>Para la cuarta</p>
-      <img srcSet={M141} alt="" className="formula__imagen__easy" />
-      <img srcSet={M142} alt="" className="formula__imagen__easy" />
-      <img srcSet={M143} alt="" className="formula__imagen__easy" />
+      <img srcSet={M141} alt="" className="formula__imagen__result" />
+      <img srcSet={M142} alt="" className="formula__imagen__result" />
+      <img srcSet={M143} alt="" className="formula__imagen__result" />
       <br />
       <p>Una vez hecha esta ultima expansión tenemos lo siguiente:</p>
       <img srcSet={Expansion2} alt="" className="formula__imagen" />
@@ -110,7 +110,7 @@ const LaplaceExample = () => {
         <br />
         Finalmente el resultado del determinante es el siguiente:
       </p>
-      <img srcSet={Resultado} alt="" className="formula__imagen" />
+      <img srcSet={Resultado} alt="" className="formula__imagen__result" />
     </div>
   );
 };

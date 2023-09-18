@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Theory from "../Theory";
-import MobileMatrix from "./mobilematrix";
+import Matrix from "../../../../assets/matrix3x3.png";
 import Steps from "../Steps";
-import Mobileexpansion from "./mobileexpansion";
-import Mobileexpresion from "./mobileexpresion";
+import Expansion from "../../../../assets/expansion.png";
+import Expresion from "../../../../assets/expresion.png";
 import "../../det.css";
 
 const Definition = () => {
@@ -33,7 +33,7 @@ const Definition = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <MobileMatrix />
+            <img srcSet={Matrix} alt="" className="formula__imagen__easy" />
             </div>
           </div>
         </>
@@ -52,7 +52,7 @@ const Definition = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <Mobileexpansion />
+            <img srcSet={Expansion} alt="" className="formula__imagen" />
             </div>
           </div>
         </>
@@ -74,7 +74,7 @@ const Definition = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <Mobileexpresion />
+            <img srcSet={Expresion} alt="" className="formula__imagen" />
             </div>
           </div>
         </>

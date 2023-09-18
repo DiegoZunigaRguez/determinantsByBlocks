@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import MatrixExample from "../mobile/mobilematrix5";
-import Mobilesubmatrix1 from "../mobile/mobilesubmatrix1";
-import Mobilesubmatrix2 from "../mobile/mobilesubmatrix2";
-import Mobilesubmatrix3 from "../mobile/mobilesubmatrix3";
-import Mobilesubmatrix4 from "../mobile/mobilesubmatrix4";
-import Mobilematrixexpansion from "./mobilematrixexpansion";
 import "../../det.css";
+import Matrix from "../../../../assets/A4.png";
+import M11 from "../../../../assets/M11.png";
+import M12 from "../../../../assets/M12.png";
+import M13 from "../../../../assets/M13.png";
+import M14 from "../../../../assets/M14.png";
+import Expansion from "../../../../assets/MExpansion.png";
 import M111 from "../../../../assets/M111.png";
 import M112 from "../../../../assets/M112.png";
 import M113 from "../../../../assets/M113.png";
@@ -52,7 +52,7 @@ const Mobileexample = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <MatrixExample />
+            <img srcSet={Matrix} alt="" className="formula__imagen__easy" />
             </div>
           </div>
         </>
@@ -78,7 +78,7 @@ const Mobileexample = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <Mobilesubmatrix1 />
+            <img srcSet={M11} alt="" className="formula__imagen" />
             </div>
           </div>
         </>
@@ -103,7 +103,7 @@ const Mobileexample = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <Mobilesubmatrix2 />
+            <img srcSet={M12} alt="" className="formula__imagen" />
             </div>
           </div>
         </>
@@ -127,7 +127,7 @@ const Mobileexample = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <Mobilesubmatrix3 />
+            <img srcSet={M13} alt="" className="formula__imagen" />
             </div>
           </div>
         </>
@@ -152,7 +152,7 @@ const Mobileexample = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <Mobilesubmatrix4 />
+            <img srcSet={M14} alt="" className="formula__imagen" />
             </div>
           </div>
         </>
@@ -171,7 +171,7 @@ const Mobileexample = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <Mobilematrixexpansion />
+            <img srcSet={Expansion} alt="" className="formula__imagen" />
             </div>
           </div>
         </>
@@ -264,7 +264,7 @@ const Mobileexample = () => {
           <div className="popup">
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
-              <Mobilematrixexpansion />
+            <img srcSet={Expansion} alt="" className="formula__imagen" />
               <p>
                 Haciendo la expansión de los determinantes de 3x3, resulta lo
                 siguiente

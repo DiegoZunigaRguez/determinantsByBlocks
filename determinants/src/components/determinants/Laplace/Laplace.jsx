@@ -1,8 +1,8 @@
 import React from "react";
 import "../det.css";
-import Mobilematrix from "./mobile/mobilematrix";
-import Mobileexpansion from "./mobile/mobileexpansion";
-import Mobileexpresion from "./mobile/mobileexpresion";
+import Matrix from "../../../assets/matrix3x3.png";
+import Expansion from "../../../assets/expansion.png";
+import Expresion from "../../../assets/expresion.png";
 import Steps from "./Steps";
 import Theory from "./Theory";
 import VideoPlayer from "./VideoPlayer";
@@ -13,14 +13,14 @@ const Laplace = () => {
     <div className="Laplace">
       <h2>Regla de Laplace</h2>
       <Theory/>
-      <Mobilematrix/>
+      <img srcSet={Matrix} alt="" className="formula__imagen__easy" />
       <Steps/>
-      <Mobileexpansion/>
+      <img srcSet={Expansion} alt="" className="formula__imagen" />
       <p className="after-formula">
         La fórmula para el teorema de Laplace de una matriz A del n×n se muestra
         en la siguiente expresión:
       </p>
-      <Mobileexpresion/>
+      <img srcSet={Expresion} alt="" className="formula__imagen" />
       <br />
       <h2>Ejemplo</h2>
       <LaplaceExample/>

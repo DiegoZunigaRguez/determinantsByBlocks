@@ -248,14 +248,18 @@ iframe {
   margin-top: 40px; /* Deja espacio para el botón de cerrar en la esquina superior izquierda */
 }
 
-
 .formula__imagen__easy {
   width: 200px;
   height: auto;
 }
 
+.formula__imagen__result{
+  width: 350px;
+  height: auto;
+}
+
 .formula__imagen{
-  width: 400px;
+  width: 500px;
   height: auto;
 }
 
@@ -342,6 +346,11 @@ iframe {
   }
 
   .formula__imagen__easy{
+    width: calc(100vw - 50px);
+    height: auto;
+  }
+
+  .formula__imagen__result{
     width: calc(100vw - 50px);
     height: auto;
   }
