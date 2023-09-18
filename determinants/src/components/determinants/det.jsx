@@ -5,6 +5,7 @@ import Sarrus from "./Sarrus/Sarrus";
 import Triangular from "./Triangular/Triangular";
 import Definition from "./Laplace/mobile/definition";
 import VideoPlayer from "./Laplace/VideoPlayer";
+import Mobileexample from "./Laplace/mobile/mobileexample";
 
 function Det() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -92,7 +93,7 @@ function Det() {
                     selectedGame === 1 ? "active" : ""
                   }`}
                 >
-                  Contenido de la Pestaña 2
+                  <Mobileexample/>
                 </div>
                 <div
                   className={`tab-content ${
