@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../det.css";
 import SarrusExpresion from "../../../../assets/Sarrus.png";
+import SarrusExpression2 from "../../../../assets/Sarrus2.png";
 
 const Definition = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -36,6 +37,7 @@ const Definition = () => {
             <button onClick={closePopup}>X</button>
             <div className="popup-content">
             <img src={SarrusExpresion} alt="" className="formula__imagen"/>
+            <img src={SarrusExpression2} alt="" className="formula__imagen"/>
             </div>
           </div>
         </>

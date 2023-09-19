@@ -1,6 +1,8 @@
 import React from "react";
 import "../det.css";
+import SarrusExample from "./SarrusExample";
 import SarrusExpresion from "../../../assets/Sarrus.png";
+import SarrusExpression2 from "../../../assets/Sarrus2.png";
 import VideoPlayer from "./VideoPlayer";
 
 const Sarrus = () => {
@@ -16,7 +18,9 @@ const Sarrus = () => {
         segundo conjunto serán 2 triángulos que cruzarán la diagonal secundaria.
       </p>
       <img src={SarrusExpresion} alt="" className="formula__imagen"/>
+      <img src={SarrusExpression2} alt="" className="formula__imagen__result" />
       <h2>Ejemplo</h2>
+      <SarrusExample/>
       <h2>Recursos de consulta</h2>
       <VideoPlayer/>
     </div>

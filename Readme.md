@@ -38,6 +38,13 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 2. Se añaden información a cada uno de los métodos de determinantes
 3. Se anexan diferentes componentes (archivos .jsx) para poder tener un código más limpio
 4. Se hace la responsividad de cada uno de los componentes de las formulas matematicas
+5. Se colocan videos sobre los temas
+
+>17-09-2023
+1. Se coloca el ejemplo para la version movil
+
+>18-09-2023
+1. Se termina Laplace y Sarrus para la version de escritorio y movil
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"

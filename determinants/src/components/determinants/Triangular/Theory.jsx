@@ -51,56 +51,9 @@ const Theory = () => {
             </mrow>
           </msub>
         </math>{" "}
-        Esto es,el dterminante de una matriz triangular es igual al producto de
+        Esto es, el determinante de una matriz triangular es igual al producto de
         sus componentes en la diagonal principal.
       </p>
-      <math xmlns="http://www.w3.org/1998/Math/MathML">
-        <mrow>
-          <mo>|</mo>
-          <mtable>
-            <mtr>
-              <mtd>
-                <mi>a</mi>
-              </mtd>
-              <mtd>
-                <mo>0</mo>
-              </mtd>
-              <mtd>
-                <mo>0</mo>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mo>0</mo>
-              </mtd>
-              <mtd>
-                <mi>b</mi>
-              </mtd>
-              <mtd>
-                <mo>0</mo>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mo>0</mo>
-              </mtd>
-              <mtd>
-                <mo>0</mo>
-              </mtd>
-              <mtd>
-                <mi>c</mi>
-              </mtd>
-            </mtr>
-          </mtable>
-          <mo>|</mo>
-          <mo>=</mo>
-          <mi>a</mi>
-          <mo>*</mo>
-          <mi>b</mi>
-          <mo>*</mo>
-          <mi>c</mi>
-        </mrow>
-      </math>
     </div>
   );
 };

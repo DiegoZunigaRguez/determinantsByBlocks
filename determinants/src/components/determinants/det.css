@@ -263,6 +263,11 @@ iframe {
   height: auto;
 }
 
+.Sarrus__image{
+  width: auto;
+  height: 200px;
+}
+
 /* Estilos para pantallas pequeñas (máximo 768px de ancho) */
 
 @media (min-width: 1100px) {
@@ -282,7 +287,7 @@ iframe {
 
   /* Ajusta el tamaño del texto del párrafo para pantallas pequeñas */
   .dev__container p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   /* Ajusta el tamaño de los botones para pantallas pequeñas */
