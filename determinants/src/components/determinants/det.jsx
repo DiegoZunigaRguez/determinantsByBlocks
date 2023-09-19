@@ -6,6 +6,7 @@ import SarrusDefinition from "./Sarrus/mobile/definition";
 import SarrusExample from "./Sarrus/mobile/mobileexample";
 import Triangular from "./Triangular/Triangular";
 import TriangularDefinition from "./Triangular/mobile/definition";
+import TriangularExample from "./Triangular/mobile/mobileexample";
 import Definition from "./Laplace/mobile/definition";
 import VideoPlayerLaplace from "./Laplace/VideoPlayer";
 import VideoPlayerSarrus from "./Sarrus/VideoPlayer";
@@ -196,7 +197,7 @@ function Det() {
                     selectedGame === 1 ? "active" : ""
                   }`}
                 >
-                  Contenido de la Pestaña 2
+                  <TriangularExample/>
                 </div>
                 <div
                   className={`tab-content ${

@@ -46,6 +46,9 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 >18-09-2023
 1. Se termina Laplace y Sarrus para la version de escritorio y movil
 
+>19-09-2023
+1. Se coloca el ejemplo de la matriz triangular para la versión de escritorio y movil
+
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
 2. Para compilar y generar una versión para productivo "npm build"
