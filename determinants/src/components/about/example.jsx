@@ -37,12 +37,13 @@ const example = () => {
         tanto, a continuación, se muestra como se determina cada uno de los
         bloques:
       </p>
-      <img src={Det1} alt="" className="formula__imagen__easy"/>
-      <img src={Det2} alt="" className="formula__imagen__easy"/>
-      <img src={Det3} alt="" className="formula__imagen__easy"/>
-      <img src={Det4} alt="" className="formula__imagen__easy"/>
-      <img src={Det5} alt="" className="formula__imagen__easy"/>
-      <img src={Det6} alt="" className="formula__imagen__easy"/>
+      <img src={Det1} alt="" className="formula__imagen__result"/>
+      <img src={Det2} alt="" className="formula__imagen__result"/>
+      <img src={Det3} alt="" className="formula__imagen__result"/>
+      <br />
+      <img src={Det4} alt="" className="formula__imagen__result"/>
+      <img src={Det5} alt="" className="formula__imagen__result"/>
+      <img src={Det6} alt="" className="formula__imagen__result"/>
       <br />
       <p>
         La expresión ahora, en base del producto de determinantes, resulta como

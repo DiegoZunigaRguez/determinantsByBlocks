@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.css";
-import TTExpression from "../../assets/TTExpresion.png";
 
 const info = () => {
   return (
@@ -34,7 +33,6 @@ const info = () => {
         por lo que supongamos una matriz "A" de tamaño NxN, tenemos la siguiente
         expresión
       </p>
-      <img src={TTExpression} alt="" className="formula__imagen"/>
     </div>
   );
 };

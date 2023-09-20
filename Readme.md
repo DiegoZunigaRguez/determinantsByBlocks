@@ -49,7 +49,10 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 >19-09-2023
 1. Se coloca el ejemplo de la matriz triangular para la versión de escritorio y movil
 2. Se termina el apartado de determinantes
-3. Se comienza el apartadp
+3. Se comienza el apartado de acerca del proyecto
+
+>20-09-2023
+1. Se completa el apartado acerca del proyecto en su forma de escritorio y de movil
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"

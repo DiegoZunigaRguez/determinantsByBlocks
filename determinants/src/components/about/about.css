@@ -88,6 +88,10 @@
     text-align: justify;
 }
 
+.mobile{
+  display: none;
+}
+
 /* Estilos específicos para dispositivos más pequeños */
 @media (min-width: 1800px) {
   .about__card {
@@ -106,7 +110,6 @@
 @media (max-width: 768px) {
 
   /* Ajustar el ancho máximo y el margen para pantallas pequeñas */
-  .content {}
 
   /* Cambiar el tamaño de fuente para mejorar la legibilidad */
   h1 {
@@ -144,5 +147,13 @@
 
   .about__card{
     max-height: calc(100vh - 475px);
+  }
+
+  .desktop{
+    display: none;
+  }
+
+  .mobile{
+    display: block;
   }
 }
