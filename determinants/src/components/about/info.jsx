@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import MathExpression from "./MathExpression";
+import TTExpression from "../../assets/TTExpresion.png";
 
 const info = () => {
   return (
@@ -20,11 +20,11 @@ const info = () => {
         necesita calcular en la expansión del Determinante de una Matriz de 3x3
         es solo 3. por cierto para este caso hay algunos artículos que brindan
         algunas alternativas para su cálculo, puede ser la regla de Sarrus que
-        puedes verificar en el apartado <a href="#Sarrus">Regla de Sarrus</a>{" "}
+        puedes verificar en el apartado Regla de Sarrus
         que se encuentra en la seccion de determinantes. Sin embargo, el número
         de determinantes de matrices de 2x2 aumenta a 12, cuando se trata de
-        calcular el determinante de una matriz de 4 4, así como 60 para una
-        matriz de 5 5, y 360 determinantes de matrices de 2 2 para una matriz de
+        calcular el determinante de una matriz de 4x4, así como 60 para una
+        matriz de 5x5, y 360 determinantes de matrices de 2x2 para una matriz de
         6x6. También existen otros trabajos que han propuesto alternativas para
         el cálculo de los determinantes en general para cualquier tamaño de
         matriz.
@@ -34,10 +34,7 @@ const info = () => {
         por lo que supongamos una matriz "A" de tamaño NxN, tenemos la siguiente
         expresión
       </p>
-      <br />
-      <p>
-        <MathExpression/>
-      </p>
+      <img src={TTExpression} alt="" className="formula__imagen"/>
     </div>
   );
 };
