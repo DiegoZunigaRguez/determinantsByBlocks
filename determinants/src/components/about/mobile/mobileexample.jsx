@@ -13,7 +13,7 @@ import Det2x2 from "../../../assets/about2x2.png";
 import aboutProd from "../../../assets/aboutProd.png";
 import aboutRes from "../../../assets/aboutRes.png";
 
-const mobileexample = () => {
+const Mobileexample = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedPopup, setSelectedPopup] = useState(null);
 
@@ -242,4 +242,4 @@ const mobileexample = () => {
   )
 }
 
-export default mobileexample
+export default Mobileexample

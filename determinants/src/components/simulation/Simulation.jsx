@@ -1,27 +1,166 @@
 import React, { useState } from "react";
 import "./simulation.css";
+import Swal from "sweetalert2";
 
 function Simulation() {
   const [matrixSize, setMatrixSize] = useState(0);
   const [matrix, setMatrix] = useState([]);
+  const [simulationInProgress, setSimulationInProgress] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [productMatrices, setProductMatrices] = useState([]);
+  const [submatrices, setSubmatrices] = useState([]);
 
-  // Función para cambiar el tamaño de la matriz
   const handleMatrixSizeChange = (event) => {
     const newSize = parseInt(event.target.value, 10);
     setMatrixSize(newSize);
-    // Generar una matriz vacía del nuevo tamaño
     const newMatrix = Array.from({ length: newSize }, () =>
       Array(newSize).fill("")
     );
     setMatrix(newMatrix);
+    setProductMatrices([]);
+    setSubmatrices([]);
+    setCurrentStep(0);
   };
 
-  // Función para rellenar la matriz de forma aleatoria
   const handleRandomFill = () => {
     const randomMatrix = matrix.map((row) =>
       row.map(() => Math.floor(Math.random() * 10))
     );
     setMatrix(randomMatrix);
+  };
+
+  const areAllValuesValid = () => {
+    for (let i = 0; i < matrixSize; i++) {
+      for (let j = 0; j < matrixSize; j++) {
+        const cellValue = matrix[i][j];
+        if (cellValue === "" || isNaN(cellValue)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  };
+
+  const generateSubmatrices = () => {
+    const submatrices = [];
+    for (let i = 0; i < matrixSize - 1; i++) {
+      for (let j = 0; j < matrixSize - 1; j++) {
+        const submatrix = [
+          [matrix[i][j], matrix[i][j + 1]],
+          [matrix[i + 1][j], matrix[i + 1][j + 1]],
+        ];
+        submatrices.push(submatrix);
+      }
+    }
+    return submatrices;
+  };
+
+  const calculateDeterminant = (submatrix) => {
+    //return math.det(submatrix);
+  };
+
+  const handleSimulationStart = () => {
+    if (matrixSize === 0) {
+      Swal.fire("Error", "Selecciona una dimensión de matriz válida.", "error");
+    } else if (!areAllValuesValid()) {
+      Swal.fire(
+        "Error",
+        "La matriz no es válida. Se deben tener todos los elementos como números enteros.",
+        "error"
+      );
+    } else {
+      setSimulationInProgress(true);
+      const submatrices = generateSubmatrices();
+      const productDeterminants = submatrices.map((submatrix) =>
+        calculateDeterminant(submatrix)
+      );
+      setProductMatrices(productDeterminants);
+      setSubmatrices(submatrices);
+      setCurrentStep(0);
+    }
+  };
+
+  const handleNextStep = () => {
+    setCurrentStep(currentStep + 1);
+  };
+
+  const renderButtons = () => {
+    if (matrixSize === 0) {
+      return null;
+    }
+
+    if (simulationInProgress) {
+      return (
+        <>
+          {currentStep < productMatrices.length - 1 && (
+            <button className="button" onClick={handleNextStep}>
+              Siguiente Paso
+            </button>
+          )}
+          <button className="button">Correr Simulación</button>
+        </>
+      );
+    }
+
+    return (
+      <>
+        <button className="button" onClick={handleRandomFill}>
+          Rellenar Aleatoriamente
+        </button>
+        <button className="button" onClick={handleSimulationStart}>
+          Iniciar Simulación
+        </button>
+      </>
+    );
+  };
+
+  const renderProductMatrix = () => {
+    if (submatrices.length === 0 || currentStep >= submatrices.length) {
+      return null;
+    }
+
+    const currentSubmatrix1 = submatrices[currentStep];
+    const currentSubmatrix2 = submatrices[currentStep + 1];
+    const productMatrix1 = productMatrices[currentStep];
+    const productMatrix2 = productMatrices[currentStep + 1];
+
+    return (
+      <div className="">
+        <h3 style={{ color: "#3498db" }}>
+          {currentStep === 0 ? "Primer Determinante:" : `Determinante ${currentStep}:`}
+        </h3>
+        <div className="determinant">
+          {currentSubmatrix1.map((row, rowIndex) => (
+            <div key={rowIndex} className="matrix-row">
+              {row.map((cell, columnIndex) => (
+                <div className="matrix-cell" key={columnIndex}>
+                  <input
+                    type="text"
+                    value={cell}
+                    readOnly
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="determinant">
+          {currentSubmatrix2.map((row, rowIndex) => (
+            <div key={rowIndex} className="matrix-row">
+              {row.map((cell, columnIndex) => (
+                <div className="matrix-cell" key={columnIndex}>
+                  <input
+                    type="text"
+                    value={cell}
+                    readOnly
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -30,9 +169,8 @@ function Simulation() {
         <h1 className="simulation__title">Simulación</h1>
         <p className="simulation__text">
           Aquí tienes la simulación haciendo uso del algoritmo que se te
-          presentó anteriormente, lo único que necesitas para visualizar es
-          colocar la dimensión de la matriz y los datos, únicamente se puede
-          utilizar una matriz entre dimensión 4x4 y 6x6.
+          presentó anteriormente. Por favor, selecciona la dimensión de la matriz
+          y completa los datos. La matriz debe ser de dimensión 4x4 o superior.
         </p>
         <select
           className="simulation__options"
@@ -53,7 +191,7 @@ function Simulation() {
               {row.map((cell, columnIndex) => (
                 <input
                   key={columnIndex}
-                  type="number"
+                  type="text"
                   value={cell}
                   onChange={(e) => {
                     const updatedMatrix = [...matrix];
@@ -65,17 +203,15 @@ function Simulation() {
             </div>
           ))}
         </div>
-        <button className="button" onClick={handleRandomFill}>
-          Rellenar Aleatoriamente
-        </button>
-        <button className="button">Iniciar simulacion</button>
+        {renderButtons()}
+        {renderProductMatrix()}
       </div>
       <div className="mobile">
         <h1 className="simulation__title">Simulación</h1>
         <p className="simulation__text">
-          ¡Lo sentimos! Pero por el momento la visualización de la simulación en
-          dispositivos móviles no esta disponible. Agradecemos tu interés en
-          este proyecto, puedes visualizar este apartado desde tu computadora.
+          ¡Lo sentimos! La visualización de la simulación en dispositivos móviles
+          no está disponible en este momento. Te recomendamos usar una
+          computadora para interactuar con esta simulación.
         </p>
       </div>
     </div>

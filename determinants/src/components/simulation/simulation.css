@@ -57,7 +57,7 @@
 }
 
 /* Estilo de las celdas de entrada (input) */
-input[type="number"] {
+input[type="text"] {
   text-align: center;
   width: 40px;
   height: 40px;

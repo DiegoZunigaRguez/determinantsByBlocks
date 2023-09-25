@@ -7,7 +7,7 @@ import SColumn from "../../../../assets/Segundacolumna.png";
 import TColumn from "../../../../assets/TerceraColumna.png";
 import Diagonal from "../../../../assets/mobilediagonal.png";
 
-const mobileexample = () => {
+const Mobileexample = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedPopup, setSelectedPopup] = useState(null);
 
@@ -159,4 +159,4 @@ const mobileexample = () => {
   );
 };
 
-export default mobileexample;
+export default Mobileexample;

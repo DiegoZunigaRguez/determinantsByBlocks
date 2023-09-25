@@ -4,7 +4,7 @@ import SarrusMatrix from "../../../../assets/Sarrus3x3.png";
 import SarrusExpansion from "../../../../assets/Sarrus3.png";
 import SarrusResult from "../../../../assets/Sarrusresultado.png";
 
-const mobileexample = () => {
+const Mobileexample = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedPopup, setSelectedPopup] = useState(null);
 
@@ -98,4 +98,4 @@ const mobileexample = () => {
   );
 };
 
-export default mobileexample;
+export default Mobileexample;

@@ -5,7 +5,7 @@ import Example from "./example";
 import Mobileexample from "./mobile/mobileexample";
 import TTExpression from "../../assets/TTExpresion.png";
 
-const card = () => {
+const Card = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedPopup, setSelectedPopup] = useState(null);
 
@@ -64,4 +64,4 @@ const card = () => {
   );
 };
 
-export default card;
+export default Card;
