@@ -78,6 +78,20 @@ input[type="text"] {
   margin-right: 10px;
 }
 
+.matrix-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.determinant {
+  margin-right: 20px; /* Espacio entre los determinantes y el producto de determinantes */
+}
+
+.product-matrix {
+  font-weight: bold; /* Opcional: Establece el peso de la fuente para resaltar el producto */
+}
+
 @media (min-width: 1100px) {
   .simulation__text{
     font-size: 20px;

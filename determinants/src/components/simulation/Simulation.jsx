@@ -55,9 +55,7 @@ function Simulation() {
     return submatrices;
   };
 
-  const calculateDeterminant = (submatrix) => {
-    //return math.det(submatrix);
-  };
+  const calculateDeterminant = () => {};
 
   const handleSimulationStart = () => {
     if (matrixSize === 0) {
@@ -121,39 +119,26 @@ function Simulation() {
 
     const currentSubmatrix1 = submatrices[currentStep];
     const currentSubmatrix2 = submatrices[currentStep + 1];
-    const productMatrix1 = productMatrices[currentStep];
-    const productMatrix2 = productMatrices[currentStep + 1];
 
     return (
       <div className="">
-        <h3 style={{ color: "#3498db" }}>
-          {currentStep === 0 ? "Primer Determinante:" : `Determinante ${currentStep}:`}
-        </h3>
         <div className="determinant">
-          {currentSubmatrix1.map((row, rowIndex) => (
+          {matrix.slice(0, 2).map((row, rowIndex) => (
             <div key={rowIndex} className="matrix-row">
-              {row.map((cell, columnIndex) => (
+              {row.slice(1, 3).map((cell, columnIndex) => (
                 <div className="matrix-cell" key={columnIndex}>
-                  <input
-                    type="text"
-                    value={cell}
-                    readOnly
-                  />
+                  <input type="text" value={cell} readOnly />
                 </div>
               ))}
             </div>
           ))}
         </div>
         <div className="determinant">
-          {currentSubmatrix2.map((row, rowIndex) => (
+          {matrix.slice(2, 4).map((row, rowIndex) => (
             <div key={rowIndex} className="matrix-row">
-              {row.map((cell, columnIndex) => (
+              {row.slice(2, 4).map((cell, columnIndex) => (
                 <div className="matrix-cell" key={columnIndex}>
-                  <input
-                    type="text"
-                    value={cell}
-                    readOnly
-                  />
+                  <input type="text" value={cell} readOnly />
                 </div>
               ))}
             </div>
@@ -169,8 +154,9 @@ function Simulation() {
         <h1 className="simulation__title">Simulación</h1>
         <p className="simulation__text">
           Aquí tienes la simulación haciendo uso del algoritmo que se te
-          presentó anteriormente. Por favor, selecciona la dimensión de la matriz
-          y completa los datos. La matriz debe ser de dimensión 4x4 o superior.
+          presentó anteriormente. Por favor, selecciona la dimensión de la
+          matriz y completa los datos. La matriz debe ser de dimensión 4x4 o
+          superior.
         </p>
         <select
           className="simulation__options"
@@ -185,32 +171,34 @@ function Simulation() {
           <option value={6}>Matriz 6x6</option>
         </select>
         <br />
-        <div className="determinant">
-          {matrix.map((row, rowIndex) => (
-            <div key={rowIndex} className="matrix-row">
-              {row.map((cell, columnIndex) => (
-                <input
-                  key={columnIndex}
-                  type="text"
-                  value={cell}
-                  onChange={(e) => {
-                    const updatedMatrix = [...matrix];
-                    updatedMatrix[rowIndex][columnIndex] = e.target.value;
-                    setMatrix(updatedMatrix);
-                  }}
-                />
-              ))}
-            </div>
-          ))}
-        </div>
-        {renderButtons()}
+        {matrixSize > 0 && (
+          <div className="determinant">
+            {matrix.map((row, rowIndex) => (
+              <div key={rowIndex} className="matrix-row">
+                {row.map((cell, columnIndex) => (
+                  <input
+                    key={columnIndex}
+                    type="text"
+                    value={cell}
+                    onChange={(e) => {
+                      const updatedMatrix = [...matrix];
+                      updatedMatrix[rowIndex][columnIndex] = e.target.value;
+                      setMatrix(updatedMatrix);
+                    }}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
         {renderProductMatrix()}
+        {renderButtons()}
       </div>
       <div className="mobile">
         <h1 className="simulation__title">Simulación</h1>
         <p className="simulation__text">
-          ¡Lo sentimos! La visualización de la simulación en dispositivos móviles
-          no está disponible en este momento. Te recomendamos usar una
+          ¡Lo sentimos! La visualización de la simulación en dispositivos
+          móviles no está disponible en este momento. Te recomendamos usar una
           computadora para interactuar con esta simulación.
         </p>
       </div>
