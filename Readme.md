@@ -8,6 +8,9 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 1. Se crea la rama para trabajar en la simulacion.
 2. Se generan los primeros productos de determinantes.
 
+>25-09-2023
+1. Se obtienen los subdeterminantes 
+
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
