@@ -55,8 +55,8 @@ function Simulation() {
     return submatrices;
   };
 
-  const calculateDeterminant = () => {
-    // Agrega aquí tu función para calcular el determinante de una matriz
+  const calculateDeterminant = (matrix) => {
+    return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
   };
 
   const handleSimulationStart = () => {
@@ -77,6 +77,7 @@ function Simulation() {
       setProductMatrices(productDeterminants);
       setSubmatrices(submatrices);
       setCurrentStep(0);
+
     }
   };
 
@@ -92,12 +93,16 @@ function Simulation() {
     if (simulationInProgress) {
       return (
         <>
-          {currentStep < productMatrices.length - 1 && (
-            <button className="button" onClick={handleNextStep}>
-              Siguiente Paso
+          <div className="button-container">
+            {currentStep < productMatrices.length - 1 && (
+              <button className="button" onClick={handleNextStep}>
+                Siguiente Paso
+              </button>
+            )}
+            <button className="button" onClick={handleSimulationStart}>
+              Correr Simulación
             </button>
-          )}
-          <button className="button">Correr Simulación</button>
+          </div>
         </>
       );
     }
@@ -119,240 +124,616 @@ function Simulation() {
       return null;
     }
 
-    const currentSubmatrix = submatrices[currentStep];
-
     const renderProductDeterminant = (step) => {
-      switch (step) {
-        case 0:
-          return (
-            <div className="">
-              <h3>Primer producto de determinantes</h3>
-              <div className="determinant">
-              {matrix.slice(0,2).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(0,1).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(1,2).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+      if (matrixSize === 4) {
+        switch (step) {
+          case 0:
+            return (
+              <div className="">
+                <h3>Primer producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="determinant">
-                {matrix.slice(2,4).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(2, 3).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(3,4).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 1:
+            return (
+              <div className="">
+                <h3>Segundo producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        case 1:
-          return (
-            <div className="">
-              <h3>Segundo producto de determinantes</h3>
-              <div className="determinant">
-              {matrix.slice(0,2).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(0,1).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(2,3).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 2:
+            return (
+              <div className="">
+                <h3>Tercer producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="determinant">
-                {matrix.slice(2,4).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(1, 2).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(3,4).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 3:
+            return (
+              <div className="">
+                <h3>Cuarto producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        case 2:
-          return (
-            <div className="">
-              <h3>Tercer producto de determinantes</h3>
-              <div className="determinant">
-                {matrix.slice(0, 2).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(0, 1).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(3, 4).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 4:
+            return (
+              <div className="">
+                <h3>Quinto producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="determinant">
-                {matrix.slice(2, 4).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(1, 2).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(2, 3).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 5:
+            return (
+              <div className="">
+                <h3>Sexto producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        case 3:
-          return (
-            <div className="">
-              <h3>Cuarto producto de determinantes</h3>
-              <div className="determinant">
-                {matrix.slice(0, 2).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(1, 2).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(2, 3).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          default:
+            return null;
+        }
+      } else if (matrixSize === 5) {
+        switch (step) {
+          case 0:
+            return (
+              <div className="">
+                <h3>Primer producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="determinant">
-                {matrix.slice(2, 4).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(0, 1).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(3, 4).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 1:
+            return (
+              <div className="">
+                <h3>Segundo producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        case 4:
-          return (
-            <div className="">
-              <h3>Quinto producto de determinantes</h3>
-              <div className="determinant">
-                {matrix.slice(0, 2).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(1, 2).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(3, 4).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 2:
+            return (
+              <div className="">
+                <h3>Tercer producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(4, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="determinant">
-                {matrix.slice(2, 4).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(0, 1).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(2, 3).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 3:
+            return (
+              <div className="">
+                <h3>Cuarto producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(4, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        case 5:
-          return (
-            <div className="">
-              <h3>Sexto producto de determinantes</h3>
-              <div className="determinant">
-                {matrix.slice(0, 2).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(2, 3).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(3, 4).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 4:
+            return (
+              <div className="">
+                <h3>Quinto producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="determinant">
-                {matrix.slice(2, 4).map((row, rowIndex) => (
-                  <div key={rowIndex} className="matrix-row">
-                    {row.slice(0, 1).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                    {row.slice(1, 2).map((cell, columnIndex) => (
-                      <div className="matrix-cell" key={columnIndex}>
-                        <input type="text" value={cell} readOnly />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            );
+          case 5:
+            return (
+              <div className="">
+                <h3>Sexto producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(4, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        default:
-          return null;
+            );
+          case 6:
+            return (
+              <div className="">
+                <h3>Septimo producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(4, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          case 7:
+            return (
+              <div className="">
+                <h3>Octavo producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(2, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(4, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          case 8:
+            return (
+              <div className="">
+                <h3>Noveno producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(4, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          case 9:
+            return (
+              <div className="">
+                <h3>Decimo producto de determinantes</h3>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(3, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          default:
+            return null;
+        }
+      } else {
       }
     };
 
@@ -362,28 +743,50 @@ function Simulation() {
   return (
     <div className="simulation__container" id="simulation">
       <div className="desktop">
-        <h1 className="simulation__title">Simulación</h1>
-        <p className="simulation__text">
-          Aquí tienes la simulación haciendo uso del algoritmo que se te
-          presentó anteriormente. Por favor, selecciona la dimensión de la
-          matriz y completa los datos. La matriz debe ser de dimensión 4x4 o
-          superior.
-        </p>
-        <select
-          className="simulation__options"
-          value={matrixSize}
-          onChange={handleMatrixSizeChange}
-        >
-          <option value={0} defaultChecked>
-            Selecciona
-          </option>
-          <option value={4}>Matriz 4x4</option>
-          <option value={5}>Matriz 5x5</option>
-          <option value={6}>Matriz 6x6</option>
-        </select>
-        <br />
-        {matrixSize > 0 && (
-          <div className="determinant">
+        {!simulationInProgress && (
+          <div>
+            <h1 className="simulation__title">Simulación</h1>
+            <p className="simulation__text">
+              Aquí tienes la simulación haciendo uso del algoritmo que se te
+              presentó anteriormente. Por favor, selecciona la dimensión de la
+              matriz y completa los datos. La matriz debe ser de dimensión 4x4 o
+              superior.
+            </p>
+            <select
+              className="simulation__options"
+              value={matrixSize}
+              onChange={handleMatrixSizeChange}
+            >
+              <option value={0} defaultChecked>
+                Selecciona
+              </option>
+              <option value={4}>Matriz 4x4</option>
+              <option value={5}>Matriz 5x5</option>
+              <option value={6}>Matriz 6x6</option>
+            </select>
+            <br />
+            <div className="determinant">
+              {matrix.map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.map((cell, columnIndex) => (
+                    <input
+                      key={columnIndex}
+                      type="text"
+                      value={cell}
+                      onChange={(e) => {
+                        const updatedMatrix = [...matrix];
+                        updatedMatrix[rowIndex][columnIndex] = e.target.value;
+                        setMatrix(updatedMatrix);
+                      }}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {simulationInProgress && (
+          <div className="determinant__after">
             {matrix.map((row, rowIndex) => (
               <div key={rowIndex} className="matrix-row">
                 {row.map((cell, columnIndex) => (
@@ -402,7 +805,7 @@ function Simulation() {
             ))}
           </div>
         )}
-        {renderProductMatrix()}
+        <div className="product-container">{renderProductMatrix()}</div>
         {renderButtons()}
       </div>
       <div className="mobile">
