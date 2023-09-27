@@ -97,6 +97,10 @@ input[type="text"] {
   background-color: #D96A3D; /* Color de resaltado, puedes cambiarlo */
 }
 
+.highlight__down{
+  background-color: #E19031;
+}
+
 @media (min-width: 1100px) {
   .simulation__text{
     font-size: 20px;

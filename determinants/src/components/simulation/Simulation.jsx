@@ -1319,18 +1319,18 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1360,18 +1360,18 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1401,18 +1401,18 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1442,18 +1442,18 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1483,18 +1483,18 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1524,18 +1524,18 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1570,33 +1570,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1626,33 +1626,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1682,33 +1682,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1738,33 +1738,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1794,33 +1794,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1850,33 +1850,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1906,33 +1906,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -1962,33 +1962,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -2018,33 +2018,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -2074,33 +2074,33 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -2135,55 +2135,55 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
-                case 5:
-                  switch (columnIndex) {
-                    case 2:
-                      return "highlight";
-                    case 3:
-                      return "highlight";
-                    case 4:
-                      return "highlight";
-                    case 5:
-                      return "highlight";
-                    default:
-                      return "";
-                  }
+              case 5:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight__down";
+                  case 5:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
               default:
                 return false;
             }
@@ -2210,52 +2210,52 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 5:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -2285,52 +2285,52 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 5:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -2360,52 +2360,52 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 5:
                 switch (columnIndex) {
                   case 1:
-                    return "highlight";
+                    return "highlight__down";
                   case 2:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -2435,52 +2435,52 @@ function Simulation() {
               case 2:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
               case 5:
                 switch (columnIndex) {
                   case 0:
-                    return "highlight";
+                    return "highlight__down";
                   case 3:
-                    return "highlight";
+                    return "highlight__down";
                   case 4:
-                    return "highlight";
+                    return "highlight__down";
                   case 5:
-                    return "highlight";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -2766,7 +2766,7 @@ function Simulation() {
                     return "highlight";
                   case 3:
                     return "highlight";
-                  case 5: 
+                  case 5:
                     return "highlight";
                   default:
                     return "";
@@ -2828,8 +2828,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 5:
-                      return "highlight";
+                  case 5:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -2841,8 +2841,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 5:
-                      return "highlight";
+                  case 5:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -2854,8 +2854,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 5:
-                      return "highlight";
+                  case 5:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -2903,8 +2903,8 @@ function Simulation() {
                     return "highlight";
                   case 3:
                     return "highlight";
-                    case 5:
-                      return "highlight";
+                  case 5:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -2916,8 +2916,8 @@ function Simulation() {
                     return "highlight";
                   case 3:
                     return "highlight";
-                    case 5:
-                      return "highlight";
+                  case 5:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -2929,14 +2929,14 @@ function Simulation() {
                     return "highlight";
                   case 3:
                     return "highlight";
-                    case 5:
-                      return "highlight";
+                  case 5:
+                    return "highlight";
                   default:
                     return "";
                 }
               default:
                 return false;
-            } 
+            }
           case 11:
             switch (rowIndex) {
               case 0:
@@ -2978,8 +2978,8 @@ function Simulation() {
                     return "highlight";
                   case 3:
                     return "highlight";
-                    case 4:
-                      return "highlight";
+                  case 4:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -2991,8 +2991,8 @@ function Simulation() {
                     return "highlight";
                   case 3:
                     return "highlight";
-                    case 4:
-                      return "highlight";
+                  case 4:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3004,8 +3004,8 @@ function Simulation() {
                     return "highlight";
                   case 3:
                     return "highlight";
-                    case 4:
-                      return "highlight";
+                  case 4:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3053,8 +3053,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 5:
-                      return "highlight";
+                  case 5:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3066,8 +3066,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 5:
-                      return "highlight";
+                  case 5:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3079,8 +3079,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 5:
-                      return "highlight";
+                  case 5:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3128,8 +3128,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 4:
-                      return "highlight";
+                  case 4:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3141,8 +3141,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 4:
-                      return "highlight";
+                  case 4:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3154,8 +3154,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 4:
-                      return "highlight";
+                  case 4:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3203,8 +3203,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 3:
-                      return "highlight";
+                  case 3:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3216,8 +3216,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 3:
-                      return "highlight";
+                  case 3:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3229,8 +3229,8 @@ function Simulation() {
                     return "highlight";
                   case 2:
                     return "highlight";
-                    case 3:
-                      return "highlight";
+                  case 3:
+                    return "highlight";
                   default:
                     return "";
                 }
@@ -3251,8 +3251,15 @@ function Simulation() {
               {row.map((cell, columnIndex) => (
                 <div
                   className={`matrix-cell ${
-                    shouldHighlightCell(rowIndex, columnIndex, currentStep)
-                      ? "highlight" // Aplica la clase de resaltado si se cumple la condición
+                    shouldHighlightCell(rowIndex, columnIndex, currentStep) ===
+                    "highlight"
+                      ? "highlight"
+                      : shouldHighlightCell(
+                          rowIndex,
+                          columnIndex,
+                          currentStep
+                        ) === "highlight__down"
+                      ? "highlight__down"
                       : ""
                   }`}
                   key={columnIndex}
