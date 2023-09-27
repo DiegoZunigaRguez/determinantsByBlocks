@@ -11,6 +11,13 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 >25-09-2023
 1. Se obtienen los subdeterminantes 
 
+>26-09-2023
+1. Se comienza a trabajar en los subproductos de matrices
+2. Se termina el codigo para los determinantes de 5x5
+3. Se termina el codigo para los determinantes de 6x6
+4. Se termina el codigo para los determinantes de 4x4
+5. Se coloca el color detras a cada uno de los subdeterminantes
+
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"

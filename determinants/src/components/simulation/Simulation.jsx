@@ -77,7 +77,6 @@ function Simulation() {
       setProductMatrices(productDeterminants);
       setSubmatrices(submatrices);
       setCurrentStep(0);
-
     }
   };
 
@@ -1291,7 +1290,1995 @@ function Simulation() {
       }
     };
 
-    return renderProductDeterminant(currentStep);
+    const shouldHighlightCell = (rowIndex, columnIndex, step) => {
+      // Define aquí la lógica para determinar si la celda debe resaltarse según el paso actual (step)
+      // Por ejemplo, puedes resaltar la diagonal en el paso 0 y otras celdas en pasos posteriores.
+      // Asegúrate de ajustar esta lógica según tus necesidades.
+      if (matrixSize === 4) {
+        switch (step) {
+          case 0:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 1:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 2:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 3:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 4:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 5:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          default:
+            return false; // Por defecto, no se resalta ninguna celda
+        }
+      } else if (matrixSize === 5) {
+        switch (step) {
+          case 0:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 1:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 2:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 3:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 4:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 5:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 6:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 7:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 8:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 9:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          default:
+            return false; // Por defecto, no se resalta ninguna celda
+        }
+      } else {
+        switch (step) {
+          case 0:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+                case 5:
+                  switch (columnIndex) {
+                    case 2:
+                      return "highlight";
+                    case 3:
+                      return "highlight";
+                    case 4:
+                      return "highlight";
+                    case 5:
+                      return "highlight";
+                    default:
+                      return "";
+                  }
+              default:
+                return false;
+            }
+          case 1:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 2:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 3:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 4:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 5:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 6:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 7:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 8:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5: 
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 9:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 5:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 5:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 5:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 10:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                    case 5:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                    case 5:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                    case 5:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            } 
+          case 11:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                    case 4:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                    case 4:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                    case 4:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 12:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 5:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 5:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 5:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 13:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 4:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 4:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 4:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 14:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 4:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 3:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 3:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                    case 3:
+                      return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          default:
+            return false; // Por defecto, no se resalta ninguna celda
+        }
+      }
+    };
+
+    return (
+      <div className="">
+        <div className="determinant__after">
+          {matrix.map((row, rowIndex) => (
+            <div key={rowIndex} className="matrix-row">
+              {row.map((cell, columnIndex) => (
+                <div
+                  className={`matrix-cell ${
+                    shouldHighlightCell(rowIndex, columnIndex, currentStep)
+                      ? "highlight" // Aplica la clase de resaltado si se cumple la condición
+                      : ""
+                  }`}
+                  key={columnIndex}
+                >
+                  <input type="text" value={cell} readOnly />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {renderProductDeterminant(currentStep)}
+      </div>
+    );
+    //return renderProductDeterminant(currentStep);
+  };
+
+  const autoRunSimulation = () => {
+    // Esta función ejecutará automáticamente la simulación paso a paso
+    const intervalId = setInterval(() => {
+      if (currentStep < productMatrices.length - 1) {
+        handleNextStep();
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 1000); // Cambia el intervalo según tus necesidades (1000 ms = 1 segundo)
   };
 
   return (
@@ -1337,26 +3324,6 @@ function Simulation() {
                 </div>
               ))}
             </div>
-          </div>
-        )}
-        {simulationInProgress && (
-          <div className="determinant__after">
-            {matrix.map((row, rowIndex) => (
-              <div key={rowIndex} className="matrix-row">
-                {row.map((cell, columnIndex) => (
-                  <input
-                    key={columnIndex}
-                    type="text"
-                    value={cell}
-                    onChange={(e) => {
-                      const updatedMatrix = [...matrix];
-                      updatedMatrix[rowIndex][columnIndex] = e.target.value;
-                      setMatrix(updatedMatrix);
-                    }}
-                  />
-                ))}
-              </div>
-            ))}
           </div>
         )}
         <div className="product-container">{renderProductMatrix()}</div>
