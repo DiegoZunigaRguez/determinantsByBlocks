@@ -120,6 +120,24 @@ input[type="text"] {
   font-size: 30px;
 }
 
+@media (min-width: 1600px) {
+  .expansion {
+    grid-template-columns: repeat(15, 1fr) !important; /* Divide el grid en 5 columnas de igual tamaño */
+  }
+  .button-container{
+    left: calc(100vw - 120vw) !important; /* Ajusta la distancia desde el borde izquierdo de la ventana */
+  }
+}
+
+@media (min-width: 1300px) {
+  .expansion {
+    grid-template-columns: repeat(12, 1fr) !important; /* Divide el grid en 5 columnas de igual tamaño */
+  }
+  .button-container{
+    left: calc(100vw - 120vw) !important; /* Ajusta la distancia desde el borde izquierdo de la ventana */
+  }
+}
+
 @media (min-width: 1100px) {
   .simulation__text{
     font-size: 20px;
@@ -131,6 +149,13 @@ input[type="text"] {
 
   .button{
     font-size: 16px;
+  }
+
+  .expansion {
+    grid-template-columns: repeat(9, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
+  }
+  .button-container{
+    left: calc(100vw - 110vw); /* Ajusta la distancia desde el borde izquierdo de la ventana */
   }
 }
 

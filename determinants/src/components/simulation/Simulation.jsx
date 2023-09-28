@@ -4843,7 +4843,7 @@ function Simulation() {
           <div>
             <div className="product-container">{renderProductMatrix()}</div>
           </div>
-        )};
+        )}
         
         {renderButtons()}
       </div>
