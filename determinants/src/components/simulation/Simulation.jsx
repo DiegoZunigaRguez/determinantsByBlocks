@@ -1868,7 +1868,46 @@ function Simulation() {
         switch (step) {
           case 0:
             return (
-              <div className="">
+              <div className="expansion">
+                <p>=</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row highlight">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 5).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row highlight__down">
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 5).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          case 1:
+            return (
+              <div className="expansion5x5">
+                <p>=</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
                     <div key={rowIndex} className="matrix-row">
@@ -1901,15 +1940,10 @@ function Simulation() {
                     </div>
                   ))}
                 </div>
-              </div>
-            );
-          case 1:
-            return (
-              <div className="">
-                <h3>Segundo producto de determinantes</h3>
+                <p>-</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
+                    <div key={rowIndex} className="matrix-row highlight">
                       {row.slice(0, 1).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
@@ -1925,7 +1959,7 @@ function Simulation() {
                 </div>
                 <div className="determinant">
                   {matrix.slice(2, 5).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
+                    <div key={rowIndex} className="matrix-row highlight__down">
                       {row.slice(1, 2).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
