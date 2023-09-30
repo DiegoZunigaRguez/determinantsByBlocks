@@ -113,7 +113,7 @@ input[type="text"] {
 }
 .explication__step {
   position: relative;
-  top: 4rem;
+  top: 3.5rem;
   background-color: #C4C1BD;
   text-align: center;
   width: 650px;

@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import "./simulation.css";
 import Swal from "sweetalert2";
 import Combinatoria from "../../assets/Productos.png";
 import Expression from "../../assets/TTExp.png";
+import firstSum4x4 from "../../assets/firstSum4x4.png";
+import secondSum4x4 from "../../assets/secondSum4x4.png";
+import thirdSum4x4 from "../../assets/thirdSum4x4.png";
+import fourthSum4x4 from "../../assets/fourthSum4x4.png";
+import fifthSum4x4 from "../../assets/fifthSum4x4.png";
+import sixthSum4x4 from "../../assets/sixthSum4x4.png";
+import Det2x2 from "../../assets/defDet2x2.png";
 
 function Simulation() {
   const [matrixSize, setMatrixSize] = useState(0);
   const [matrix, setMatrix] = useState([]);
   const [simulationInProgress, setSimulationInProgress] = useState(false);
+  const [startSimulation, setStartSimulation] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
+  const intervalRef = useRef(null);
   const [productMatrices, setProductMatrices] = useState([]);
   const [submatrices, setSubmatrices] = useState([]);
 
@@ -88,7 +97,7 @@ function Simulation() {
   };
 
   const handleSimulationRestart = () => {
-    setSimulationInProgress(false); // Detiene la simulación si está en progreso
+    setStartSimulation(false); // Detiene la simulación si está en progreso
     setCurrentStep(0); // Restablece el paso actual a 0
   };
 
@@ -112,7 +121,7 @@ function Simulation() {
         "error"
       );
     } else {
-      setSimulationInProgress(true);
+      setStartSimulation(true);
       const submatrices = generateSubmatrices();
       const productDeterminants = submatrices.map((submatrix) =>
         calculateDeterminant(submatrix)
@@ -125,6 +134,42 @@ function Simulation() {
 
   const handleNextStep = () => {
     setCurrentStep(currentStep + 1);
+  };
+
+  const autoRunSimulation = async () => {
+    for (let step = currentStep; step < 22; step++) {
+      if (step > currentStep) {
+        setCurrentStep(step);
+      }
+  
+      await new Promise(resolve => setTimeout(resolve, 1000));
+  
+      if (step === 21) {
+        setSimulationInProgress(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (simulationInProgress) {
+      autoRunSimulation();
+    } else {
+      // Limpiar el intervalo cuando la simulación se detiene manualmente
+      clearInterval(intervalRef.current);
+    }
+    // Limpiar el intervalo al desmontar el componente
+    return () => clearInterval(intervalRef.current);
+  }, [simulationInProgress]);
+// Este efecto se ejecutará cuando simulationInProgress cambie
+
+  const handleRunSimulationClick = () => {
+    // Cuando haces clic en "Correr Simulación", establece simulationInProgress en true
+    setSimulationInProgress(true);
+  };
+
+  const handleStopSimulationClick = () => {
+    // Cuando haces clic en "Detener Simulación", establece simulationInProgress en false
+    setSimulationInProgress(false);
   };
 
   const renderButtons = () => {
@@ -144,22 +189,25 @@ function Simulation() {
   };
 
   const renderButtonsSimulation = () => {
-    if (simulationInProgress) {
+    if (startSimulation) {
       return (
         <>
           <div className="button-container">
             <div className="button-wrapper">
-              {currentStep > 0 ? (
-                <button className="button" onClick={handleSimulationPrevious}>
-                  Paso Anterior
-                </button>
-              ) : null}
-              <button className="button" onClick={handleNextStep}>
+              {!startSimulation ? null
+              : (simulationInProgress? null 
+              : <button className="button" onClick={handleSimulationPrevious}>
+                Paso Anterior
+              </button>)}  
+              {!startSimulation?null:(simulationInProgress?null:<button className="button" onClick={handleNextStep}>
                 Siguiente Paso
-              </button>
+              </button>)}  
+              {simulationInProgress ? <button className="button" onClick={handleStopSimulationClick}>
+                Detener Simulacion
+              </button> : null}  
             </div>
             <div className="button-wrapper">
-              <button className="button" onClick={handleSimulationStart}>
+            <button className="button" onClick={handleRunSimulationClick}>
                 Correr Simulación
               </button>
               <button className="button" onClick={handleSimulationRestart}>
@@ -268,90 +316,19 @@ function Simulation() {
           )
         );
         switch (step) {
-          case 0:
-            return (
-              <div className="expansion">
-                <p>=</p>
-                <div className="determinant">
-                  {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row highlight">
-                      {row.slice(0, 1).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="determinant">
-                  {matrix.slice(2, 4).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row highlight__down">
-                      {row.slice(2, 3).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            );
           case 1:
             return (
               <div className="expansion">
                 <p>=</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(0, 1).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="determinant">
-                  {matrix.slice(2, 4).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(2, 3).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <p>-</p>
-                <div className="determinant">
-                  {matrix.slice(0, 2).map((row, rowIndex) => (
                     <div key={rowIndex} className="matrix-row highlight">
                       {row.slice(0, 1).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
                       ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
+                      {row.slice(1, 2).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -362,7 +339,7 @@ function Simulation() {
                 <div className="determinant">
                   {matrix.slice(2, 4).map((row, rowIndex) => (
                     <div key={rowIndex} className="matrix-row highlight__down">
-                      {row.slice(1, 2).map((cell, columnIndex) => (
+                      {row.slice(2, 3).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -416,46 +393,13 @@ function Simulation() {
                 <p>-</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(0, 1).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="determinant">
-                  {matrix.slice(2, 4).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <p>+</p>
-                <div className="determinant">
-                  {matrix.slice(0, 2).map((row, rowIndex) => (
                     <div key={rowIndex} className="matrix-row highlight">
                       {row.slice(0, 1).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
                       ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
+                      {row.slice(2, 3).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -471,7 +415,7 @@ function Simulation() {
                           <input type="text" value={cell} readOnly />
                         </div>
                       ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
+                      {row.slice(3, 4).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -553,46 +497,13 @@ function Simulation() {
                 <p>+</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
+                    <div key={rowIndex} className="matrix-row highlight">
                       {row.slice(0, 1).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
                       ))}
                       {row.slice(3, 4).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="determinant">
-                  {matrix.slice(2, 4).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <p>+</p>
-                <div className="determinant">
-                  {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row highlight">
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -603,12 +514,12 @@ function Simulation() {
                 <div className="determinant">
                   {matrix.slice(2, 4).map((row, rowIndex) => (
                     <div key={rowIndex} className="matrix-row highlight__down">
-                      {row.slice(0, 1).map((cell, columnIndex) => (
+                      {row.slice(1, 2).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
                       ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
+                      {row.slice(2, 3).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -723,46 +634,13 @@ function Simulation() {
                 <p>+</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="determinant">
-                  {matrix.slice(2, 4).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(0, 1).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <p>-</p>
-                <div className="determinant">
-                  {matrix.slice(0, 2).map((row, rowIndex) => (
                     <div key={rowIndex} className="matrix-row highlight">
                       {row.slice(1, 2).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
                       ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
+                      {row.slice(2, 3).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -778,7 +656,7 @@ function Simulation() {
                           <input type="text" value={cell} readOnly />
                         </div>
                       ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
+                      {row.slice(3, 4).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -926,41 +804,8 @@ function Simulation() {
                 <p>-</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="determinant">
-                  {matrix.slice(2, 4).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(0, 1).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <p>+</p>
-                <div className="determinant">
-                  {matrix.slice(0, 2).map((row, rowIndex) => (
                     <div key={rowIndex} className="matrix-row highlight">
-                      {row.slice(2, 3).map((cell, columnIndex) => (
+                      {row.slice(1, 2).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -981,7 +826,7 @@ function Simulation() {
                           <input type="text" value={cell} readOnly />
                         </div>
                       ))}
-                      {row.slice(1, 2).map((cell, columnIndex) => (
+                      {row.slice(2, 3).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
                           <input type="text" value={cell} readOnly />
                         </div>
@@ -1162,6 +1007,209 @@ function Simulation() {
                 <p>+</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row highlight">
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row highlight__down">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          case 7:
+            return (
+              <div className="expansion">
+                <p>=</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <p>-</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <p>+</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <p>+</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <p>-</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <p>+</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
                     <div key={rowIndex} className="matrix-row">
                       {row.slice(2, 3).map((cell, columnIndex) => (
                         <div className="matrix-cell" key={columnIndex}>
@@ -1194,7 +1242,7 @@ function Simulation() {
                 </div>
               </div>
             );
-          case 7:
+          case 8:
             return (
               <div className="expansion">
                 <p className="det__result">=</p>
@@ -1369,7 +1417,7 @@ function Simulation() {
                 </div>
               </div>
             );
-          case 8:
+          case 9:
             return (
               <div className="expansion">
                 <p className="det__result">=</p>
@@ -1514,122 +1562,6 @@ function Simulation() {
                 </div>
               </div>
             );
-          case 9:
-            return (
-              <div className="expansion">
-                <p>=</p>
-                <p>({calculateDeterminant(matrix1)}</p>
-                <p>*</p>
-                <p>{calculateDeterminant(matrix2)})</p>
-                <p>-</p>
-                <p>({calculateDeterminant(matrix3)}</p>
-                <p>*</p>
-                <p>{calculateDeterminant(matrix4)})</p>
-                <p>+</p>
-                <p>({calculateDeterminant(matrix5)}</p>
-                <p>*</p>
-                <p>{calculateDeterminant(matrix6)})</p>
-                <p>+</p>
-                <div className="determinant">
-                  {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="determinant">
-                  {matrix.slice(2, 4).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(0, 1).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <p>-</p>
-                <div className="determinant">
-                  {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="determinant">
-                  {matrix.slice(2, 4).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(0, 1).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(2, 3).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <p>+</p>
-                <div className="determinant">
-                  {matrix.slice(0, 2).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(2, 3).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(3, 4).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="determinant">
-                  {matrix.slice(2, 4).map((row, rowIndex) => (
-                    <div key={rowIndex} className="matrix-row">
-                      {row.slice(0, 1).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                      {row.slice(1, 2).map((cell, columnIndex) => (
-                        <div className="matrix-cell" key={columnIndex}>
-                          <input type="text" value={cell} readOnly />
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            );
           case 10:
             return (
               <div className="expansion">
@@ -1646,9 +1578,38 @@ function Simulation() {
                 <p>*</p>
                 <p>{calculateDeterminant(matrix6)})</p>
                 <p>+</p>
-                <p>({calculateDeterminant(matrix7)}</p>
-                <p>*</p>
-                <p>{calculateDeterminant(matrix8)})</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
                 <p>-</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
@@ -1732,14 +1693,43 @@ function Simulation() {
                 <p>({calculateDeterminant(matrix5)}</p>
                 <p>*</p>
                 <p>{calculateDeterminant(matrix6)})</p>
-                <p>-</p>
+                <p>+</p>
                 <p>({calculateDeterminant(matrix7)}</p>
                 <p>*</p>
                 <p>{calculateDeterminant(matrix8)})</p>
                 <p>-</p>
-                <p>({calculateDeterminant(matrix9)}</p>
-                <p>*</p>
-                <p>{calculateDeterminant(matrix10)})</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
                 <p>+</p>
                 <div className="determinant">
                   {matrix.slice(0, 2).map((row, rowIndex) => (
@@ -1799,12 +1789,70 @@ function Simulation() {
                 <p>*</p>
                 <p>{calculateDeterminant(matrix10)})</p>
                 <p>+</p>
+                <div className="determinant">
+                  {matrix.slice(0, 2).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(2, 3).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(3, 4).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <div className="determinant">
+                  {matrix.slice(2, 4).map((row, rowIndex) => (
+                    <div key={rowIndex} className="matrix-row">
+                      {row.slice(0, 1).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                      {row.slice(1, 2).map((cell, columnIndex) => (
+                        <div className="matrix-cell" key={columnIndex}>
+                          <input type="text" value={cell} readOnly />
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          case 13:
+            return (
+              <div className="expansion">
+                <p>=</p>
+                <p>({calculateDeterminant(matrix1)}</p>
+                <p>*</p>
+                <p>{calculateDeterminant(matrix2)})</p>
+                <p>-</p>
+                <p>({calculateDeterminant(matrix3)}</p>
+                <p>*</p>
+                <p>{calculateDeterminant(matrix4)})</p>
+                <p>+</p>
+                <p>({calculateDeterminant(matrix5)}</p>
+                <p>*</p>
+                <p>{calculateDeterminant(matrix6)})</p>
+                <p>-</p>
+                <p>({calculateDeterminant(matrix7)}</p>
+                <p>*</p>
+                <p>{calculateDeterminant(matrix8)})</p>
+                <p>-</p>
+                <p>({calculateDeterminant(matrix9)}</p>
+                <p>*</p>
+                <p>{calculateDeterminant(matrix10)})</p>
+                <p>+</p>
                 <p>({calculateDeterminant(matrix11)}</p>
                 <p>*</p>
                 <p>{calculateDeterminant(matrix12)})</p>
               </div>
             );
-          case 13:
+          case 14:
             return (
               <div className="expansion">
                 <p>=</p>
@@ -1838,7 +1886,7 @@ function Simulation() {
                 <p>{calculateDeterminant(matrix12)})</p>
               </div>
             );
-          case 14:
+          case 15:
             return (
               <div className="expansion">
                 <p>=</p>
@@ -1877,7 +1925,7 @@ function Simulation() {
                 <p>{calculateDeterminant(matrix12)})</p>
               </div>
             );
-          case 15:
+          case 16:
             return (
               <div className="expansion">
                 <p>=</p>
@@ -1921,7 +1969,7 @@ function Simulation() {
                 <p>{calculateDeterminant(matrix12)})</p>
               </div>
             );
-          case 16:
+          case 17:
             return (
               <div className="expansion">
                 <p>=</p>
@@ -1970,7 +2018,7 @@ function Simulation() {
                 <p>{calculateDeterminant(matrix12)})</p>
               </div>
             );
-          case 17:
+          case 18:
             return (
               <div className="expansion">
                 <p>=</p>
@@ -2024,7 +2072,7 @@ function Simulation() {
                 <p>{calculateDeterminant(matrix12)})</p>
               </div>
             );
-          case 18:
+          case 19:
             return (
               <div className="expansion">
                 <p>=</p>
@@ -2083,11 +2131,11 @@ function Simulation() {
                 </p>
               </div>
             );
-          case 19:
+          case 20:
             return (
               <div className="expansion">
                 <p>=</p>
-                <p>{sum[0] >= 0 ? `+${sum[0]}` : sum[0]}</p>
+                <p>{sum[0]}</p>
                 <p>{sum[1] >= 0 ? `+${sum[1]}` : sum[1]}</p>
                 <p>{sum[2] >= 0 ? `+${sum[2]}` : sum[2]}</p>
                 <p>{sum[3] >= 0 ? `+${sum[3]}` : sum[3]}</p>
@@ -2095,11 +2143,11 @@ function Simulation() {
                 <p>{sum[5] >= 0 ? `+${sum[5]}` : sum[5]}</p>
               </div>
             );
-          case 20:
+          case 21:
             return (
               <div className="expansion">
                 <p>=</p>
-                <p>{sum[0] >= 0 ? `+${sum[0]}` : sum[0]}</p>
+                <p>{sum[0]}</p>
                 <p>{sum[1] >= 0 ? `+${sum[1]}` : sum[1]}</p>
                 <p>{sum[2] >= 0 ? `+${sum[2]}` : sum[2]}</p>
                 <p>{sum[3] >= 0 ? `+${sum[3]}` : sum[3]}</p>
@@ -5202,54 +5250,13 @@ function Simulation() {
     const shouldHighlightCell = (rowIndex, columnIndex, step) => {
       if (matrixSize === 4) {
         switch (step) {
-          case 0:
-            switch (rowIndex) {
-              case 0:
-                switch (columnIndex) {
-                  case 0:
-                    return "highlight";
-                  case 1:
-                    return "highlight";
-                  default:
-                    return "";
-                }
-              case 1:
-                switch (columnIndex) {
-                  case 0:
-                    return "highlight";
-                  case 1:
-                    return "highlight";
-                  default:
-                    return "";
-                }
-              case 2:
-                switch (columnIndex) {
-                  case 2:
-                    return "highlight__down";
-                  case 3:
-                    return "highlight__down";
-                  default:
-                    return "";
-                }
-              case 3:
-                switch (columnIndex) {
-                  case 2:
-                    return "highlight__down";
-                  case 3:
-                    return "highlight__down";
-                  default:
-                    return "";
-                }
-              default:
-                return false;
-            }
           case 1:
             switch (rowIndex) {
               case 0:
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 2:
+                  case 1:
                     return "highlight";
                   default:
                     return "";
@@ -5258,14 +5265,14 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 2:
+                  case 1:
                     return "highlight";
                   default:
                     return "";
                 }
               case 2:
                 switch (columnIndex) {
-                  case 1:
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
@@ -5274,7 +5281,7 @@ function Simulation() {
                 }
               case 3:
                 switch (columnIndex) {
-                  case 1:
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
@@ -5290,7 +5297,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 3:
+                  case 2:
                     return "highlight";
                   default:
                     return "";
@@ -5299,7 +5306,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 3:
+                  case 2:
                     return "highlight";
                   default:
                     return "";
@@ -5308,7 +5315,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   default:
                     return "";
@@ -5317,7 +5324,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   default:
                     return "";
@@ -5329,36 +5336,36 @@ function Simulation() {
             switch (rowIndex) {
               case 0:
                 switch (columnIndex) {
-                  case 1:
+                  case 0:
                     return "highlight";
-                  case 2:
+                  case 3:
                     return "highlight";
                   default:
                     return "";
                 }
               case 1:
                 switch (columnIndex) {
-                  case 1:
+                  case 0:
                     return "highlight";
-                  case 2:
+                  case 3:
                     return "highlight";
                   default:
                     return "";
                 }
               case 2:
                 switch (columnIndex) {
-                  case 0:
+                  case 1:
                     return "highlight__down";
-                  case 3:
+                  case 2:
                     return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
-                  case 0:
+                  case 1:
                     return "highlight__down";
-                  case 3:
+                  case 2:
                     return "highlight__down";
                   default:
                     return "";
@@ -5372,6 +5379,47 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 5:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight";
                   case 3:
                     return "highlight";
                   default:
@@ -5407,7 +5455,7 @@ function Simulation() {
               default:
                 return false;
             }
-          case 5:
+          case 6:
             switch (rowIndex) {
               case 0:
                 switch (columnIndex) {
@@ -7171,321 +7219,187 @@ function Simulation() {
           case 1:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
-                </p>
-                <img src={Expression} alt="" className="formula2" />
+                <p>Para la primera sumatoria, se tiene lo siguiente, es decir
+                  para determinar los signos de los productos:</p>
+                <img src={firstSum4x4} alt="" className="formula2"/>
+                <p>Ahora tomando el primer termino de la sumatoria.</p>
               </div>
             );
           case 2:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
-                </p>
-                <img src={Expression} alt="" className="formula2" />
+                <p>Para la primera sumatoria, se tiene lo siguiente, es decir
+                  para determinar los signos de los productos:</p>
+                <img src={secondSum4x4} alt="" className="formula2"/>
+                <p>Ahora tomando el segundo termino de la sumatoria.</p>
               </div>
             );
           case 3:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
-                </p>
-                <img src={Expression} alt="" className="formula2" />
+                <p>Para la primera sumatoria, se tiene lo siguiente, es decir
+                  para determinar los signos de los productos:</p>
+                <img src={thirdSum4x4} alt="" className="formula2"/>
+                <p>Ahora tomando el tercer termino de la sumatoria.</p>
               </div>
             );
           case 4:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
-                </p>
-                <img src={Expression} alt="" className="formula2" />
+                <p>Para la segunda sumatoria, se tiene lo siguiente, es decir
+                  para determinar los signos de los productos:</p>
+                <img src={fourthSum4x4} alt="" className="formula2"/>
+                <p>Ahora tomando el primer termino de la sumatoria.</p>
               </div>
             );
           case 5:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
-                </p>
-                <img src={Expression} alt="" className="formula2" />
+                <p>Para la segunda sumatoria, se tiene lo siguiente, es decir
+                  para determinar los signos de los productos:</p>
+                <img src={fifthSum4x4} alt="" className="formula2"/>
+                <p>Ahora tomando el segundo termino de la sumatoria.</p>
               </div>
             );
           case 6:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Finalmente, para el ultimo termino, unicamente se debe sustituir 
+                  los valores donde n=4, ya que la dimension de la matriz es de 4x4.
                 </p>
-                <img src={Expression} alt="" className="formula2" />
+                <img src={sixthSum4x4} alt="" className="formula2"/>
               </div>
             );
           case 7:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Ahora, se tiene toda la expansion de productos de determinantes 2x2, como se puede
+                  observar, se tienen los 6 productos, si no recuerdas como se calculo, 
+                  puedes regresar al inicio de la simulación.
                 </p>
-                <img src={Expression} alt="" className="formula2" />
+                <p>Como siguiente paso, procederemos a calcular el primer producto de determinantes mediante
+                  la siguiente definicion:
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
               </div>
             );
           case 8:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Procederemos a calcular el segundo producto de determinantes mediante
+                  la siguiente definicion:
                 </p>
-                <img src={Expression} alt="" className="formula2" />
+                <br />
+                <img src={Det2x2} alt="" className="formula"/>
               </div>
             );
           case 9:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Procederemos a calcular el tercer producto de determinantes mediante
+                  la siguiente definicion:
                 </p>
-                <img src={Expression} alt="" className="formula2" />
+                <br />
+                <img src={Det2x2} alt="" className="formula"/>
               </div>
             );
           case 10:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Procederemos a calcular el cuarto producto de determinantes mediante
+                  la siguiente definicion:
                 </p>
-                <img src={Expression} alt="" className="formula2" />
+                <br />
+                <img src={Det2x2} alt="" className="formula"/>
               </div>
             );
           case 11:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Procederemos a calcular el quinto producto de determinantes mediante
+                  la siguiente definicion:
                 </p>
-                <img src={Expression} alt="" className="formula2" />
+                <br />
+                <img src={Det2x2} alt="" className="formula"/>
               </div>
             );
           case 12:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Procederemos a calcular el sexto producto de determinantes mediante
+                  la siguiente definicion:
                 </p>
-                <img src={Expression} alt="" className="formula2" />
+                <br />
+                <img src={Det2x2} alt="" className="formula"/>
               </div>
             );
           case 13:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Una vez realizados todos los determinantes, se realizan las multiplicaciones
+                  dentro de cada parentesis. En este caso se procede con el primer parentesis.
                 </p>
-                <img src={Expression} alt="" className="formula2" />
               </div>
             );
           case 14:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Se procede con el segundo parentesis.
                 </p>
-                <img src={Expression} alt="" className="formula2" />
               </div>
             );
           case 15:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Se procede con el tercer parentesis.
                 </p>
-                <img src={Expression} alt="" className="formula2" />
               </div>
             );
           case 16:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Se procede con el cuarto parentesis.
                 </p>
-                <img src={Expression} alt="" className="formula2" />
               </div>
             );
           case 17:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Se procede con el quinto parentesis.
                 </p>
-                <img src={Expression} alt="" className="formula2" />
               </div>
             );
           case 18:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Se procede con el sexto parentesis y ultimo parentesis. 
                 </p>
-                <img src={Expression} alt="" className="formula2" />
               </div>
             );
           case 19:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Una vez hecho esto, 
+                  se hace la multiplicacion de signos para sumar los resultados.
                 </p>
-                <img src={Expression} alt="" className="formula2" />
               </div>
             );
           case 20:
             return (
               <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
+                <p>Ahora, sumamos los resultados de los productos para obtener los resultados.</p>
+              </div>
+            );
+          case 21:
+            return (
+              <div className="explication__step">
+                <p>Finalmente,puedes ver el resultado del determinante que colocaste, puedes
+                  comprobar el resultado en la calculadora de tu preferencia.
                 </p>
-                <img src={Expression} alt="" className="formula2" />
+                <br />
+                <p>Si quieres ingresar un nuevo determinante, puedes dar click en el boton 
+                  "Nueva simulación".
+                </p>
               </div>
             );
           default:
@@ -7537,21 +7451,10 @@ function Simulation() {
     );
   };
 
-  const autoRunSimulation = () => {
-    // Esta función ejecutará automáticamente la simulación paso a paso
-    const intervalId = setInterval(() => {
-      if (currentStep < productMatrices.length - 1) {
-        handleNextStep();
-      } else {
-        clearInterval(intervalId);
-      }
-    }, 1000); // Cambia el intervalo según tus necesidades (1000 ms = 1 segundo)
-  };
-
   return (
     <div className="simulation__container" id="simulation">
       <div className="desktop">
-        {!simulationInProgress && (
+        {!startSimulation && (
           <div>
             <h1 className="simulation__title">Simulación</h1>
             <p className="simulation__text">
@@ -7596,7 +7499,7 @@ function Simulation() {
             {renderButtons()}
           </div>
         )}
-        {simulationInProgress && (
+        {startSimulation && (
           <div>
             <div className="product-container">{renderProductMatrix()}</div>
           </div>

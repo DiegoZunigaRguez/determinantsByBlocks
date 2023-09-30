@@ -23,6 +23,9 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 
 >29-09-2023
 1. Se coloca el bloque de informacion como prueba
+2. Se termina toda la explicacion para las matrices de 4x4.
+3. Se termina el boton correr simulacion para la matriz de 4x4.
+4. Se coloca el boton para detener la simulacion en el momento en que se necesite.
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
