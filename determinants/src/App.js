@@ -7,6 +7,7 @@ import About from './components/about/about';
 import Developers from './components/developers/developers';
 import Determinants from './components/determinants/det';
 import Simulation from './components/simulation/Simulation';
+import Space from './components/space/space';
 /*import Footer from './components/footer/footer';
 import Determinants from './components/determinants/det';
 import Simulation from './components/simulation/Simulation';*/
@@ -21,6 +22,7 @@ function App() {
       <About/>
       <Determinants/>
       <Simulation/>
+      <Space/>
       <Developers/>
     </>
   );

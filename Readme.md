@@ -21,6 +21,9 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 >27-09-2023
 1. Se termina la simulacion de matriz 4x4
 
+>29-09-2023
+1. Se coloca el bloque de informacion como prueba
+
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
 2. Para compilar y generar una versión para productivo "npm build"
