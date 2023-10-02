@@ -42,6 +42,10 @@
   border-color: #E19031;
 }
 
+.simulation__options option:hover{
+  background-color: var(--RHeader);
+}
+
 /* Estilo del determinante */
 .determinant {
   display: inline-block;
@@ -181,25 +185,32 @@ input[type="text"] {
   font-size: 30px;
 }
 
-@media (min-width: 1600px) {
-  .expansion {
-    grid-template-columns: repeat(15, 1fr) !important; /* Divide el grid en 5 columnas de igual tamaño */
-  }
-  .button-container{
-    left: calc(100vw - 120vw) !important; /* Ajusta la distancia desde el borde izquierdo de la ventana */
-  }
-}
-
-@media (min-width: 1300px) {
+@media screen and (max-width: 1599px) {
   .expansion {
     grid-template-columns: repeat(12, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
   }
   .button-container{
-    left: calc(100vw - 120vw) !important; /* Ajusta la distancia desde el borde izquierdo de la ventana */
+    margin-left: 2rem;
+  }
+
+  .button{
+    font-size: 13px;
+  }
+
+  .explication__step{
+    margin-right: 1rem;
+  }
+
+  .simulation__options{
+    font-size: 20px;
+  }
+
+  .expansion5x5{
+    grid-template-columns: repeat(9, 1fr);
   }
 }
 
-@media (min-width: 1100px) {
+@media screen and (max-width: 1100px) {
   .simulation__text{
     font-size: 20px;
   }
@@ -208,20 +219,14 @@ input[type="text"] {
     font-size: 20px;
   }
 
-  .button{
-    font-size: 16px;
-  }
-
   .expansion {
     grid-template-columns: repeat(9, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
     margin-bottom: 1rem;
   }
-  .button-container{
-    left: calc(100vw - 110vw); /* Ajusta la distancia desde el borde izquierdo de la ventana */
-  }
+
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .desktop{
     display: none;
   }
