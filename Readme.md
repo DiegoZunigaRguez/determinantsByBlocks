@@ -27,6 +27,9 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 3. Se termina el boton correr simulacion para la matriz de 4x4.
 4. Se coloca el boton para detener la simulacion en el momento en que se necesite.
 
+>31-09-2023
+1. Se inicia la simulacion para la matriz de 5x5.
+
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
 2. Para compilar y generar una versión para productivo "npm build"
