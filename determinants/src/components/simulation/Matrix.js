@@ -1172,3 +1172,46 @@ const renderProductMatrix = () => {
 
   return renderProductDeterminant(currentStep);
 };
+
+sum[0] = calculateMult(
+  1,
+  calculateMult(calculateDeterminant(matrix1_1), calculateSarrus(matrix1_2))
+);
+sum[1] = calculateMult(
+  -1,
+  calculateMult(calculateDeterminant(matrix2_1), calculateSarrus(matrix2_2))
+);
+sum[2] = calculateMult(
+  1,
+  calculateMult(calculateDeterminant(matrix3_1), calculateSarrus(matrix3_2))
+);
+sum[3] = calculateMult(
+  -1,
+  calculateMult(calculateDeterminant(matrix4_1), calculateSarrus(matrix4_2))
+);
+sum[4] = calculateMult(
+  1,
+  calculateMult(calculateDeterminant(matrix5_1), calculateSarrus(matrix5_2))
+);
+sum[5] = calculateMult(
+  -1,
+  calculateMult(calculateDeterminant(matrix6_1), calculateSarrus(matrix6_2))
+);
+
+sum[6] = calculateMult(
+  1,
+  calculateMult(calculateDeterminant(matrix7_1), calculateSarrus(matrix7_2))
+);
+sum[7] = calculateMult(
+  1,
+  calculateMult(calculateDeterminant(matrix8_1), calculateSarrus(matrix8_2))
+);
+sum[8] = calculateMult(
+  -1,
+  calculateMult(calculateDeterminant(matrix9_1), calculateSarrus(matrix9_2))
+);
+
+sum[9] = calculateMult(
+  1,
+  calculateMult(calculateDeterminant(matrix10_1), calculateSarrus(matrix10_2))
+);

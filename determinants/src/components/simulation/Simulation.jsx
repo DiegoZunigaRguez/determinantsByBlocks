@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./simulation.css";
 import Swal from "sweetalert2";
 import Combinatoria from "../../assets/Productos.png";
 import Expression from "../../assets/TTExp.png";
+import Sarrus from "../../assets/Sarrus.png";
 //Se declaran las imagenes para la explicación de las matrices 4x4
 import firstSum4x4 from "../../assets/firstSum4x4.png";
 import secondSum4x4 from "../../assets/secondSum4x4.png";
@@ -151,13 +152,24 @@ function Simulation() {
   };
 
   const autoRunSimulation = async () => {
-    for (
-      let step = currentStep;
-      step < 21 && isSimulationRunning.current;
-      step++
-    ) {
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Espera 1 segundo entre cada paso
-      setCurrentStep(step);
+    if(matrixSize===4){
+      for (let step = currentStep; step < 21; step++) {
+        if (!isSimulationRunning.current) {
+          // Si la simulación se detiene, salir del bucle
+          break;
+        }
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        setCurrentStep(step + 1); // Actualizar el paso actual
+      }
+    }else if(matrixSize===5){
+      for (let step = currentStep; step < 33; step++) {
+        if (!isSimulationRunning.current) {
+          // Si la simulación se detiene, salir del bucle
+          break;
+        }
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        setCurrentStep(step + 1); // Actualizar el paso actual
+      }
     }
     setSimulationInProgress(false);
     isSimulationRunning.current = false;
@@ -172,11 +184,11 @@ function Simulation() {
     }
 
     return () => {
-      // Limpiar el intervalo si el componente se desmonta o si simulationInProgress se establece en false
+      // Detener la simulación cuando el componente se desmonta
       isSimulationRunning.current = false;
     };
   }, [simulationInProgress, currentStep]);
-  // Este efecto se ejecutará cuando simulationInProgress cambie
+// Este efecto se ejecutará cuando simulationInProgress cambie
 
   const handleRunSimulationClick = () => {
     // Cuando haces clic en "Correr Simulación", establece simulationInProgress en true
@@ -2282,6 +2294,49 @@ function Simulation() {
           [matrix[4][0], matrix[4][1], matrix[4][2]]
         ];
         /*Se colocan las variables para las sumas al final del resultado*/
+        const sum=[];
+        sum[0] = calculateMult(
+          1,
+          calculateMult(calculateDeterminant(matrix1_1), calculateSarrus(matrix1_2))
+        );
+        sum[1] = calculateMult(
+          -1,
+          calculateMult(calculateDeterminant(matrix2_1), calculateSarrus(matrix2_2))
+        );
+        sum[2] = calculateMult(
+          1,
+          calculateMult(calculateDeterminant(matrix3_1), calculateSarrus(matrix3_2))
+        );
+        sum[3] = calculateMult(
+          -1,
+          calculateMult(calculateDeterminant(matrix4_1), calculateSarrus(matrix4_2))
+        );
+        sum[4] = calculateMult(
+          1,
+          calculateMult(calculateDeterminant(matrix5_1), calculateSarrus(matrix5_2))
+        );
+        sum[5] = calculateMult(
+          -1,
+          calculateMult(calculateDeterminant(matrix6_1), calculateSarrus(matrix6_2))
+        );
+        
+        sum[6] = calculateMult(
+          1,
+          calculateMult(calculateDeterminant(matrix7_1), calculateSarrus(matrix7_2))
+        );
+        sum[7] = calculateMult(
+          1,
+          calculateMult(calculateDeterminant(matrix8_1), calculateSarrus(matrix8_2))
+        );
+        sum[8] = calculateMult(
+          -1,
+          calculateMult(calculateDeterminant(matrix9_1), calculateSarrus(matrix9_2))
+        );
+        
+        sum[9] = calculateMult(
+          1,
+          calculateMult(calculateDeterminant(matrix10_1), calculateSarrus(matrix10_2))
+        );        
         switch (step) {
           case 1:
             return (
@@ -6854,101 +6909,40 @@ function Simulation() {
                 </p>
               </div>
             );
-          case 32:
-            return (
-              <div className="expansion5x5">
-                <p className="det__result">=</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix1_1),
-                    calculateSarrus(matrix1_2)
-                  )}
-                  )
-                </p>
-                <p>-</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix2_1),
-                    calculateSarrus(matrix2_2)
-                  )}
-                  )
-                </p>
-                <p>+</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix3_1),
-                    calculateSarrus(matrix3_2)
-                  )}
-                  )
-                </p>
-                <p>-</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix4_1),
-                    calculateSarrus(matrix4_2)
-                  )}
-                  )
-                </p>
-                <p>+</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix5_1),
-                    calculateSarrus(matrix5_2)
-                  )}
-                  )
-                </p>
-                <p>-</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix6_1),
-                    calculateSarrus(matrix6_2)
-                  )}
-                  )
-                </p>
-                <p>+</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix7_1),
-                    calculateSarrus(matrix7_2)
-                  )}
-                  )
-                </p>
-                <p>+</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix8_1),
-                    calculateSarrus(matrix8_2)
-                  )}
-                  )
-                </p>
-                <p>-</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix9_1),
-                    calculateSarrus(matrix9_2)
-                  )}
-                  )
-                </p>
-                <p>+</p>
-                <p>
-                  (
-                  {calculateMult(
-                    calculateDeterminant(matrix10_1),
-                    calculateSarrus(matrix10_2)
-                  )}
-                  )
-                </p>
-              </div>
-            );
+            case 32:
+              return (
+                <div className="expansion">
+                  <p>=</p>
+                  <p>{sum[0]}</p>
+                  <p>{sum[1] >= 0 ? `+${sum[1]}` : sum[1]}</p>
+                  <p>{sum[2] >= 0 ? `+${sum[2]}` : sum[2]}</p>
+                  <p>{sum[3] >= 0 ? `+${sum[3]}` : sum[3]}</p>
+                  <p>{sum[4] >= 0 ? `+${sum[4]}` : sum[4]}</p>
+                  <p>{sum[5] >= 0 ? `+${sum[5]}` : sum[5]}</p>
+                  <p>{sum[6] >= 0 ? `+${sum[6]}` : sum[6]}</p>
+                  <p>{sum[7] >= 0 ? `+${sum[7]}` : sum[7]}</p>
+                  <p>{sum[8] >= 0 ? `+${sum[8]}` : sum[8]}</p>
+                  <p>{sum[9] >= 0 ? `+${sum[9]}` : sum[9]}</p>
+                </div>
+              );
+            case 33:
+              return (
+                <div className="expansion">
+                  <p>=</p>
+                  <p>{sum[0]}</p>
+                  <p>{sum[1] >= 0 ? `+${sum[1]}` : sum[1]}</p>
+                  <p>{sum[2] >= 0 ? `+${sum[2]}` : sum[2]}</p>
+                  <p>{sum[3] >= 0 ? `+${sum[3]}` : sum[3]}</p>
+                  <p>{sum[4] >= 0 ? `+${sum[4]}` : sum[4]}</p>
+                  <p>{sum[5] >= 0 ? `+${sum[5]}` : sum[5]}</p>
+                  <p>{sum[6] >= 0 ? `+${sum[6]}` : sum[6]}</p>
+                  <p>{sum[7] >= 0 ? `+${sum[7]}` : sum[7]}</p>
+                  <p>{sum[8] >= 0 ? `+${sum[8]}` : sum[8]}</p>
+                  <p>{sum[9] >= 0 ? `+${sum[9]}` : sum[9]}</p>
+                  <p>=</p>
+                  <p>{calculateSum(sum)}</p>
+                </div>
+              );
           default:
             return null;
         }
@@ -9746,11 +9740,11 @@ function Simulation() {
             return (
               <div className="explication__step">
                 <p>
-                  Para la segunda sumatoria, se tiene lo siguiente, es decir
+                  Para la primera sumatoria, se tiene lo siguiente, es decir
                   para determinar los signos de los productos:
                 </p>
                 <img src={fourthSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el primer termino de la sumatoria.</p>
+                <p>Ahora tomando el cuarto termino de la sumatoria.</p>
               </div>
             );
           case 5:
@@ -9761,7 +9755,7 @@ function Simulation() {
                   para determinar los signos de los productos:
                 </p>
                 <img src={fifthSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el segundo termino de la sumatoria.</p>
+                <p>Ahora tomando el primer termino de la sumatoria.</p>
               </div>
             );
           case 6:
@@ -9783,25 +9777,25 @@ function Simulation() {
                   para determinar los signos de los productos:
                 </p>
                 <img src={seventhSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el segundo termino de la sumatoria.</p>
+                <p>Ahora tomando el tercer termino de la sumatoria.</p>
               </div>
             );
           case 8:
             return (
               <div className="explication__step">
                 <p>
-                  Para la segunda sumatoria, se tiene lo siguiente, es decir
+                  Para la tercera sumatoria, se tiene lo siguiente, es decir
                   para determinar los signos de los productos:
                 </p>
                 <img src={eightSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el segundo termino de la sumatoria.</p>
+                <p>Ahora tomando el primer termino de la sumatoria.</p>
               </div>
             );
           case 9:
             return (
               <div className="explication__step">
                 <p>
-                  Para la segunda sumatoria, se tiene lo siguiente, es decir
+                  Para la tercera sumatoria, se tiene lo siguiente, es decir
                   para determinar los signos de los productos:
                 </p>
                 <img src={ninthSum5x5} alt="" className="formula2" />
@@ -9813,8 +9807,8 @@ function Simulation() {
               <div className="explication__step">
                 <p>
                   Finalmente, para el ultimo termino, unicamente se debe
-                  sustituir los valores donde n=4, ya que la dimension de la
-                  matriz es de 4x4.
+                  sustituir los valores donde n=5, ya que la dimension de la
+                  matriz es de 5x5.
                 </p>
                 <img src={tenthSum5x5} alt="" className="formula2" />
               </div>
@@ -9832,6 +9826,156 @@ function Simulation() {
                 <p>Como se puede observar tenemos productos de determinantes 2x2 por 
                   determinantes de dimensión 3x3, por lo que para los determinantes 3x3
                   se hará uso de la regla de Sarrus para obtener el valor.
+                </p>
+              </div>
+            );
+          case 12:
+            return (
+              <div className="explication__step">
+                <p>
+                  Calculando el primer producto de determinantes, primero se calcula el 
+                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
+                  el determinante de 3x3.
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
+                <img src={Sarrus} alt="" className="formula"/>
+              </div>
+            );
+          case 13:
+            return (
+              <div className="explication__step">
+                <p>
+                  Calculando el segundo producto de determinantes, primero se calcula el 
+                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
+                  el determinante de 3x3.
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
+                <img src={Sarrus} alt="" className="formula"/>
+              </div>
+            );
+          case 14:
+            return (
+              <div className="explication__step">
+                <p>
+                  Calculando el tercer producto de determinantes, primero se calcula el 
+                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
+                  el determinante de 3x3.
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
+                <img src={Sarrus} alt="" className="formula"/>
+              </div>
+            );
+          case 15:
+            return (
+              <div className="explication__step">
+                <p>
+                  Calculando el cuarto producto de determinantes, primero se calcula el 
+                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
+                  el determinante de 3x3.
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
+                <img src={Sarrus} alt="" className="formula"/>
+              </div>
+            );
+          case 16:
+            return (
+              <div className="explication__step">
+                <p>
+                  Calculando el quinta producto de determinantes, primero se calcula el 
+                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
+                  el determinante de 3x3.
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
+                <img src={Sarrus} alt="" className="formula"/>
+              </div>
+            );
+          case 17:
+            return (
+              <div className="explication__step">
+                <p>
+                  Calculando el sexto producto de determinantes, primero se calcula el 
+                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
+                  el determinante de 3x3.
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
+                <img src={Sarrus} alt="" className="formula"/>
+              </div>
+            );
+          case 18:
+            return (
+              <div className="explication__step">
+                <p>
+                  Calculando el septimo producto de determinantes, primero se calcula el 
+                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
+                  el determinante de 3x3.
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
+                <img src={Sarrus} alt="" className="formula"/>
+              </div>
+            );
+          case 19:
+            return (
+              <div className="explication__step">
+                <p>
+                  Calculando el octavo producto de determinantes, primero se calcula el 
+                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
+                  el determinante de 3x3.
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
+                <img src={Sarrus} alt="" className="formula"/>
+              </div>
+            );
+          case 20:
+            return (
+              <div className="explication__step">
+                <p>
+                  Calculando el noveno producto de determinantes, primero se calcula el 
+                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
+                  el determinante de 3x3.
+                </p>
+                <img src={Det2x2} alt="" className="formula"/>
+                <img src={Sarrus} alt="" className="formula"/>
+              </div>
+            );
+          case 21:
+            return (
+              <div className="explication__step">
+                <p>
+                  Una vez realizando estos calculos de determinantes, procedemos a hacer
+                  la multiplicacion interna.
+                </p>
+              </div>
+            );
+          case 31:
+            return (
+              <div className="explication__step">
+                <p>
+                  Ya que se multiplicaron los resultados de los determinantes, procedemos
+                  a realizar la multiplicacion de signos, entre los que estan dentro y fuera
+                  de los parentesis.
+                </p>
+              </div>
+            );
+          case 32:
+            return (
+              <div className="explication__step">
+                <p>
+                  Una vez obtenidos los signos, procedemos a sumar los resultados.
+                </p>
+              </div>
+            );
+          case 33:
+            return (
+              <div className="explication__step">
+                <p>
+                  Finalmente,puedes ver el resultado del determinante que
+                  colocaste, puedes comprobar el resultado en la calculadora de
+                  tu preferencia.
+                </p>
+                <br />
+                <p>
+                  Si quieres ingresar un nuevo determinante, puedes dar click en
+                  el boton "Nueva simulación".
                 </p>
               </div>
             );

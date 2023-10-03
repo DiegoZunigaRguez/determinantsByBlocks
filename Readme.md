@@ -29,6 +29,9 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 
 >31-09-2023
 1. Se inicia la simulacion para la matriz de 5x5.
+2. Se terminan los pasos para la expansion de 5x5.
+3. Se comienza con el calculo del determinante.
+4. Se cambia el useeffect para poder correr de manera automatica la simulacion.
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
