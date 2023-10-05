@@ -33,6 +33,10 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 3. Se comienza con el calculo del determinante.
 4. Se cambia el useeffect para poder correr de manera automatica la simulacion.
 
+>05-10-2023
+1. Se comienza con la simulación de 6x6.
+2. Como propuesta para reducir el número de lineas de codigo, se realizará componentes especificos para las dimensiones de las matriz, el más largo sería el de 4x4.
+
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
 2. Para compilar y generar una versión para productivo "npm build"
