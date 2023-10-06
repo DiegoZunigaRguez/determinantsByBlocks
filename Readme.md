@@ -36,6 +36,7 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 >05-10-2023
 1. Se comienza con la simulación de 6x6.
 2. Como propuesta para reducir el número de lineas de codigo, se realizará componentes especificos para las dimensiones de las matriz, el más largo sería el de 4x4.
+3. Se completa el componente de la matriz 4x4 para ahorrar líneas de código en el componente principal de la simulación
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"

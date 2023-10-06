@@ -14,8 +14,8 @@ const VideoPlayer = () => {
         <div key={videoId} className="video-item">
           <iframe
             src={`https://www.youtube.com/embed/${videoId}`}
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
             title={`Video ${videoId}`}
           ></iframe>
         </div>
