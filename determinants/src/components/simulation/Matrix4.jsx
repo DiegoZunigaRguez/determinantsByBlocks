@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const Matrix4 = (props) => {
-  const {parametro1, parametro2} = props;
-  const generateDeterminantContent=(matrix,step)=>{
+  const { parametro1, parametro2 } = props;
+  const generateDeterminantContent = (matrix, step) => {
     const calculateDeterminant = (matrix) => {
       return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
     };
@@ -10,7 +10,7 @@ const Matrix4 = (props) => {
     const calculateMult = (value1, value2) => {
       return value1 * value2;
     };
-  
+
     const calculateSum = (sum) => {
       let res = 0;
       for (let i = 0; i < sum.length; i++) {
@@ -1041,8 +1041,8 @@ const Matrix4 = (props) => {
           <div className="expansion">
             <p className="det__result">=</p>
             <p>
-              ({calculateDeterminant(matrix1)} *{" "}
-              {calculateDeterminant(matrix2)})
+              ({calculateDeterminant(matrix1)} * {calculateDeterminant(matrix2)}
+              )
             </p>
             <p>-</p>
             <div className="determinant">
@@ -1954,12 +1954,8 @@ const Matrix4 = (props) => {
       default:
         return null;
     }
-  }
-  return(
-    <div>
-      {generateDeterminantContent(parametro1, parametro2)}
-    </div>
-  );
-}
+  };
+  return <div>{generateDeterminantContent(parametro1, parametro2)}</div>;
+};
 
 export default Matrix4;
