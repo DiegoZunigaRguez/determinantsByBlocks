@@ -1,6 +1,6 @@
 #include<iostream>
 #include"Matriz.h"
-#define getSign(n) n%2==0?1:-1
+//#define getSign(n) n%2==0?1:-1
 
 using namespace std;
 
@@ -13,10 +13,10 @@ lli factorial(int n){
     else fact = n*factorial(n-1);
     return fact;
 }
-/*
+
 int getSign(int n){
     return n%2==0 ? 1 : -1;
-}*/
+}
 Matriz getComplementaryMatrix(Matriz mtz, int n, int index0, int index1){
     int dim = n-2;
     Matriz comp = createMatrix(dim);

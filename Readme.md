@@ -2,29 +2,11 @@
 ================================================================
 ## Bitacora de cambios en el repositorio
 ----------------------------------------------------------------
-En el presente documento se agregara las fechas de los cambios para tener un orden de como se van realizando los cambios y tener un mejor
-control de versiones:
->09-03-2023
-Diego Zúñiga crea el repositorio de github donde se almacenará el proyecto.
-Abraham Hernández crea el proyecto base de react. 
+En la presente rama se realizaran los cambios para el codigo de escritorio.
 
->15-03-2023
-Abraham Hernandez realiza los cambios para realizar la aplicacion responsive
-
->27-03-2023
-Diego Zúñiga hace un push para subir la última versión estable del código de C++
-
->29-03-2023
-Abraham Hernández hace push con actualización del Readme principal
-
->31-03-2023
-Abraham Hernandez sube los documentos pertinentes para el documento tecnico ubicado en la carpeta "Documentos"
-
->02-04-2023
-Abraham Hernandez sube documentos correspondientes a la documentación de TT2
-
->10-07-2023
-Se genera la pantalla de inicio de la aplicación web, tanto para su versión de computadora como el responsivo
+>08-10-2023
+1. Se crea la rama para anlizar el codigo de la aplicacion de escritorio.
+2. Se obtiene la version estable del ejecutable.
 
 ## Pasos para compilación de código en C++
 compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
