@@ -81,21 +81,3 @@ int main(int argc, char *argv[]){
         for(int i = 0; i< n-1; i++)
             cout<<"determinantes de orden "<<i+2<<" : "<<numDetOrden[i]<<endl;
 }
-
-/** 
- int num;
-        for (int i = 0; i < n; i++) {
-            strWolfram += "{";
-            for (int j = 0; j < n; j++) {
-                num = getRandomNum(range);
-                matriz[i][j] = num;//llena con numeros enteros en [-range, range]
-                strWolfram += to_string(num) + ",";
-            }
-            strWolfram.pop_back();
-            strWolfram += "},";
-        }
-        strWolfram.pop_back();
-        strWolfram += "})";
-        cout << strWolfram << endl;
- * 
- */

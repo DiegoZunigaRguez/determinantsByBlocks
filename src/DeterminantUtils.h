@@ -27,7 +27,8 @@ Matriz getComplementaryMatrix(Matriz mtz, int n, int index0, int index1){
                 continue;
             comp[auxI][auxJ++]=mtz[i][j];   
         }
-    //printMatrix(comp, dim);
+    /*cout<<"Matriz complementaria: "<<endl;
+    printMatrix(comp, dim);*/
     return comp;
 }
 
@@ -89,6 +90,8 @@ lli Determinant(Matriz mtz, int n){
             for (int right = left +1; right < n; right++){
                 m0[0][1] = mtz[0][right];
                 m0[1][1] = mtz[1][right];
+                /*cout<<"Matriz: "<<endl;
+                printMatrix(m0,2);*/
                 Matriz aux = getComplementaryMatrix(mtz, n, left, right);
                 det += getSign(left % 2 == 1 ? right : right + 1) * Determinant(m0, 2) * Determinant(aux, n - 2);
                 deleteMatrix(aux, n-2);

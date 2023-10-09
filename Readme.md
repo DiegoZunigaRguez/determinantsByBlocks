@@ -2,51 +2,6 @@
 ================================================================
 ## Bitacora de cambios en el repositorio
 ----------------------------------------------------------------
-<<<<<<< HEAD
-En la presente rama se anexan la bitacora para la pagina web y tener un control de versionamiento
-
->24-09-2023
-1. Se crea la rama para trabajar en la simulacion.
-2. Se generan los primeros productos de determinantes.
-
->25-09-2023
-1. Se obtienen los subdeterminantes 
-
->26-09-2023
-1. Se comienza a trabajar en los subproductos de matrices
-2. Se termina el codigo para los determinantes de 5x5
-3. Se termina el codigo para los determinantes de 6x6
-4. Se termina el codigo para los determinantes de 4x4
-5. Se coloca el color detras a cada uno de los subdeterminantes
-
->27-09-2023
-1. Se termina la simulacion de matriz 4x4
-
->29-09-2023
-1. Se coloca el bloque de informacion como prueba
-2. Se termina toda la explicacion para las matrices de 4x4.
-3. Se termina el boton correr simulacion para la matriz de 4x4.
-4. Se coloca el boton para detener la simulacion en el momento en que se necesite.
-
->31-09-2023
-1. Se inicia la simulacion para la matriz de 5x5.
-2. Se terminan los pasos para la expansion de 5x5.
-3. Se comienza con el calculo del determinante.
-4. Se cambia el useeffect para poder correr de manera automatica la simulacion.
-
->05-10-2023
-1. Se comienza con la simulación de 6x6.
-2. Como propuesta para reducir el número de lineas de codigo, se realizará componentes especificos para las dimensiones de las matriz, el más largo sería el de 4x4.
-3. Se completa el componente de la matriz 4x4 para ahorrar líneas de código en el componente principal de la simulación
-
->06-10-2023
-1. Se colocan en componentes hijos las tres dimensiones de los determinantes.
-
-## Pasos para la ejecución del proyecto en react
-1. Para iniciar la aplicación se requiere del cómando "npm start"
-2. Para compilar y generar una versión para productivo "npm build"
-3. Para subir a productivo "netlify deploy --prod" y colocar "./build" para tomar la versión de productivo generada con anterioridad
-=======
 En la presente rama se realizaran los cambios para el codigo de escritorio.
 
 >08-10-2023
@@ -54,7 +9,9 @@ En la presente rama se realizaran los cambios para el codigo de escritorio.
 2. Se obtiene la version estable del ejecutable.
 3. Se elimina cualquier otra carpeta que no tenga que ver con la aplicacion de escritorio.
 
+>09-10-2023
+1. Se tiene la primera propuesta para la aplicación de escritorio utilizando Java
+
 ## Pasos para compilación de código en C++
 compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
 ejecutar con .\<nombre> <n>
->>>>>>> 592d8786714348d18ac8dd6316688e1b94374379

@@ -10,6 +10,7 @@ public class Interfaz {
     private JPanel topPanel;
     int Resultado = 0;
     private JTextField Res = new JTextField();
+    int[][] matrix = new int[dimension][dimension];
 
     public Interfaz() {
         // Crea una interfaz gráfica con un tablero de texto de tamaño 4x4 inicialmente
@@ -39,26 +40,15 @@ public class Interfaz {
         topPanel.setBackground(new Color(241, 232, 219)); // Establece el color de fondo del panel superior
         topPanel.add(new JLabel("Selecciona la Dimension: "));
         topPanel.add(dimensionSelector);
-
-        // Establece el color de fondo del panel del tablero
-        boardPanel = new JPanel(new GridLayout(dimension, dimension));
-        boardPanel.setSize(300, 300);
-        boardPanel.setBackground(new Color(241, 232, 219));
-
-        frame.add(topPanel, BorderLayout.NORTH);
-        frame.add(boardPanel, BorderLayout.CENTER);
-        frame.setLocationRelativeTo(null); // Centra la ventana en la pantalla
-        frame.setVisible(true);
-    }
-
-    private void updateBoard() {
-        // Remueve los componentes del panel anterior
-        boardPanel.removeAll();
         JButton button1 = new JButton("Limpiar");
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Acciones cuando se presiona el Botón 1
+                for (int i = 0; i < dimension; i++) {
+                    for (int j = 0; j < dimension; j++) {
+                        textFieldGrid[i][j].setText("");
+                    }
+                }
             }
         });
 
@@ -80,13 +70,37 @@ public class Interfaz {
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int j = 0; j < matrix.length; j++) {
+                        matrix[i][j] = Integer.parseInt(textFieldGrid[i][j].getText());
+                    }
+                }
 
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int index = 0; index < matrix.length; index++) {
+                        System.out.println(matrix[i][index]);
+                    }
+                }
             }
         });
 
         topPanel.add(button1);
         topPanel.add(button2);
         topPanel.add(button3);
+        // Establece el color de fondo del panel del tablero
+        boardPanel = new JPanel(new GridLayout(dimension, dimension));
+        boardPanel.setSize(300, 300);
+        boardPanel.setBackground(new Color(241, 232, 219));
+
+        frame.add(topPanel, BorderLayout.NORTH);
+        frame.add(boardPanel, BorderLayout.CENTER);
+        frame.setLocationRelativeTo(null); // Centra la ventana en la pantalla
+        frame.setVisible(true);
+    }
+
+    private void updateBoard() {
+        // Remueve los componentes del panel anterior
+        boardPanel.removeAll();
 
         // Calcula el ancho de cada JTextField en función de la nueva dimensión y del
         // tamaño de la ventana
