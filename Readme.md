@@ -2,6 +2,7 @@
 ================================================================
 ## Bitacora de cambios en el repositorio
 ----------------------------------------------------------------
+<<<<<<< HEAD
 En la presente rama se anexan la bitacora para la pagina web y tener un control de versionamiento
 
 >24-09-2023
@@ -45,3 +46,15 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 1. Para iniciar la aplicación se requiere del cómando "npm start"
 2. Para compilar y generar una versión para productivo "npm build"
 3. Para subir a productivo "netlify deploy --prod" y colocar "./build" para tomar la versión de productivo generada con anterioridad
+=======
+En la presente rama se realizaran los cambios para el codigo de escritorio.
+
+>08-10-2023
+1. Se crea la rama para anlizar el codigo de la aplicacion de escritorio.
+2. Se obtiene la version estable del ejecutable.
+3. Se elimina cualquier otra carpeta que no tenga que ver con la aplicacion de escritorio.
+
+## Pasos para compilación de código en C++
+compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
+ejecutar con .\<nombre> <n>
+>>>>>>> 592d8786714348d18ac8dd6316688e1b94374379

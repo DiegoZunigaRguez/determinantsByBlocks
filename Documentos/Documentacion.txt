@@ -1,8 +1,0 @@
-https://online.visual-paradigm.com/knowledge/software-design/gane-sarson-dfd-tutorial->Gane-Sarson Data Flow Diagram Tutorial
-https://ieeexplore.ieee.org/document/182223->A modern approach to the application of Yourdon structured methods
-https://www.conceptdraw.com/examples/yourdon-structured-method->Structured Systems Analysis and Design Method. SSADM with ConceptDraw DIAGRAM
-https://administracionelectronica.gob.es/pae_Home/pae_Documentacion/pae_Metodolog/pae_Metrica_v3.html->Este es el importante
-https://www.itson.mx/servicios/innovacion/documents/taxonomia_verbos_2.pdf->Taxonomia
-Libros
-https://gc.scalahed.com/recursos/files/r161r/w25469w/ingdelsoftwarelibro9_compressed.pdf
-http://cotana.informatica.edu.bo/downloads/ld-Ingenieria.de.software.enfoque.practico.7ed.Pressman.PDF
