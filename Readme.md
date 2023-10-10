@@ -18,3 +18,7 @@ En la presente rama se realizaran los cambios para el codigo de escritorio.
 ## Pasos para compilación de código en C++
 compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
 ejecutar con .\<nombre> <n>
+
+## Pasos para compilación de código en Java
+Compilar con javac Interfaz.java
+Ejecutar con java Interfaz
