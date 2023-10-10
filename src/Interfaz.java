@@ -8,14 +8,108 @@ public class Interfaz {
     private JTextField[][] textFieldGrid;
     private JPanel boardPanel;
     private JPanel topPanel;
-    int Resultado = 0;
-    private JTextField Res = new JTextField();
-    int[][] matrix = new int[dimension][dimension];
+    JTextField textFieldResultado = new JTextField();
+    long Resultado = 0;
+    int[][] matriz;
 
     public Interfaz() {
         // Crea una interfaz gráfica con un tablero de texto de tamaño 4x4 inicialmente
         dimension = 4;
         initializeUI();
+    }
+
+    public static int getSign(int n) {
+        return n % 2 == 0 ? 1 : -1;
+    }
+
+    public static void printMatrix(int[][] mtz) {
+        for (int i = 0; i < mtz.length; i++) {
+            for (int j = 0; j < mtz[i].length; j++) {
+                System.out.print(mtz[i][j] + "\t"); // Usamos print en lugar de println para imprimir en la misma línea
+            }
+            System.out.println(); // Al final de cada fila, imprimimos una nueva línea para pasar a la siguiente fila
+        }
+    }
+    
+
+    public static int[][] getComplementaryMatrix(int[][] mtz, int n, int index0, int index1) {
+        int dim = n - 2;
+        int[][] comp = new int[dim][dim];
+        for (int i = 2, auxI = 0; i < n; i++, auxI++) {
+            for (int j = 0, auxJ = 0; j < n; j++) {
+                if (j == index0 || j == index1) {
+                    continue;
+                }
+                comp[auxI][auxJ++] = mtz[i][j];
+            }
+        }
+        /*System.out.println("Matriz complementaria");
+        printMatrix(comp);*/
+        return comp;
+    }
+
+    public static long DeterminantCounting(int[][] mtz, int n, long numDetCalculados, int[] numDetOrden) {
+        long det = 0;
+        if (n == 2) {
+            det = mtz[0][0] * mtz[1][1] - mtz[0][1] * mtz[1][0];
+            numDetCalculados++;
+            numDetOrden[n - 2]++;
+        } else if (n == 3) {
+            det = mtz[0][0] * mtz[1][1] * mtz[2][2] +
+                    mtz[1][0] * mtz[2][1] * mtz[0][2] +
+                    mtz[2][0] * mtz[0][1] * mtz[1][2] -
+                    mtz[0][2] * mtz[1][1] * mtz[2][0] -
+                    mtz[1][2] * mtz[2][1] * mtz[0][0] -
+                    mtz[2][2] * mtz[0][1] * mtz[1][0];
+            numDetCalculados++;
+            numDetOrden[n - 2]++;
+        } else {
+            int[][] m0 = new int[2][2];
+            for (int left = 0; left < n - 1; left++) {
+                m0[0][0] = mtz[0][left];
+                m0[1][0] = mtz[1][left];
+                for (int right = left + 1; right < n; right++) {
+                    m0[0][1] = mtz[0][right];
+                    m0[1][1] = mtz[1][right];
+                    printMatrix(m0);
+                    int[][] aux = getComplementaryMatrix(mtz, n, left, right);
+                    det += getSign(left % 2 == 1 ? right : right + 1)
+                            * DeterminantCounting(m0, 2, numDetCalculados, numDetOrden)
+                            * DeterminantCounting(aux, n - 2, numDetCalculados, numDetOrden);
+                    // deleteMatrix(aux, n - 2);
+                }
+            }
+            numDetOrden[n - 2]++;
+        }
+        return det;
+    }
+
+    public static long Determinant(int[][] mtz, int n) {
+        long det = 0;
+        if (n == 2) {
+            det = mtz[0][0] * mtz[1][1] - mtz[0][1] * mtz[1][0];
+        } else if (n == 3) {
+            det = mtz[0][0] * mtz[1][1] * mtz[2][2] +
+                    mtz[1][0] * mtz[2][1] * mtz[0][2] +
+                    mtz[2][0] * mtz[0][1] * mtz[1][2] -
+                    mtz[0][2] * mtz[1][1] * mtz[2][0] -
+                    mtz[1][2] * mtz[2][1] * mtz[0][0] -
+                    mtz[2][2] * mtz[0][1] * mtz[1][0];
+        } else {
+            int[][] m0 = new int[2][2];
+            for (int left = 0; left < n - 1; left++) {
+                m0[0][0] = mtz[0][left];
+                m0[1][0] = mtz[1][left];
+                for (int right = left + 1; right < n; right++) {
+                    m0[0][1] = mtz[0][right];
+                    m0[1][1] = mtz[1][right];
+                    int[][] aux = getComplementaryMatrix(mtz, n, left, right);
+                    det += getSign(left % 2 == 1 ? right : right + 1) * Determinant(m0, 2) * Determinant(aux, n - 2);
+                    // deleteMatrix(aux, n - 2);
+                }
+            }
+        }
+        return det;
     }
 
     private void initializeUI() {
@@ -70,16 +164,36 @@ public class Interfaz {
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (int i = 0; i < matrix.length; i++) {
-                    for (int j = 0; j < matrix.length; j++) {
-                        matrix[i][j] = Integer.parseInt(textFieldGrid[i][j].getText());
+                // Intentar parsear los valores de los JTextField a enteros y guardarlos en la
+                // matriz
+                int[][] matrix = new int[dimension][dimension];
+                boolean isValidInput = true;
+
+                for (int i = 0; i < dimension; i++) {
+                    for (int j = 0; j < dimension; j++) {
+                        try {
+                            matrix[i][j] = Integer.parseInt(textFieldGrid[i][j].getText());
+                        } catch (NumberFormatException ex) {
+                            // Si el texto no es un número válido, marcar la entrada como inválida
+                            isValidInput = false;
+                            break;
+                        }
+                    }
+                    if (!isValidInput) {
+                        break;
                     }
                 }
 
-                for (int i = 0; i < matrix.length; i++) {
-                    for (int index = 0; index < matrix.length; index++) {
-                        System.out.println(matrix[i][index]);
-                    }
+                if (isValidInput) {
+                    //System.out.println("El valor del determinante es "+Determinant(matrix, dimension));
+                    Resultado=Determinant(matrix, dimension);
+                    SwingUtilities.invokeLater(() -> {
+                        textFieldResultado.setText(String.valueOf(Resultado));
+                    });
+                } else {
+                    // Al menos una entrada no es un número válido, mostrar un mensaje de error
+                    JOptionPane.showMessageDialog(null, "Por favor, ingresa números válidos en todas las celdas.",
+                            "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -87,6 +201,8 @@ public class Interfaz {
         topPanel.add(button1);
         topPanel.add(button2);
         topPanel.add(button3);
+        topPanel.add(new JLabel("Resultado: "));
+        topPanel.add(textFieldResultado);
         // Establece el color de fondo del panel del tablero
         boardPanel = new JPanel(new GridLayout(dimension, dimension));
         boardPanel.setSize(300, 300);
