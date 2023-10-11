@@ -7,6 +7,8 @@ import Matrix4 from "./Matrix4";
 import Matrix5 from "./Matrix5";
 //Se agrega el modulo para el determinante de 6x6
 import Matrix6 from "./Matrix6";
+//Se agrega el modulo para la calculadora movil
+import MobileCalculator from "./mobileCalculator";
 import Combinatoria from "../../assets/Productos.png";
 import Expression from "../../assets/TTExp.png";
 import Sarrus from "../../assets/Sarrus.png";
@@ -2785,22 +2787,30 @@ function Simulation() {
     );
   };
 
-  const renderProduct=()=>{
+  const renderProduct = () => {
+    const Result = () => {
+      return (
+        <div>
+          <MobileCalculator parametro1={matrix} parametro2={matrixSize} />
+        </div>
+      );
+    };
+
     return (
-      <div className="">
-          <div className="determinant">
-            {matrix.map((row, rowIndex) => (
-              <div key={rowIndex} className="matrix-row">
-                {row.map((cell, columnIndex) => (
-                    <input type="text" value={cell} readOnly />
-                ))}
-              </div>
-            ))}
-          </div>
-          
+      <div className="mobile__after">
+        <div className="determinant">
+          {matrix.map((row, rowIndex) => (
+            <div key={rowIndex} className="matrix-row">
+              {row.map((cell) => (
+                <input type="text" value={cell} readOnly />
+              ))}
+            </div>
+          ))}
+        </div>
+        {Result()}
       </div>
     );
-  }
+  };
 
   return (
     <div className="simulation__container" id="simulation">
@@ -2861,9 +2871,11 @@ function Simulation() {
           <div>
             <h1 className="simulation__title">Simulación</h1>
             <p className="simulation__text">
-              Aquí tienes una calculadora de determinantes, tienes la opción de elegir desde un determinante de 4x4
-              hasta un determinante de 7x7, en este caso únicamente se visualizará el resultado del determinante,
-              si quieres ver el proceso del calculo, puedes consultar desde una tablet o computadora.
+              Aquí tienes una calculadora de determinantes, tienes la opción de
+              elegir desde un determinante de 4x4 hasta un determinante de 7x7,
+              en este caso únicamente se visualizará el resultado del
+              determinante, si quieres ver el proceso del calculo, puedes
+              consultar desde una tablet o computadora.
             </p>
             <select
               className="simulation__options"

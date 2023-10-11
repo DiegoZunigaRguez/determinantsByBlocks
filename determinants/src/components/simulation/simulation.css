@@ -287,4 +287,12 @@ input[type="text"] {
   .button{
     margin-bottom: 1rem;
   }
+
+  .mobile__after{
+    padding-top: 7rem;
+  }
+
+  .result__text{
+    font-size: 40px;
+  }
 }
