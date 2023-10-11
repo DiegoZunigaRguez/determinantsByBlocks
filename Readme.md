@@ -41,6 +41,9 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 >06-10-2023
 1. Se colocan en componentes hijos las tres dimensiones de los determinantes.
 
+>11-10-2023
+1. Se hace la primera prueba de la versión movil, en esta versión únicamente se podrá realizar los calculos, no sé podrá mostrar la simulación.
+
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
 2. Para compilar y generar una versión para productivo "npm build"

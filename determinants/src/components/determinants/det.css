@@ -303,6 +303,10 @@ iframe {
     margin: 1rem;
     font-size: 12px;
   }
+
+  .mobile{
+    display: none;
+  }
 }
 
 /* Estilos para pantallas muy pequeñas (máximo 480px de ancho) */

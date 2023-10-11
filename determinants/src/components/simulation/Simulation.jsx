@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./simulation.css";
 import Swal from "sweetalert2";
 //Se agrega el modulo para la matriz de 4x4
@@ -92,30 +92,6 @@ function Simulation() {
     return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
   };
 
-  const calculateSarrus = (matrix) => {
-    const determinant =
-      matrix[0][0] * matrix[1][1] * matrix[2][2] +
-      matrix[0][1] * matrix[1][2] * matrix[2][0] +
-      matrix[0][2] * matrix[1][0] * matrix[2][1] -
-      matrix[0][2] * matrix[1][1] * matrix[2][0] -
-      matrix[0][1] * matrix[1][0] * matrix[2][2] -
-      matrix[0][0] * matrix[1][2] * matrix[2][1];
-
-    return determinant;
-  };
-
-  const calculateMult = (value1, value2) => {
-    return value1 * value2;
-  };
-
-  const calculateSum = (sum) => {
-    let res = 0;
-    for (let i = 0; i < sum.length; i++) {
-      res += sum[i];
-    }
-    return res;
-  };
-
   const handleSimulationRestart = () => {
     setStartSimulation(false); // Detiene la simulación si está en progreso
     setCurrentStep(0); // Restablece el paso actual a 0
@@ -158,7 +134,7 @@ function Simulation() {
   };
 
   const autoRunSimulation = async () => {
-    if(matrixSize===4){
+    if (matrixSize === 4) {
       for (let step = currentStep; step < 21; step++) {
         if (!isSimulationRunning.current) {
           // Si la simulación se detiene, salir del bucle
@@ -167,7 +143,7 @@ function Simulation() {
         await new Promise((resolve) => setTimeout(resolve, 1000));
         setCurrentStep(step + 1); // Actualizar el paso actual
       }
-    }else if(matrixSize===5){
+    } else if (matrixSize === 5) {
       for (let step = currentStep; step < 33; step++) {
         if (!isSimulationRunning.current) {
           // Si la simulación se detiene, salir del bucle
@@ -194,7 +170,7 @@ function Simulation() {
       isSimulationRunning.current = false;
     };
   }, [simulationInProgress, currentStep]);
-// Este efecto se ejecutará cuando simulationInProgress cambie
+  // Este efecto se ejecutará cuando simulationInProgress cambie
 
   const handleRunSimulationClick = () => {
     // Cuando haces clic en "Correr Simulación", establece simulationInProgress en true
@@ -262,21 +238,21 @@ function Simulation() {
     // Calcula los determinantes para ambas matrices
     const renderProductDeterminant = (step) => {
       if (matrixSize === 4) {
-        return(
+        return (
           <div>
-            <Matrix4 parametro1={matrix} parametro2={step}/>
+            <Matrix4 parametro1={matrix} parametro2={step} />
           </div>
         );
       } else if (matrixSize === 5) {
-        return(
+        return (
           <div>
-            <Matrix5 parametro1={matrix} parametro2={step}/>
+            <Matrix5 parametro1={matrix} parametro2={step} />
           </div>
         );
       } else {
-        return(
+        return (
           <div>
-            <Matrix6 parametro1={matrix} parametro2={step}/>
+            <Matrix6 parametro1={matrix} parametro2={step} />
           </div>
         );
       }
@@ -1401,81 +1377,81 @@ function Simulation() {
               default:
                 return false;
             }
-            case 4:
-              switch (rowIndex) {
-                case 0:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight";
-                    case 5:
-                      return "highlight";
-                    default:
-                      return "";
-                  }
-                case 1:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight";
-                    case 5:
-                      return "highlight";
-                    default:
-                      return "";
-                  }
-                case 2:
-                  switch (columnIndex) {
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
-                case 3:
-                  switch (columnIndex) {
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
-                case 4:
-                  switch (columnIndex) {
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
-                case 5:
-                  switch (columnIndex) {
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
-                default:
-                  return false;
-              }
+          case 4:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 5:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
           case 5:
             switch (rowIndex) {
               case 0:
@@ -1851,81 +1827,81 @@ function Simulation() {
               default:
                 return false;
             }
-            case 10:
-              switch (rowIndex) {
-                case 0:
-                  switch (columnIndex) {
-                    case 2:
-                      return "highlight";
-                    case 4:
-                      return "highlight";
-                    default:
-                      return "";
-                  }
-                case 1:
-                  switch (columnIndex) {
-                    case 2:
-                      return "highlight";
-                    case 4:
-                      return "highlight";
-                    default:
-                      return "";
-                  }
-                case 2:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 5:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
-                case 3:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 5:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
-                case 4:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 5:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
-                case 5:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 5:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
-                default:
-                  return false;
-              }
+          case 10:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 2:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 5:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 5:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 5:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 5:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
           case 11:
             switch (rowIndex) {
               case 0:
@@ -2602,9 +2578,11 @@ function Simulation() {
                   inicio de la simulación.
                 </p>
                 <br />
-                <p>Como se puede observar tenemos productos de determinantes 2x2 por 
-                  determinantes de dimensión 3x3, por lo que para los determinantes 3x3
-                  se hará uso de la regla de Sarrus para obtener el valor.
+                <p>
+                  Como se puede observar tenemos productos de determinantes 2x2
+                  por determinantes de dimensión 3x3, por lo que para los
+                  determinantes 3x3 se hará uso de la regla de Sarrus para
+                  obtener el valor.
                 </p>
               </div>
             );
@@ -2612,116 +2590,116 @@ function Simulation() {
             return (
               <div className="explication__step">
                 <p>
-                  Calculando el primer producto de determinantes, primero se calcula el 
-                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
-                  el determinante de 3x3.
+                  Calculando el primer producto de determinantes, primero se
+                  calcula el determinante 2x2, posterior, usando el metodo de
+                  Sarrus se obtiene el determinante de 3x3.
                 </p>
-                <img src={Det2x2} alt="" className="formula"/>
-                <img src={Sarrus} alt="" className="formula"/>
+                <img src={Det2x2} alt="" className="formula" />
+                <img src={Sarrus} alt="" className="formula" />
               </div>
             );
           case 13:
             return (
               <div className="explication__step">
                 <p>
-                  Calculando el segundo producto de determinantes, primero se calcula el 
-                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
-                  el determinante de 3x3.
+                  Calculando el segundo producto de determinantes, primero se
+                  calcula el determinante 2x2, posterior, usando el metodo de
+                  Sarrus se obtiene el determinante de 3x3.
                 </p>
-                <img src={Det2x2} alt="" className="formula"/>
-                <img src={Sarrus} alt="" className="formula"/>
+                <img src={Det2x2} alt="" className="formula" />
+                <img src={Sarrus} alt="" className="formula" />
               </div>
             );
           case 14:
             return (
               <div className="explication__step">
                 <p>
-                  Calculando el tercer producto de determinantes, primero se calcula el 
-                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
-                  el determinante de 3x3.
+                  Calculando el tercer producto de determinantes, primero se
+                  calcula el determinante 2x2, posterior, usando el metodo de
+                  Sarrus se obtiene el determinante de 3x3.
                 </p>
-                <img src={Det2x2} alt="" className="formula"/>
-                <img src={Sarrus} alt="" className="formula"/>
+                <img src={Det2x2} alt="" className="formula" />
+                <img src={Sarrus} alt="" className="formula" />
               </div>
             );
           case 15:
             return (
               <div className="explication__step">
                 <p>
-                  Calculando el cuarto producto de determinantes, primero se calcula el 
-                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
-                  el determinante de 3x3.
+                  Calculando el cuarto producto de determinantes, primero se
+                  calcula el determinante 2x2, posterior, usando el metodo de
+                  Sarrus se obtiene el determinante de 3x3.
                 </p>
-                <img src={Det2x2} alt="" className="formula"/>
-                <img src={Sarrus} alt="" className="formula"/>
+                <img src={Det2x2} alt="" className="formula" />
+                <img src={Sarrus} alt="" className="formula" />
               </div>
             );
           case 16:
             return (
               <div className="explication__step">
                 <p>
-                  Calculando el quinta producto de determinantes, primero se calcula el 
-                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
-                  el determinante de 3x3.
+                  Calculando el quinta producto de determinantes, primero se
+                  calcula el determinante 2x2, posterior, usando el metodo de
+                  Sarrus se obtiene el determinante de 3x3.
                 </p>
-                <img src={Det2x2} alt="" className="formula"/>
-                <img src={Sarrus} alt="" className="formula"/>
+                <img src={Det2x2} alt="" className="formula" />
+                <img src={Sarrus} alt="" className="formula" />
               </div>
             );
           case 17:
             return (
               <div className="explication__step">
                 <p>
-                  Calculando el sexto producto de determinantes, primero se calcula el 
-                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
-                  el determinante de 3x3.
+                  Calculando el sexto producto de determinantes, primero se
+                  calcula el determinante 2x2, posterior, usando el metodo de
+                  Sarrus se obtiene el determinante de 3x3.
                 </p>
-                <img src={Det2x2} alt="" className="formula"/>
-                <img src={Sarrus} alt="" className="formula"/>
+                <img src={Det2x2} alt="" className="formula" />
+                <img src={Sarrus} alt="" className="formula" />
               </div>
             );
           case 18:
             return (
               <div className="explication__step">
                 <p>
-                  Calculando el septimo producto de determinantes, primero se calcula el 
-                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
-                  el determinante de 3x3.
+                  Calculando el septimo producto de determinantes, primero se
+                  calcula el determinante 2x2, posterior, usando el metodo de
+                  Sarrus se obtiene el determinante de 3x3.
                 </p>
-                <img src={Det2x2} alt="" className="formula"/>
-                <img src={Sarrus} alt="" className="formula"/>
+                <img src={Det2x2} alt="" className="formula" />
+                <img src={Sarrus} alt="" className="formula" />
               </div>
             );
           case 19:
             return (
               <div className="explication__step">
                 <p>
-                  Calculando el octavo producto de determinantes, primero se calcula el 
-                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
-                  el determinante de 3x3.
+                  Calculando el octavo producto de determinantes, primero se
+                  calcula el determinante 2x2, posterior, usando el metodo de
+                  Sarrus se obtiene el determinante de 3x3.
                 </p>
-                <img src={Det2x2} alt="" className="formula"/>
-                <img src={Sarrus} alt="" className="formula"/>
+                <img src={Det2x2} alt="" className="formula" />
+                <img src={Sarrus} alt="" className="formula" />
               </div>
             );
           case 20:
             return (
               <div className="explication__step">
                 <p>
-                  Calculando el noveno producto de determinantes, primero se calcula el 
-                  determinante 2x2, posterior, usando el metodo de Sarrus se obtiene 
-                  el determinante de 3x3.
+                  Calculando el noveno producto de determinantes, primero se
+                  calcula el determinante 2x2, posterior, usando el metodo de
+                  Sarrus se obtiene el determinante de 3x3.
                 </p>
-                <img src={Det2x2} alt="" className="formula"/>
-                <img src={Sarrus} alt="" className="formula"/>
+                <img src={Det2x2} alt="" className="formula" />
+                <img src={Sarrus} alt="" className="formula" />
               </div>
             );
           case 21:
             return (
               <div className="explication__step">
                 <p>
-                  Una vez realizando estos calculos de determinantes, procedemos a hacer
-                  la multiplicacion interna.
+                  Una vez realizando estos calculos de determinantes, procedemos
+                  a hacer la multiplicacion interna.
                 </p>
               </div>
             );
@@ -2729,9 +2707,9 @@ function Simulation() {
             return (
               <div className="explication__step">
                 <p>
-                  Ya que se multiplicaron los resultados de los determinantes, procedemos
-                  a realizar la multiplicacion de signos, entre los que estan dentro y fuera
-                  de los parentesis.
+                  Ya que se multiplicaron los resultados de los determinantes,
+                  procedemos a realizar la multiplicacion de signos, entre los
+                  que estan dentro y fuera de los parentesis.
                 </p>
               </div>
             );
@@ -2739,7 +2717,8 @@ function Simulation() {
             return (
               <div className="explication__step">
                 <p>
-                  Una vez obtenidos los signos, procedemos a sumar los resultados.
+                  Una vez obtenidos los signos, procedemos a sumar los
+                  resultados.
                 </p>
               </div>
             );
@@ -2861,12 +2840,56 @@ function Simulation() {
         )}
       </div>
       <div className="mobile">
-        <h1 className="simulation__title">Simulación</h1>
-        <p className="simulation__text">
-          ¡Lo sentimos! La visualización de la simulación en dispositivos
-          móviles no está disponible en este momento. Te recomendamos usar una
-          computadora para interactuar con esta simulación.
-        </p>
+        {!startSimulation && (
+          <div>
+            <h1 className="simulation__title">Simulación</h1>
+            <p className="simulation__text">
+              Aquí tienes la simulación haciendo uso del algoritmo que se te
+              presentó anteriormente. Por favor, selecciona la dimensión de la
+              matriz y completa los datos. La matriz debe ser de dimensión 4x4 o
+              superior.
+            </p>
+            <select
+              className="simulation__options"
+              value={matrixSize}
+              onChange={handleMatrixSizeChange}
+            >
+              <option value={0} defaultChecked>
+                Selecciona
+              </option>
+              <option value={4}>Matriz 4x4</option>
+              <option value={5}>Matriz 5x5</option>
+              <option value={6}>Matriz 6x6</option>
+            </select>
+            <br />
+            <br />
+            <div className="determinant">
+              {matrix.map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.map((cell, columnIndex) => (
+                    <input
+                      key={columnIndex}
+                      type="text"
+                      value={cell}
+                      onChange={(e) => {
+                        const updatedMatrix = [...matrix];
+                        updatedMatrix[rowIndex][columnIndex] = e.target.value;
+                        setMatrix(updatedMatrix);
+                      }}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+            <br />
+            {renderButtons()}
+          </div>
+        )}
+        {startSimulation && (
+          <div>
+            <div className="product-container">{renderProductMatrix()}</div>
+          </div>
+        )}
       </div>
     </div>
   );

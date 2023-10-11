@@ -68,6 +68,19 @@
 }
 
 /* Media queries para dispositivos más pequeños */
+@media screen and (max-width: 1100px) {
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .circle, .circle__imagen{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Media queries para dispositivos más pequeños */
 @media screen and (max-width: 768px) {
     .developers__card{
         flex-direction: column;

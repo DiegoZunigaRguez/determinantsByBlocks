@@ -188,7 +188,7 @@ input[type="text"] {
 
 .expansion6x6{
   display: grid;
-  grid-template-columns: repeat(9, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
+  grid-template-columns: repeat(12, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
   align-items: center; /* Alinea verticalmente los elementos al centro */
   margin-bottom: 3rem;
   max-width: 100vw;
@@ -232,6 +232,10 @@ input[type="text"] {
     grid-template-columns: repeat(9, 1fr);
   }
 
+  .expansion6x6{
+    grid-template-columns: repeat(9,1fr);
+  }
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -250,12 +254,37 @@ input[type="text"] {
 
 }
 
-@media (width <= 480px) {
+@media (width <= 900px) {
+  .simulation__title{
+    padding-top: 2rem;
+  }
+
   .desktop{
     display: none;
   }
 
   .mobile{
     display: block;
+  }
+
+  .mobile .simulation__text{
+    font-size: 15px;
+  }
+
+  .mobile .simulation__options{
+    font-size: 15px;
+  }
+
+  .mobile .determinant{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  input[type="text"] {
+    margin: 0.2rem;
+  }
+
+  .button{
+    margin-bottom: 1rem;
   }
 }
