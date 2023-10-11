@@ -9,29 +9,8 @@ import Matrix5 from "./Matrix5";
 import Matrix6 from "./Matrix6";
 //Se agrega el modulo para la calculadora movil
 import MobileCalculator from "./mobileCalculator";
-import Combinatoria from "../../assets/Productos.png";
-import Expression from "../../assets/TTExp.png";
-import Sarrus from "../../assets/Sarrus.png";
-//Se declaran las imagenes para la explicación de las matrices 4x4
-import firstSum4x4 from "../../assets/firstSum4x4.png";
-import secondSum4x4 from "../../assets/secondSum4x4.png";
-import thirdSum4x4 from "../../assets/thirdSum4x4.png";
-import fourthSum4x4 from "../../assets/fourthSum4x4.png";
-import fifthSum4x4 from "../../assets/fifthSum4x4.png";
-import sixthSum4x4 from "../../assets/sixthSum4x4.png";
-import Det2x2 from "../../assets/defDet2x2.png";
-//Se declaran las imagenes para la explicación de las matrices 5x5
-import Productos5x5 from "../../assets/productos5x5.png";
-import firstSum5x5 from "../../assets/firstSum5x5.png";
-import secondSum5x5 from "../../assets/secondSum5x5.png";
-import thirdSum5x5 from "../../assets/thirdSum5x5.png";
-import fourthSum5x5 from "../../assets/fourthSum5x5.png";
-import fifthSum5x5 from "../../assets/fifthSum5x5.png";
-import sixthSum5x5 from "../../assets/sixthSum5x5.png";
-import seventhSum5x5 from "../../assets/seventhSum5x5.png";
-import eightSum5x5 from "../../assets/eighthSum5x5.png";
-import ninthSum5x5 from "../../assets/ninthSum5x5.png";
-import tenthSum5x5 from "../../assets/tenthSum5x5.png";
+//Se agrega el modulo de la explicación
+import Explication from "./Explication";
 
 function Simulation() {
   const [matrixSize, setMatrixSize] = useState(0);
@@ -231,6 +210,33 @@ function Simulation() {
               </button>
             </div>
           </div>
+        </>
+      );
+    }
+  };
+
+  const renderButtonsCalculator = () => {
+    if (matrixSize === 0) {
+      return null;
+    }
+    if (startSimulation) {
+      return (
+        <>
+          <br />
+          <button className="button" onClick={handleSimulationRestart}>
+            Nuevo Calculo
+          </button>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <button className="button" onClick={handleRandomFill}>
+            Rellenar Aleatoriamente
+          </button>
+          <button className="button" onClick={handleSimulationStart}>
+            Calcular
+          </button>
         </>
       );
     }
@@ -1079,88 +1085,13 @@ function Simulation() {
         }
       } else {
         switch (step) {
-          case 0:
-            switch (rowIndex) {
-              case 0:
-                switch (columnIndex) {
-                  case 0:
-                    return "highlight";
-                  case 1:
-                    return "highlight";
-                  default:
-                    return "";
-                }
-              case 1:
-                switch (columnIndex) {
-                  case 0:
-                    return "highlight";
-                  case 1:
-                    return "highlight";
-                  default:
-                    return "";
-                }
-              case 2:
-                switch (columnIndex) {
-                  case 2:
-                    return "highlight__down";
-                  case 3:
-                    return "highlight__down";
-                  case 4:
-                    return "highlight__down";
-                  case 5:
-                    return "highlight__down";
-                  default:
-                    return "";
-                }
-              case 3:
-                switch (columnIndex) {
-                  case 2:
-                    return "highlight__down";
-                  case 3:
-                    return "highlight__down";
-                  case 4:
-                    return "highlight__down";
-                  case 5:
-                    return "highlight__down";
-                  default:
-                    return "";
-                }
-              case 4:
-                switch (columnIndex) {
-                  case 2:
-                    return "highlight__down";
-                  case 3:
-                    return "highlight__down";
-                  case 4:
-                    return "highlight__down";
-                  case 5:
-                    return "highlight__down";
-                  default:
-                    return "";
-                }
-              case 5:
-                switch (columnIndex) {
-                  case 2:
-                    return "highlight__down";
-                  case 3:
-                    return "highlight__down";
-                  case 4:
-                    return "highlight__down";
-                  case 5:
-                    return "highlight__down";
-                  default:
-                    return "";
-                }
-              default:
-                return false;
-            }
           case 1:
             switch (rowIndex) {
               case 0:
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 2:
+                  case 1:
                     return "highlight";
                   default:
                     return "";
@@ -1169,14 +1100,14 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 2:
+                  case 1:
                     return "highlight";
                   default:
                     return "";
                 }
               case 2:
                 switch (columnIndex) {
-                  case 1:
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
@@ -1189,7 +1120,7 @@ function Simulation() {
                 }
               case 3:
                 switch (columnIndex) {
-                  case 1:
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
@@ -1202,7 +1133,7 @@ function Simulation() {
                 }
               case 4:
                 switch (columnIndex) {
-                  case 1:
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
@@ -1215,7 +1146,7 @@ function Simulation() {
                 }
               case 5:
                 switch (columnIndex) {
-                  case 1:
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
@@ -1235,7 +1166,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 3:
+                  case 2:
                     return "highlight";
                   default:
                     return "";
@@ -1244,7 +1175,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 3:
+                  case 2:
                     return "highlight";
                   default:
                     return "";
@@ -1253,7 +1184,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   case 4:
                     return "highlight__down";
@@ -1266,7 +1197,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   case 4:
                     return "highlight__down";
@@ -1279,7 +1210,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   case 4:
                     return "highlight__down";
@@ -1292,7 +1223,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   case 4:
                     return "highlight__down";
@@ -1310,7 +1241,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 4:
+                  case 3:
                     return "highlight";
                   default:
                     return "";
@@ -1319,7 +1250,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 4:
+                  case 3:
                     return "highlight";
                   default:
                     return "";
@@ -1330,7 +1261,7 @@ function Simulation() {
                     return "highlight__down";
                   case 2:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1343,7 +1274,7 @@ function Simulation() {
                     return "highlight__down";
                   case 2:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1356,7 +1287,7 @@ function Simulation() {
                     return "highlight__down";
                   case 2:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1369,7 +1300,7 @@ function Simulation() {
                     return "highlight__down";
                   case 2:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1385,7 +1316,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 5:
+                  case 4:
                     return "highlight";
                   default:
                     return "";
@@ -1394,7 +1325,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight";
-                  case 5:
+                  case 4:
                     return "highlight";
                   default:
                     return "";
@@ -1407,7 +1338,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1420,7 +1351,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1433,7 +1364,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1446,7 +1377,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1458,70 +1389,70 @@ function Simulation() {
             switch (rowIndex) {
               case 0:
                 switch (columnIndex) {
-                  case 1:
+                  case 0:
                     return "highlight";
-                  case 2:
+                  case 5:
                     return "highlight";
                   default:
                     return "";
                 }
               case 1:
                 switch (columnIndex) {
-                  case 1:
+                  case 0:
                     return "highlight";
-                  case 2:
+                  case 5:
                     return "highlight";
                   default:
                     return "";
                 }
               case 2:
                 switch (columnIndex) {
-                  case 0:
+                  case 1:
+                    return "highlight__down";
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down";
-                  case 5:
                     return "highlight__down";
                   default:
                     return "";
                 }
               case 3:
                 switch (columnIndex) {
-                  case 0:
+                  case 1:
+                    return "highlight__down";
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down";
-                  case 5:
                     return "highlight__down";
                   default:
                     return "";
                 }
               case 4:
                 switch (columnIndex) {
-                  case 0:
+                  case 1:
+                    return "highlight__down";
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down";
-                  case 5:
                     return "highlight__down";
                   default:
                     return "";
                 }
               case 5:
                 switch (columnIndex) {
-                  case 0:
+                  case 1:
+                    return "highlight__down";
+                  case 2:
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down";
-                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1535,7 +1466,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight";
-                  case 3:
+                  case 2:
                     return "highlight";
                   default:
                     return "";
@@ -1544,7 +1475,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight";
-                  case 3:
+                  case 2:
                     return "highlight";
                   default:
                     return "";
@@ -1553,7 +1484,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   case 4:
                     return "highlight__down";
@@ -1566,7 +1497,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   case 4:
                     return "highlight__down";
@@ -1579,7 +1510,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   case 4:
                     return "highlight__down";
@@ -1592,7 +1523,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
                   case 4:
                     return "highlight__down";
@@ -1610,7 +1541,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight";
-                  case 4:
+                  case 3:
                     return "highlight";
                   default:
                     return "";
@@ -1619,7 +1550,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight";
-                  case 4:
+                  case 3:
                     return "highlight";
                   default:
                     return "";
@@ -1630,7 +1561,7 @@ function Simulation() {
                     return "highlight__down";
                   case 2:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1643,7 +1574,7 @@ function Simulation() {
                     return "highlight__down";
                   case 2:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1656,7 +1587,7 @@ function Simulation() {
                     return "highlight__down";
                   case 2:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1669,7 +1600,7 @@ function Simulation() {
                     return "highlight__down";
                   case 2:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1685,7 +1616,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight";
-                  case 5:
+                  case 4:
                     return "highlight";
                   default:
                     return "";
@@ -1694,7 +1625,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 1:
                     return "highlight";
-                  case 5:
+                  case 4:
                     return "highlight";
                   default:
                     return "";
@@ -1707,7 +1638,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1720,7 +1651,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1733,7 +1664,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1746,7 +1677,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1758,18 +1689,18 @@ function Simulation() {
             switch (rowIndex) {
               case 0:
                 switch (columnIndex) {
-                  case 2:
+                  case 1:
                     return "highlight";
-                  case 3:
+                  case 5:
                     return "highlight";
                   default:
                     return "";
                 }
               case 1:
                 switch (columnIndex) {
-                  case 2:
+                  case 1:
                     return "highlight";
-                  case 3:
+                  case 5:
                     return "highlight";
                   default:
                     return "";
@@ -1778,11 +1709,11 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight__down";
-                  case 1:
+                  case 2:
+                    return "highlight__down";
+                  case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down";
-                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1791,11 +1722,11 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight__down";
-                  case 1:
+                  case 2:
+                    return "highlight__down";
+                  case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down";
-                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1804,11 +1735,11 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight__down";
-                  case 1:
+                  case 2:
+                    return "highlight__down";
+                  case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down";
-                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1817,11 +1748,11 @@ function Simulation() {
                 switch (columnIndex) {
                   case 0:
                     return "highlight__down";
-                  case 1:
+                  case 2:
+                    return "highlight__down";
+                  case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down";
-                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1835,7 +1766,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 2:
                     return "highlight";
-                  case 4:
+                  case 3:
                     return "highlight";
                   default:
                     return "";
@@ -1844,7 +1775,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 2:
                     return "highlight";
-                  case 4:
+                  case 3:
                     return "highlight";
                   default:
                     return "";
@@ -1855,7 +1786,7 @@ function Simulation() {
                     return "highlight__down";
                   case 1:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1868,7 +1799,7 @@ function Simulation() {
                     return "highlight__down";
                   case 1:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1881,7 +1812,7 @@ function Simulation() {
                     return "highlight__down";
                   case 1:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1894,7 +1825,7 @@ function Simulation() {
                     return "highlight__down";
                   case 1:
                     return "highlight__down";
-                  case 3:
+                  case 4:
                     return "highlight__down";
                   case 5:
                     return "highlight__down";
@@ -1910,7 +1841,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 2:
                     return "highlight";
-                  case 5:
+                  case 4:
                     return "highlight";
                   default:
                     return "";
@@ -1919,7 +1850,7 @@ function Simulation() {
                 switch (columnIndex) {
                   case 2:
                     return "highlight";
-                  case 5:
+                  case 4:
                     return "highlight";
                   default:
                     return "";
@@ -1932,7 +1863,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1945,7 +1876,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1958,7 +1889,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1971,7 +1902,7 @@ function Simulation() {
                     return "highlight__down";
                   case 3:
                     return "highlight__down";
-                  case 4:
+                  case 5:
                     return "highlight__down";
                   default:
                     return "";
@@ -1983,18 +1914,18 @@ function Simulation() {
             switch (rowIndex) {
               case 0:
                 switch (columnIndex) {
-                  case 3:
+                  case 2:
                     return "highlight";
-                  case 4:
+                  case 5:
                     return "highlight";
                   default:
                     return "";
                 }
               case 1:
                 switch (columnIndex) {
-                  case 3:
+                  case 2:
                     return "highlight";
-                  case 4:
+                  case 5:
                     return "highlight";
                   default:
                     return "";
@@ -2005,9 +1936,9 @@ function Simulation() {
                     return "highlight__down";
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
-                  case 5:
+                  case 4:
                     return "highlight__down";
                   default:
                     return "";
@@ -2018,9 +1949,9 @@ function Simulation() {
                     return "highlight__down";
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
-                  case 5:
+                  case 4:
                     return "highlight__down";
                   default:
                     return "";
@@ -2031,9 +1962,9 @@ function Simulation() {
                     return "highlight__down";
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
-                  case 5:
+                  case 4:
                     return "highlight__down";
                   default:
                     return "";
@@ -2044,9 +1975,9 @@ function Simulation() {
                     return "highlight__down";
                   case 1:
                     return "highlight__down";
-                  case 2:
+                  case 3:
                     return "highlight__down";
-                  case 5:
+                  case 4:
                     return "highlight__down";
                   default:
                     return "";
@@ -2060,6 +1991,81 @@ function Simulation() {
                 switch (columnIndex) {
                   case 3:
                     return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 5:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 5:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 5:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 5:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 5:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 14:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 3:
+                    return "highlight";
                   case 5:
                     return "highlight";
                   default:
@@ -2129,7 +2135,7 @@ function Simulation() {
               default:
                 return false;
             }
-          case 14:
+          case 15:
             switch (rowIndex) {
               case 0:
                 switch (columnIndex) {
@@ -2210,546 +2216,14 @@ function Simulation() {
       }
     };
 
-    const Explication = (step) => {
-      if (matrixSize === 4) {
-        switch (step) {
-          case 0:
-            return (
-              <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 4x4 se deben
-                calcular 6 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Combinatoria} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
-                </p>
-                <img src={Expression} alt="" className="formula2" />
-              </div>
-            );
-          case 1:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la primera sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={firstSum4x4} alt="" className="formula2" />
-                <p>Ahora tomando el primer termino de la sumatoria.</p>
-              </div>
-            );
-          case 2:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la primera sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={secondSum4x4} alt="" className="formula2" />
-                <p>Ahora tomando el segundo termino de la sumatoria.</p>
-              </div>
-            );
-          case 3:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la primera sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={thirdSum4x4} alt="" className="formula2" />
-                <p>Ahora tomando el tercer termino de la sumatoria.</p>
-              </div>
-            );
-          case 4:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la segunda sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={fourthSum4x4} alt="" className="formula2" />
-                <p>Ahora tomando el primer termino de la sumatoria.</p>
-              </div>
-            );
-          case 5:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la segunda sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={fifthSum4x4} alt="" className="formula2" />
-                <p>Ahora tomando el segundo termino de la sumatoria.</p>
-              </div>
-            );
-          case 6:
-            return (
-              <div className="explication__step">
-                <p>
-                  Finalmente, para el ultimo termino, unicamente se debe
-                  sustituir los valores donde n=4, ya que la dimension de la
-                  matriz es de 4x4.
-                </p>
-                <img src={sixthSum4x4} alt="" className="formula2" />
-              </div>
-            );
-          case 7:
-            return (
-              <div className="explication__step">
-                <p>
-                  Ahora, se tiene toda la expansion de productos de
-                  determinantes 2x2, como se puede observar, se tienen los 6
-                  productos, si no recuerdas como se calculo, puedes regresar al
-                  inicio de la simulación.
-                </p>
-                <p>
-                  Como siguiente paso, procederemos a calcular el primer
-                  producto de determinantes mediante la siguiente definicion:
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-              </div>
-            );
-          case 8:
-            return (
-              <div className="explication__step">
-                <p>
-                  Procederemos a calcular el segundo producto de determinantes
-                  mediante la siguiente definicion:
-                </p>
-                <br />
-                <img src={Det2x2} alt="" className="formula" />
-              </div>
-            );
-          case 9:
-            return (
-              <div className="explication__step">
-                <p>
-                  Procederemos a calcular el tercer producto de determinantes
-                  mediante la siguiente definicion:
-                </p>
-                <br />
-                <img src={Det2x2} alt="" className="formula" />
-              </div>
-            );
-          case 10:
-            return (
-              <div className="explication__step">
-                <p>
-                  Procederemos a calcular el cuarto producto de determinantes
-                  mediante la siguiente definicion:
-                </p>
-                <br />
-                <img src={Det2x2} alt="" className="formula" />
-              </div>
-            );
-          case 11:
-            return (
-              <div className="explication__step">
-                <p>
-                  Procederemos a calcular el quinto producto de determinantes
-                  mediante la siguiente definicion:
-                </p>
-                <br />
-                <img src={Det2x2} alt="" className="formula" />
-              </div>
-            );
-          case 12:
-            return (
-              <div className="explication__step">
-                <p>
-                  Procederemos a calcular el sexto producto de determinantes
-                  mediante la siguiente definicion:
-                </p>
-                <br />
-                <img src={Det2x2} alt="" className="formula" />
-              </div>
-            );
-          case 13:
-            return (
-              <div className="explication__step">
-                <p>
-                  Una vez realizados todos los determinantes, se realizan las
-                  multiplicaciones dentro de cada parentesis. En este caso se
-                  procede con el primer parentesis.
-                </p>
-              </div>
-            );
-          case 14:
-            return (
-              <div className="explication__step">
-                <p>Se procede con el segundo parentesis.</p>
-              </div>
-            );
-          case 15:
-            return (
-              <div className="explication__step">
-                <p>Se procede con el tercer parentesis.</p>
-              </div>
-            );
-          case 16:
-            return (
-              <div className="explication__step">
-                <p>Se procede con el cuarto parentesis.</p>
-              </div>
-            );
-          case 17:
-            return (
-              <div className="explication__step">
-                <p>Se procede con el quinto parentesis.</p>
-              </div>
-            );
-          case 18:
-            return (
-              <div className="explication__step">
-                <p>Se procede con el sexto parentesis y ultimo parentesis.</p>
-              </div>
-            );
-          case 19:
-            return (
-              <div className="explication__step">
-                <p>
-                  Una vez hecho esto, se hace la multiplicacion de signos para
-                  sumar los resultados.
-                </p>
-              </div>
-            );
-          case 20:
-            return (
-              <div className="explication__step">
-                <p>
-                  Ahora, sumamos los resultados de los productos para obtener
-                  los resultados.
-                </p>
-              </div>
-            );
-          case 21:
-            return (
-              <div className="explication__step">
-                <p>
-                  Finalmente,puedes ver el resultado del determinante que
-                  colocaste, puedes comprobar el resultado en la calculadora de
-                  tu preferencia.
-                </p>
-                <br />
-                <p>
-                  Si quieres ingresar un nuevo determinante, puedes dar click en
-                  el boton "Nueva simulación".
-                </p>
-              </div>
-            );
-          default:
-            return false;
-        }
-      } else if (matrixSize === 5) {
-        switch (step) {
-          case 0:
-            return (
-              <div className="explication__step">
-                Como primer paso, se deben obtener los productos de
-                determinantes, para una matriz de dimension 5x5 se deben
-                calcular 10 productos, siguiendo la siguiente formula:
-                <br />
-                <img src={Productos5x5} alt="" className="formula" />
-                <br />
-                <p>
-                  Ahora, para determinar los signos se hara mediante la siguente
-                  expresión:{" "}
-                </p>
-                <img src={Expression} alt="" className="formula2" />
-              </div>
-            );
-          case 1:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la primera sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={firstSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el primer termino de la sumatoria.</p>
-              </div>
-            );
-          case 2:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la primera sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={secondSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el segundo termino de la sumatoria.</p>
-              </div>
-            );
-          case 3:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la primera sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={thirdSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el tercer termino de la sumatoria.</p>
-              </div>
-            );
-          case 4:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la primera sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={fourthSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el cuarto termino de la sumatoria.</p>
-              </div>
-            );
-          case 5:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la segunda sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={fifthSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el primer termino de la sumatoria.</p>
-              </div>
-            );
-          case 6:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la segunda sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={sixthSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el segundo termino de la sumatoria.</p>
-              </div>
-            );
-          case 7:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la segunda sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={seventhSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el tercer termino de la sumatoria.</p>
-              </div>
-            );
-          case 8:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la tercera sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={eightSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el primer termino de la sumatoria.</p>
-              </div>
-            );
-          case 9:
-            return (
-              <div className="explication__step">
-                <p>
-                  Para la tercera sumatoria, se tiene lo siguiente, es decir
-                  para determinar los signos de los productos:
-                </p>
-                <img src={ninthSum5x5} alt="" className="formula2" />
-                <p>Ahora tomando el segundo termino de la sumatoria.</p>
-              </div>
-            );
-          case 10:
-            return (
-              <div className="explication__step">
-                <p>
-                  Finalmente, para el ultimo termino, unicamente se debe
-                  sustituir los valores donde n=5, ya que la dimension de la
-                  matriz es de 5x5.
-                </p>
-                <img src={tenthSum5x5} alt="" className="formula2" />
-              </div>
-            );
-          case 11:
-            return (
-              <div className="explication__step">
-                <p>
-                  Ahora, se tiene toda la expansion de productos de
-                  determinantes 2x2, como se puede observar, se tienen los 10
-                  productos, si no recuerdas como se calculo, puedes regresar al
-                  inicio de la simulación.
-                </p>
-                <br />
-                <p>
-                  Como se puede observar tenemos productos de determinantes 2x2
-                  por determinantes de dimensión 3x3, por lo que para los
-                  determinantes 3x3 se hará uso de la regla de Sarrus para
-                  obtener el valor.
-                </p>
-              </div>
-            );
-          case 12:
-            return (
-              <div className="explication__step">
-                <p>
-                  Calculando el primer producto de determinantes, primero se
-                  calcula el determinante 2x2, posterior, usando el metodo de
-                  Sarrus se obtiene el determinante de 3x3.
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-                <img src={Sarrus} alt="" className="formula" />
-              </div>
-            );
-          case 13:
-            return (
-              <div className="explication__step">
-                <p>
-                  Calculando el segundo producto de determinantes, primero se
-                  calcula el determinante 2x2, posterior, usando el metodo de
-                  Sarrus se obtiene el determinante de 3x3.
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-                <img src={Sarrus} alt="" className="formula" />
-              </div>
-            );
-          case 14:
-            return (
-              <div className="explication__step">
-                <p>
-                  Calculando el tercer producto de determinantes, primero se
-                  calcula el determinante 2x2, posterior, usando el metodo de
-                  Sarrus se obtiene el determinante de 3x3.
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-                <img src={Sarrus} alt="" className="formula" />
-              </div>
-            );
-          case 15:
-            return (
-              <div className="explication__step">
-                <p>
-                  Calculando el cuarto producto de determinantes, primero se
-                  calcula el determinante 2x2, posterior, usando el metodo de
-                  Sarrus se obtiene el determinante de 3x3.
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-                <img src={Sarrus} alt="" className="formula" />
-              </div>
-            );
-          case 16:
-            return (
-              <div className="explication__step">
-                <p>
-                  Calculando el quinta producto de determinantes, primero se
-                  calcula el determinante 2x2, posterior, usando el metodo de
-                  Sarrus se obtiene el determinante de 3x3.
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-                <img src={Sarrus} alt="" className="formula" />
-              </div>
-            );
-          case 17:
-            return (
-              <div className="explication__step">
-                <p>
-                  Calculando el sexto producto de determinantes, primero se
-                  calcula el determinante 2x2, posterior, usando el metodo de
-                  Sarrus se obtiene el determinante de 3x3.
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-                <img src={Sarrus} alt="" className="formula" />
-              </div>
-            );
-          case 18:
-            return (
-              <div className="explication__step">
-                <p>
-                  Calculando el septimo producto de determinantes, primero se
-                  calcula el determinante 2x2, posterior, usando el metodo de
-                  Sarrus se obtiene el determinante de 3x3.
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-                <img src={Sarrus} alt="" className="formula" />
-              </div>
-            );
-          case 19:
-            return (
-              <div className="explication__step">
-                <p>
-                  Calculando el octavo producto de determinantes, primero se
-                  calcula el determinante 2x2, posterior, usando el metodo de
-                  Sarrus se obtiene el determinante de 3x3.
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-                <img src={Sarrus} alt="" className="formula" />
-              </div>
-            );
-          case 20:
-            return (
-              <div className="explication__step">
-                <p>
-                  Calculando el noveno producto de determinantes, primero se
-                  calcula el determinante 2x2, posterior, usando el metodo de
-                  Sarrus se obtiene el determinante de 3x3.
-                </p>
-                <img src={Det2x2} alt="" className="formula" />
-                <img src={Sarrus} alt="" className="formula" />
-              </div>
-            );
-          case 21:
-            return (
-              <div className="explication__step">
-                <p>
-                  Una vez realizando estos calculos de determinantes, procedemos
-                  a hacer la multiplicacion interna.
-                </p>
-              </div>
-            );
-          case 31:
-            return (
-              <div className="explication__step">
-                <p>
-                  Ya que se multiplicaron los resultados de los determinantes,
-                  procedemos a realizar la multiplicacion de signos, entre los
-                  que estan dentro y fuera de los parentesis.
-                </p>
-              </div>
-            );
-          case 32:
-            return (
-              <div className="explication__step">
-                <p>
-                  Una vez obtenidos los signos, procedemos a sumar los
-                  resultados.
-                </p>
-              </div>
-            );
-          case 33:
-            return (
-              <div className="explication__step">
-                <p>
-                  Finalmente,puedes ver el resultado del determinante que
-                  colocaste, puedes comprobar el resultado en la calculadora de
-                  tu preferencia.
-                </p>
-                <br />
-                <p>
-                  Si quieres ingresar un nuevo determinante, puedes dar click en
-                  el boton "Nueva simulación".
-                </p>
-              </div>
-            );
-          default:
-            return false;
-        }
-      } else {
-      }
+    const Explication_Step = (step) => {
+      return <Explication parametro1={matrixSize} parametro2={step} />;
     };
 
     return (
       <div className="">
         <div className="explication">
-          {Explication(currentStep)}
+          {Explication_Step(currentStep)}
           <div className="determinant__after">
             {matrix.map((row, rowIndex) => (
               <div key={rowIndex} className="matrix-row">
@@ -2808,6 +2282,7 @@ function Simulation() {
           ))}
         </div>
         {Result()}
+        {renderButtonsCalculator()}
       </div>
     );
   };
@@ -2911,7 +2386,7 @@ function Simulation() {
               ))}
             </div>
             <br />
-            {renderButtons()}
+            {renderButtonsCalculator()}
           </div>
         )}
         {startSimulation && (
