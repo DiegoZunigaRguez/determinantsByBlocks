@@ -2785,6 +2785,23 @@ function Simulation() {
     );
   };
 
+  const renderProduct=()=>{
+    return (
+      <div className="">
+          <div className="determinant">
+            {matrix.map((row, rowIndex) => (
+              <div key={rowIndex} className="matrix-row">
+                {row.map((cell, columnIndex) => (
+                    <input type="text" value={cell} readOnly />
+                ))}
+              </div>
+            ))}
+          </div>
+          
+      </div>
+    );
+  }
+
   return (
     <div className="simulation__container" id="simulation">
       <div className="desktop">
@@ -2844,10 +2861,9 @@ function Simulation() {
           <div>
             <h1 className="simulation__title">Simulación</h1>
             <p className="simulation__text">
-              Aquí tienes la simulación haciendo uso del algoritmo que se te
-              presentó anteriormente. Por favor, selecciona la dimensión de la
-              matriz y completa los datos. La matriz debe ser de dimensión 4x4 o
-              superior.
+              Aquí tienes una calculadora de determinantes, tienes la opción de elegir desde un determinante de 4x4
+              hasta un determinante de 7x7, en este caso únicamente se visualizará el resultado del determinante,
+              si quieres ver el proceso del calculo, puedes consultar desde una tablet o computadora.
             </p>
             <select
               className="simulation__options"
@@ -2860,6 +2876,7 @@ function Simulation() {
               <option value={4}>Matriz 4x4</option>
               <option value={5}>Matriz 5x5</option>
               <option value={6}>Matriz 6x6</option>
+              <option value={7}>Matriz 7x7</option>
             </select>
             <br />
             <br />
@@ -2887,7 +2904,7 @@ function Simulation() {
         )}
         {startSimulation && (
           <div>
-            <div className="product-container">{renderProductMatrix()}</div>
+            <div className="product-container">{renderProduct()}</div>
           </div>
         )}
       </div>
