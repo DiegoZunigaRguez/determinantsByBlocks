@@ -43,6 +43,8 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 
 >11-10-2023
 1. Se hace la primera prueba de la versión movil, en esta versión únicamente se podrá realizar los calculos, no sé podrá mostrar la simulación.
+2. La versión movil ya cuenta con los botones necesarios para poder reiniciar un nuevo calculo, se alcanza hasta un determinante 7x7.
+3. Se coloca la explicación de los determinantes 6x6.
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
