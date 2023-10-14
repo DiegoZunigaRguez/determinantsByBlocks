@@ -15,6 +15,9 @@ En la presente rama se realizaran los cambios para el codigo de escritorio.
 >10-10-2023
 1. Se tiene la primera version de la aplicacion de escritorio, en este caso, no se hizo uso de C++.
 
+>14-10-2023
+1. Modificación en la interfaz para que se tenga un elemento 0 y no se seleccione alguna sin haber seleccionado alguna dimension anterior.
+
 ## Pasos para compilación de código en C++
 compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
 ejecutar con .\<nombre> <n>

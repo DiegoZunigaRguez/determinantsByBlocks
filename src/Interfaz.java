@@ -1,3 +1,5 @@
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,12 +13,7 @@ public class Interfaz {
     JTextField textFieldResultado = new JTextField();
     long Resultado = 0;
     int[][] matriz;
-
-    public Interfaz() {
-        // Crea una interfaz gráfica con un tablero de texto de tamaño 4x4 inicialmente
-        dimension = 4;
-        initializeUI();
-    }
+    private JButton button1, button2, button3;
 
     public static int getSign(int n) {
         return n % 2 == 0 ? 1 : -1;
@@ -103,6 +100,8 @@ public class Interfaz {
                 for (int right = left + 1; right < n; right++) {
                     m0[0][1] = mtz[0][right];
                     m0[1][1] = mtz[1][right];
+                    /*System.out.println("Matriz Principal");
+                    printMatrix(m0);*/
                     int[][] aux = getComplementaryMatrix(mtz, n, left, right);
                     det += getSign(left % 2 == 1 ? right : right + 1) * Determinant(m0, 2) * Determinant(aux, n - 2);
                     // deleteMatrix(aux, n - 2);
@@ -112,6 +111,12 @@ public class Interfaz {
         return det;
     }
 
+    public Interfaz() {
+        // Crea una interfaz gráfica con un tablero de texto de tamaño 4x4 inicialmente
+        dimension = 4;
+        initializeUI();
+    }
+
     private void initializeUI() {
         JFrame frame = new JFrame("EscoMate");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -119,22 +124,28 @@ public class Interfaz {
         frame.setResizable(false);
 
         // Selector de dimensiones
-        JComboBox<Integer> dimensionSelector = new JComboBox<>(new Integer[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 });
-        dimensionSelector.setSelectedItem(dimension);
+        JComboBox<Integer> dimensionSelector = new JComboBox<>(new Integer[] { null, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 });
+        dimensionSelector.setSelectedItem(null);
         dimensionSelector.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Cambia la dimensión del tablero al valor seleccionado
                 dimension = (Integer) dimensionSelector.getSelectedItem();
                 updateBoard();
+        
+                // Habilita los botones y el panel de resultados
+                button1.setEnabled(true);
+                button2.setEnabled(true);
+                button3.setEnabled(true);
+                textFieldResultado.setVisible(true);
+                textFieldResultado.setText(null);
             }
-        });
-
+        });        
         topPanel = new JPanel(new GridLayout(7, 2)); // Usar GridLayout con 5 filas y 1 columna
         topPanel.setBackground(new Color(241, 232, 219)); // Establece el color de fondo del panel superior
         topPanel.add(new JLabel("Selecciona la Dimension: "));
         topPanel.add(dimensionSelector);
-        JButton button1 = new JButton("Limpiar");
+        button1 = new JButton("Limpiar");
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -146,7 +157,7 @@ public class Interfaz {
             }
         });
 
-        JButton button2 = new JButton("Aleatorio");
+        button2 = new JButton("Aleatorio");
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -160,7 +171,7 @@ public class Interfaz {
             }
         });
 
-        JButton button3 = new JButton("Calcular");
+        button3 = new JButton("Calcular");
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -197,7 +208,10 @@ public class Interfaz {
                 }
             }
         });
-
+        button1.setEnabled(false);
+        button2.setEnabled(false);
+        button3.setEnabled(false);
+        textFieldResultado.setVisible(false);
         topPanel.add(button1);
         topPanel.add(button2);
         topPanel.add(button3);
