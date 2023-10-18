@@ -217,9 +217,11 @@ iframe {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo semitransparente */
   z-index: 1000;
-  cursor: pointer; /* Cambia el cursor al hacer hover */
+  cursor: pointer;
+  /* Cambia el cursor al hacer hover */
 }
 
 /* Estilo para el popup */
@@ -230,14 +232,15 @@ iframe {
   transform: translate(-50%, -50%);
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1001; /* Mayor que el z-index del overlay */
+  z-index: 1001;
+  /* Mayor que el z-index del overlay */
 }
 
 /* Estilo para el botón de cerrar el popup */
 .popup button {
   position: absolute;
   top: 5px;
-  left:calc(100vw - 100px);
+  left: calc(100vw - 100px);
   color: var(--letter);
   background-color: var(--RHeader);
   border-radius: 10px;
@@ -245,7 +248,8 @@ iframe {
 }
 
 .popup-content {
-  margin-top: 40px; /* Deja espacio para el botón de cerrar en la esquina superior izquierda */
+  margin-top: 40px;
+  /* Deja espacio para el botón de cerrar en la esquina superior izquierda */
 }
 
 .formula__imagen__easy {
@@ -253,17 +257,17 @@ iframe {
   height: auto;
 }
 
-.formula__imagen__result{
+.formula__imagen__result {
   width: 350px;
   height: auto;
 }
 
-.formula__imagen{
+.formula__imagen {
   width: 500px;
   height: auto;
 }
 
-.Sarrus__image{
+.Sarrus__image {
   width: auto;
   height: 200px;
 }
@@ -278,8 +282,19 @@ iframe {
 
 }
 
+@media (max-width: 1099px) {
+  .dev__container .mobile {
+    display: none;
+  }
+
+  .dev__container .desktop {
+    display: block;
+  }
+}
+
 /* Estilos para pantallas pequeñas (máximo 768px de ancho) */
 @media (max-width: 768px) {
+
   /* Ajusta el tamaño del título h1 para pantallas pequeñas */
   .dev__container h1 {
     font-size: 40px;
@@ -295,17 +310,17 @@ iframe {
     padding: 8px 16px;
   }
 
-  .desktop {
+  .dev__container .mobile {
+    display: none;
+  }
+
+  .dev__container .desktop {
     display: block;
   }
 
-  .popup-content p{
+  .popup-content p {
     margin: 1rem;
     font-size: 12px;
-  }
-
-  .mobile{
-    display: none;
   }
 }
 
@@ -337,34 +352,34 @@ iframe {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .mobile {
+  .dev__container .mobile {
     display: block;
   }
 
-  .desktop {
+  .dev__container .desktop {
     display: none;
   }
 
-  .tab-content{
+  .tab-content {
     max-height: calc(100vh - 475px);
   }
 
-  .formula__imagen{
+  .formula__imagen {
     width: calc(100vw - 50px);
     height: auto;
   }
 
-  .formula__imagen__easy{
+  .formula__imagen__easy {
     width: calc(100vw - 50px);
     height: auto;
   }
 
-  .formula__imagen__result{
+  .formula__imagen__result {
     width: calc(100vw - 50px);
     height: auto;
   }
 
-  .popup-content p{
+  .popup-content p {
     margin: 1rem;
     font-size: 16px;
   }
