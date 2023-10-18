@@ -123,6 +123,10 @@ public class Interfaz {
         frame.setSize(350, 450);
         frame.setResizable(false);
 
+        ImageIcon icon = new ImageIcon("./Icono.jpeg");
+        frame.setIconImage(icon.getImage());
+
+
         // Selector de dimensiones
         JComboBox<Integer> dimensionSelector = new JComboBox<>(new Integer[] { null, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 });
         dimensionSelector.setSelectedItem(null);
