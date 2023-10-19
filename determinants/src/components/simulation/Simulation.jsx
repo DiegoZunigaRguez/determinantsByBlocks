@@ -185,16 +185,57 @@ function Simulation() {
         <>
           <div className="button-container">
             <div className="button-wrapper">
-              {!startSimulation ? null : simulationInProgress ? null : (
-                <button className="button" onClick={handleSimulationPrevious}>
-                  Paso Anterior
-                </button>
-              )}
-              {!startSimulation ? null : simulationInProgress ? null : (
-                <button className="button" onClick={handleNextStep}>
-                  Siguiente Paso
-                </button>
-              )}
+              {matrixSize === 4 ? (
+                currentStep ===
+                0 ? null : !startSimulation ? null : simulationInProgress ? null : (
+                  <button className="button" onClick={handleSimulationPrevious}>
+                    Paso Anterior
+                  </button>
+                )
+              ) : null}
+              {matrixSize === 5 ? (
+                currentStep ===
+                0 ? null : !startSimulation ? null : simulationInProgress ? null : (
+                  <button className="button" onClick={handleSimulationPrevious}>
+                    Paso Anterior
+                  </button>
+                )
+              ) : null}
+              {matrixSize === 6 ? (
+                currentStep ===
+                0 ? null : !startSimulation ? null : simulationInProgress ? null : (
+                  <button className="button" onClick={handleSimulationPrevious}>
+                    Paso Anterior
+                  </button>
+                )
+              ) : null}
+              {matrixSize === 4 ? (
+                currentStep < 21 ? (
+                  !startSimulation ? null : simulationInProgress ? null : (
+                    <button className="button" onClick={handleNextStep}>
+                      Siguiente Paso
+                    </button>
+                  )
+                ) : null
+              ) : null}
+              {matrixSize === 5 ? (
+                currentStep < 33 ? (
+                  !startSimulation ? null : simulationInProgress ? null : (
+                    <button className="button" onClick={handleNextStep}>
+                      Siguiente Paso
+                    </button>
+                  )
+                ) : null
+              ) : null}
+              {matrixSize === 6 ? (
+                currentStep < 100 ? (
+                  !startSimulation ? null : simulationInProgress ? null : (
+                    <button className="button" onClick={handleNextStep}>
+                      Siguiente Paso
+                    </button>
+                  )
+                ) : null
+              ) : null}
               {simulationInProgress ? (
                 <button className="button" onClick={handleStopSimulationClick}>
                   Detener Simulacion
@@ -202,12 +243,46 @@ function Simulation() {
               ) : null}
             </div>
             <div className="button-wrapper">
-              <button className="button" onClick={handleRunSimulationClick}>
-                Correr Simulación
-              </button>
-              <button className="button" onClick={handleSimulationRestart}>
-                Nueva Simulación
-              </button>
+              {matrixSize === 4 ? (
+                currentStep < 21 ? (
+                  !startSimulation ? null : simulationInProgress ? null : (
+                    <button
+                      className="button"
+                      onClick={handleRunSimulationClick}
+                    >
+                      Correr Simulación
+                    </button>
+                  )
+                ) : null
+              ) : null}
+              {matrixSize === 5 ? (
+                currentStep < 33 ? (
+                  !startSimulation ? null : simulationInProgress ? null : (
+                    <button
+                      className="button"
+                      onClick={handleRunSimulationClick}
+                    >
+                      Correr Simulación
+                    </button>
+                  )
+                ) : null
+              ) : null}
+              {matrixSize === 4 ? (
+                currentStep ===
+                21 ? (
+                  <button className="button" onClick={handleSimulationRestart}>
+                    Nueva Simulación
+                  </button>
+                ) : null
+              ) : null}
+              {matrixSize === 5 ? (
+                currentStep ===
+                33 ? (
+                  <button className="button" onClick={handleSimulationRestart}>
+                    Nueva Simulación
+                  </button>
+                ) : null
+              ) : null}
             </div>
           </div>
         </>
