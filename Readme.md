@@ -46,6 +46,11 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 2. La versión movil ya cuenta con los botones necesarios para poder reiniciar un nuevo calculo, se alcanza hasta un determinante 7x7.
 3. Se coloca la explicación de los determinantes 6x6.
 
+>19-10-2023
+1. Se colocan todos los rectangulos para la explicación de determinantes 6x6.
+2. Se coloca el botoón para correr en automatico la simulación para 6x6.
+3. Se colocan las condiciones para que los botones aparezcan o desaparezcan dependiendo de en que momento se encuentre la simulación.
+
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
 2. Para compilar y generar una versión para productivo "npm build"

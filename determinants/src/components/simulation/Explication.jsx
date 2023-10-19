@@ -987,13 +987,193 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Ahora, ya que tienes la explicación de la matriz 4x4, procederemos a mostrar la continuación
-                del procedimiento para un determinante 6x6, en este caso mostraremos el resultado del 
+                Ahora, ya que tienes la explicación de la matriz 4x4,
+                procederemos a mostrar la continuación del procedimiento para un
+                determinante 6x6, en este caso mostraremos el resultado del
                 determinante 4x4 y determinante 2x2.
               </p>
             </div>
           );
-
+        case 39:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 40:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 41:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 42:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 43:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 44:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 45:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 46:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 47:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 48:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 49:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 50:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 51:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 52:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 53:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 54:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 55:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
+        case 56:
+          return (
+            <div className="explication__step">
+              <p>
+                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
+                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
+                utilizando este algoritmo.
+              </p>
+            </div>
+          );
         default:
           return false;
       }

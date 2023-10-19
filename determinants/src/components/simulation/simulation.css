@@ -214,7 +214,6 @@ input[type="text"] {
   align-items: center;
   margin-bottom: 3rem;
   max-width: 100vw;
-  grid-row-gap: 20px; /* Agrega espacio vertical (20px) entre las filas */
 }
 
 .expansion6x6__after p {
@@ -250,6 +249,10 @@ input[type="text"] {
 
   .expansion6x6{
     grid-template-columns: repeat(9,1fr);
+  }
+
+  .expansion6x6__after{
+    grid-template-columns: repeat(6,1fr);
   }
 
 }

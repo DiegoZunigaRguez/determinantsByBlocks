@@ -133,6 +133,15 @@ function Simulation() {
         await new Promise((resolve) => setTimeout(resolve, 1000));
         setCurrentStep(step + 1); // Actualizar el paso actual
       }
+    }else{
+      for (let step = currentStep; step < 56; step++) {
+        if (!isSimulationRunning.current) {
+          // Si la simulación se detiene, salir del bucle
+          break;
+        }
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        setCurrentStep(step + 1); // Actualizar el paso actual
+      }
     }
     setSimulationInProgress(false);
     isSimulationRunning.current = false;
@@ -228,7 +237,7 @@ function Simulation() {
                 ) : null
               ) : null}
               {matrixSize === 6 ? (
-                currentStep < 100 ? (
+                currentStep < 56 ? (
                   !startSimulation ? null : simulationInProgress ? null : (
                     <button className="button" onClick={handleNextStep}>
                       Siguiente Paso
@@ -267,6 +276,18 @@ function Simulation() {
                   )
                 ) : null
               ) : null}
+              {matrixSize === 6 ? (
+                currentStep < 56 ? (
+                  !startSimulation ? null : simulationInProgress ? null : (
+                    <button
+                      className="button"
+                      onClick={handleRunSimulationClick}
+                    >
+                      Correr Simulación
+                    </button>
+                  )
+                ) : null
+              ) : null}
               {matrixSize === 4 ? (
                 currentStep ===
                 21 ? (
@@ -278,6 +299,14 @@ function Simulation() {
               {matrixSize === 5 ? (
                 currentStep ===
                 33 ? (
+                  <button className="button" onClick={handleSimulationRestart}>
+                    Nueva Simulación
+                  </button>
+                ) : null
+              ) : null}
+              {matrixSize === 6 ? (
+                currentStep ===
+                56 ? (
                   <button className="button" onClick={handleSimulationRestart}>
                     Nueva Simulación
                   </button>

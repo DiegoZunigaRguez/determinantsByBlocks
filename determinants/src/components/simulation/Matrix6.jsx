@@ -6166,7 +6166,7 @@ const Matrix6 = (props) => {
         );
       case 42:
         return (
-          <div className="expansion6x6">
+          <div className="expansion6x6__after">
             <p className="det__result">=</p>
             <p>
               ({calculateDeterminant(matrix1_1)} *
@@ -8951,11 +8951,6 @@ const Matrix6 = (props) => {
             <p>{calculateSum(sum)}</p>
           </div>
         );
-      case 56:
-      case 57:
-      case 58:
-      case 59:
-      case 60:
       default:
         return null;
     }
