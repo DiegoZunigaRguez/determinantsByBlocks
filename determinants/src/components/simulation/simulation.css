@@ -316,6 +316,14 @@ input[type="text"] {
     grid-template-columns: repeat(6,1fr);
   }
 
+  .expansion__5{
+    grid-template-columns: repeat(9,1fr);
+  }
+
+  .expansion__2{
+    grid-template-columns: repeat(15,1fr);
+  }
+
 }
 
 @media screen and (max-width: 1100px) {

@@ -226,7 +226,7 @@ function Simulation() {
                   </button>
                 )
               ) : null}
-              {matrixSize === 4 ? (
+              {matrixSize === 4 ? method === 1 ? (
                 currentStep < 21 ? (
                   !startSimulation ? null : simulationInProgress ? null : (
                     <button className="button" onClick={handleNextStep}>
@@ -234,7 +234,16 @@ function Simulation() {
                     </button>
                   )
                 ) : null
-              ) : null}
+              ) : null : null}
+              {matrixSize === 4 ? method === 2 ? (
+                currentStep < 100 ? (
+                  !startSimulation ? null : simulationInProgress ? null : (
+                    <button className="button" onClick={handleNextStep}>
+                      Siguiente Paso
+                    </button>
+                  )
+                ) : null
+              ) : null : null}
               {matrixSize === 5 ? (
                 currentStep < 33 ? (
                   !startSimulation ? null : simulationInProgress ? null : (

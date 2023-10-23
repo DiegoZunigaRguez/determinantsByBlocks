@@ -54,6 +54,9 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 >22-10-2023
 1. Se comienza con la simulacion para la expansion de Laplace 4x4.
 
+>23-10-2023
+1. Se tiene la expansión de 4x4 completa con las multiplicaciones.
+
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"
 2. Para compilar y generar una versión para productivo "npm build"
