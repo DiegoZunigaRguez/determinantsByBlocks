@@ -36,6 +36,7 @@
   padding: 1rem;
   border-color: #E19031;
   font-weight: bold;
+  margin-right: 1rem;
 }
 
 .simulation__options::after{
@@ -217,6 +218,66 @@ input[type="text"] {
 }
 
 .expansion6x6__after p {
+  font-weight: bold;
+  font-size: 28px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.expansion__2{
+  display: grid;
+  grid-template-columns: repeat(18, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  margin-bottom: 3rem;
+  max-width: 100vw;
+}
+
+.expansion__2 p{
+  font-weight: bold;
+  font-size: 28px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.expansion__3{
+  display: grid;
+  grid-template-columns: repeat(16, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  margin-bottom: 3rem;
+  max-width: 100vw;
+}
+
+.expansion__3 p{
+  font-weight: bold;
+  font-size: 28px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.expansion__4{
+  display: grid;
+  grid-template-columns: repeat(14, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  margin-bottom: 3rem;
+  max-width: 100vw;
+}
+
+.expansion__4 p{
+  font-weight: bold;
+  font-size: 28px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.expansion__5{
+  display: grid;
+  grid-template-columns: repeat(15, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  margin-bottom: 3rem;
+  max-width: 100vw;
+}
+
+.expansion__5 p{
   font-weight: bold;
   font-size: 28px;
   padding: 10px;

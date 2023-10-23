@@ -2,15 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import "./simulation.css";
 import Swal from "sweetalert2";
 //Se agrega el modulo para la matriz de 4x4
-import Matrix4 from "./Matrix4";
+import Matrix4 from "./TTAlgorithm/Matrix4";
 //Se agrega el modulo para el determinante de 5x5
-import Matrix5 from "./Matrix5";
+import Matrix5 from "./TTAlgorithm/Matrix5";
 //Se agrega el modulo para el determinante de 6x6
-import Matrix6 from "./Matrix6";
+import Matrix6 from "./TTAlgorithm/Matrix6";
 //Se agrega el modulo para la calculadora movil
-import MobileCalculator from "./mobileCalculator";
+import MobileCalculator from "./TTAlgorithm/mobileCalculator";
 //Se agrega el modulo de la explicación
-import Explication from "./Explication";
+import Explication from "./TTAlgorithm/Explication";
+//Se agrega el modulo para laplace 4x4
+import Laplace4x4 from "./Laplace/Laplace4x4";
 
 function Simulation() {
   const [matrixSize, setMatrixSize] = useState(0);
@@ -21,6 +23,12 @@ function Simulation() {
   const isSimulationRunning = useRef(false);
   const [productMatrices, setProductMatrices] = useState([]);
   const [submatrices, setSubmatrices] = useState([]);
+  const [method, setMethod] = useState(0);
+
+  const handleMethodChange = (event) => {
+    const selectedMethod = parseInt(event.target.value, 10);
+    setMethod(selectedMethod);
+  };
 
   const handleMatrixSizeChange = (event) => {
     const newSize = parseInt(event.target.value, 10);
@@ -133,7 +141,7 @@ function Simulation() {
         await new Promise((resolve) => setTimeout(resolve, 1000));
         setCurrentStep(step + 1); // Actualizar el paso actual
       }
-    }else{
+    } else {
       for (let step = currentStep; step < 56; step++) {
         if (!isSimulationRunning.current) {
           // Si la simulación se detiene, salir del bucle
@@ -289,24 +297,21 @@ function Simulation() {
                 ) : null
               ) : null}
               {matrixSize === 4 ? (
-                currentStep ===
-                21 ? (
+                currentStep === 21 ? (
                   <button className="button" onClick={handleSimulationRestart}>
                     Nueva Simulación
                   </button>
                 ) : null
               ) : null}
               {matrixSize === 5 ? (
-                currentStep ===
-                33 ? (
+                currentStep === 33 ? (
                   <button className="button" onClick={handleSimulationRestart}>
                     Nueva Simulación
                   </button>
                 ) : null
               ) : null}
               {matrixSize === 6 ? (
-                currentStep ===
-                56 ? (
+                currentStep === 56 ? (
                   <button className="button" onClick={handleSimulationRestart}>
                     Nueva Simulación
                   </button>
@@ -2365,6 +2370,63 @@ function Simulation() {
     );
   };
 
+  const renderLaplace = () => {
+    const renderDeterminant = (step) => {
+      if (matrixSize === 4) {
+        return (
+          <>
+            <Laplace4x4 parametro1={matrix} parametro2={step} />
+          </>
+        );
+      } else {
+        return null;
+      }
+    };
+
+    const shouldHighlightCell = () =>{
+      return null;
+    };
+
+    return (
+      <div className="">
+        <div className="explication">
+          <div className="determinant__after">
+            {matrix.map((row, rowIndex) => (
+              <div key={rowIndex} className="matrix-row">
+                {row.map((cell, columnIndex) => (
+                  <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(
+                        rowIndex,
+                        columnIndex,
+                        currentStep
+                      ) === "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(
+                            rowIndex,
+                            columnIndex,
+                            currentStep
+                          ) === "highlight__down"
+                        ? "highlight__down"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {renderButtonsSimulation()}
+        </div>
+
+        {renderDeterminant(currentStep)}
+      </div>
+    );
+  };
+
   const renderProduct = () => {
     const Result = () => {
       return (
@@ -2405,45 +2467,113 @@ function Simulation() {
             </p>
             <select
               className="simulation__options"
-              value={matrixSize}
-              onChange={handleMatrixSizeChange}
+              value={method}
+              onChange={handleMethodChange}
             >
               <option value={0} defaultChecked>
                 Selecciona
               </option>
-              <option value={4}>Matriz 4x4</option>
-              <option value={5}>Matriz 5x5</option>
-              <option value={6}>Matriz 6x6</option>
+              <option value={1}>Algoritmo TT</option>
+              <option value={2}>Expansion de Laplace</option>
             </select>
-            <br />
-            <br />
-            <div className="determinant">
-              {matrix.map((row, rowIndex) => (
-                <div key={rowIndex} className="matrix-row">
-                  {row.map((cell, columnIndex) => (
-                    <input
-                      key={columnIndex}
-                      type="text"
-                      value={cell}
-                      onChange={(e) => {
-                        const updatedMatrix = [...matrix];
-                        updatedMatrix[rowIndex][columnIndex] = e.target.value;
-                        setMatrix(updatedMatrix);
-                      }}
-                    />
-                  ))}
-                </div>
-              ))}
-            </div>
-            <br />
-            {renderButtons()}
+            {method === 1 && (
+              <>
+                <select
+                  className="simulation__options"
+                  value={matrixSize}
+                  onChange={handleMatrixSizeChange}
+                >
+                  <option value={0} defaultChecked>
+                    Selecciona
+                  </option>
+                  <option value={4}>Matriz 4x4</option>
+                  <option value={5}>Matriz 5x5</option>
+                  <option value={6}>Matriz 6x6</option>
+                </select>
+                <br />
+                <br />
+                {matrixSize !== 0 && (
+                  <>
+                    <div className="determinant">
+                      {matrix.map((row, rowIndex) => (
+                        <div key={rowIndex} className="matrix-row">
+                          {row.map((cell, columnIndex) => (
+                            <input
+                              key={columnIndex}
+                              type="text"
+                              value={cell}
+                              onChange={(e) => {
+                                const updatedMatrix = [...matrix];
+                                updatedMatrix[rowIndex][columnIndex] =
+                                  e.target.value;
+                                setMatrix(updatedMatrix);
+                              }}
+                            />
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                    <br />
+                    {renderButtons()}
+                  </>
+                )}
+              </>
+            )}
+            {method === 2 && (
+              <>
+                <select
+                  className="simulation__options"
+                  value={matrixSize}
+                  onChange={handleMatrixSizeChange}
+                >
+                  <option value={0} defaultChecked>
+                    Selecciona
+                  </option>
+                  <option value={4}>Matriz 4x4</option>
+                  <option value={5}>Matriz 5x5</option>
+                </select>
+                <br />
+                <br />
+                {matrixSize !== 0 && (
+                  <>
+                    <div className="determinant">
+                      {matrix.map((row, rowIndex) => (
+                        <div key={rowIndex} className="matrix-row">
+                          {row.map((cell, columnIndex) => (
+                            <input
+                              key={columnIndex}
+                              type="text"
+                              value={cell}
+                              onChange={(e) => {
+                                const updatedMatrix = [...matrix];
+                                updatedMatrix[rowIndex][columnIndex] =
+                                  e.target.value;
+                                setMatrix(updatedMatrix);
+                              }}
+                            />
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                    <br />
+                    {renderButtons()}
+                  </>
+                )}
+              </>
+            )}
           </div>
         )}
-        {startSimulation && (
-          <div>
-            <div className="product-container">{renderProductMatrix()}</div>
-          </div>
-        )}
+        {method === 1
+          ? startSimulation && (
+              <div>
+                <div className="product-container">{renderProductMatrix()}</div>
+              </div>
+            )
+          : startSimulation && (
+              <div>
+                <div className="product-container">{renderLaplace()}</div>
+              </div>
+            )}
       </div>
       <div className="mobile">
         {!startSimulation && (

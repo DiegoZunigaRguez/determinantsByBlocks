@@ -1,5 +1,5 @@
 import React from "react";
-import './simulation.css';
+import '../simulation.css';
 
 const MobileCalculator = (props) => {
   const { parametro1, parametro2 } = props;

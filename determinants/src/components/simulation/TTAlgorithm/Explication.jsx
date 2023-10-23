@@ -1,44 +1,44 @@
 import React from "react";
-import Combinatoria from "../../assets/Productos.png";
-import Expression from "../../assets/TTExp.png";
-import Sarrus from "../../assets/Sarrus.png";
+import Combinatoria from "../../../assets/Productos.png";
+import Expression from "../../../assets/TTExp.png";
+import Sarrus from "../../../assets/Sarrus.png";
 //Se declaran las imagenes para la explicación de las matrices 4x4
-import firstSum4x4 from "../../assets/firstSum4x4.png";
-import secondSum4x4 from "../../assets/secondSum4x4.png";
-import thirdSum4x4 from "../../assets/thirdSum4x4.png";
-import fourthSum4x4 from "../../assets/fourthSum4x4.png";
-import fifthSum4x4 from "../../assets/fifthSum4x4.png";
-import sixthSum4x4 from "../../assets/sixthSum4x4.png";
-import Det2x2 from "../../assets/defDet2x2.png";
+import firstSum4x4 from "../../../assets/firstSum4x4.png";
+import secondSum4x4 from "../../../assets/secondSum4x4.png";
+import thirdSum4x4 from "../../../assets/thirdSum4x4.png";
+import fourthSum4x4 from "../../../assets/fourthSum4x4.png";
+import fifthSum4x4 from "../../../assets/fifthSum4x4.png";
+import sixthSum4x4 from "../../../assets/sixthSum4x4.png";
+import Det2x2 from "../../../assets/defDet2x2.png";
 //Se declaran las imagenes para la explicación de las matrices 5x5
-import Productos5x5 from "../../assets/productos5x5.png";
-import firstSum5x5 from "../../assets/firstSum5x5.png";
-import secondSum5x5 from "../../assets/secondSum5x5.png";
-import thirdSum5x5 from "../../assets/thirdSum5x5.png";
-import fourthSum5x5 from "../../assets/fourthSum5x5.png";
-import fifthSum5x5 from "../../assets/fifthSum5x5.png";
-import sixthSum5x5 from "../../assets/sixthSum5x5.png";
-import seventhSum5x5 from "../../assets/seventhSum5x5.png";
-import eightSum5x5 from "../../assets/eighthSum5x5.png";
-import ninthSum5x5 from "../../assets/ninthSum5x5.png";
-import tenthSum5x5 from "../../assets/tenthSum5x5.png";
+import Productos5x5 from "../../../assets/productos5x5.png";
+import firstSum5x5 from "../../../assets/firstSum5x5.png";
+import secondSum5x5 from "../../../assets/secondSum5x5.png";
+import thirdSum5x5 from "../../../assets/thirdSum5x5.png";
+import fourthSum5x5 from "../../../assets/fourthSum5x5.png";
+import fifthSum5x5 from "../../../assets/fifthSum5x5.png";
+import sixthSum5x5 from "../../../assets/sixthSum5x5.png";
+import seventhSum5x5 from "../../../assets/seventhSum5x5.png";
+import eightSum5x5 from "../../../assets/eighthSum5x5.png";
+import ninthSum5x5 from "../../../assets/ninthSum5x5.png";
+import tenthSum5x5 from "../../../assets/tenthSum5x5.png";
 //Se importan las imagenes para la explicación de las matrices 6x6
-import Productos6x6 from "../../assets/productos6x6.png";
-import firstSum6x6 from "../../assets/firstSum6x6.png";
-import secondSum6x6 from "../../assets/secondSum6x6.png";
-import thirdSum6x6 from "../../assets/thirdSum6x6.png";
-import fourthSum6x6 from "../../assets/fourthSum6x6.png";
-import fifthSum6x6 from "../../assets/fifthSum6x6.png";
-import sixthSum6x6 from "../../assets/sixthSum6x6.png";
-import seventhSum6x6 from "../../assets/seventhSum6x6.png";
-import eighthSum6x6 from "../../assets/eighthSum6x6.png";
-import ninthSum6x6 from "../../assets/ninthSum6x6.png";
-import tenthSum6x6 from "../../assets/tenthSum6x6.png";
-import eleventhSum6x6 from "../../assets/eleventhSum6x6.png";
-import TwelfthSum6x6 from "../../assets/TwelfthSum6x6.png";
-import ThirteenthSum6x6 from "../../assets/ThirteenthSum6x6.png";
-import Fourteen6x6 from "../../assets/Fourteen6x6.png";
-import fifteenSum6x6 from "../../assets/fifteenSum6x6.png";
+import Productos6x6 from "../../../assets/productos6x6.png";
+import firstSum6x6 from "../../../assets/firstSum6x6.png";
+import secondSum6x6 from "../../../assets/secondSum6x6.png";
+import thirdSum6x6 from "../../../assets/thirdSum6x6.png";
+import fourthSum6x6 from "../../../assets/fourthSum6x6.png";
+import fifthSum6x6 from "../../../assets/fifthSum6x6.png";
+import sixthSum6x6 from "../../../assets/sixthSum6x6.png";
+import seventhSum6x6 from "../../../assets/seventhSum6x6.png";
+import eighthSum6x6 from "../../../assets/eighthSum6x6.png";
+import ninthSum6x6 from "../../../assets/ninthSum6x6.png";
+import tenthSum6x6 from "../../../assets/tenthSum6x6.png";
+import eleventhSum6x6 from "../../../assets/eleventhSum6x6.png";
+import TwelfthSum6x6 from "../../../assets/TwelfthSum6x6.png";
+import ThirteenthSum6x6 from "../../../assets/ThirteenthSum6x6.png";
+import Fourteen6x6 from "../../../assets/Fourteen6x6.png";
+import fifteenSum6x6 from "../../../assets/fifteenSum6x6.png";
 
 const Explication = (props) => {
   const { parametro1, parametro2 } = props;
@@ -283,7 +283,7 @@ const Explication = (props) => {
               para una matriz de dimension 5x5 se deben calcular 10 productos,
               siguiendo la siguiente formula:
               <br />
-              <img src={Productos6x6} alt="" className="formula" />
+              <img src={Productos5x5} alt="" className="formula" />
               <br />
               <p>
                 Ahora, para determinar los signos se hara mediante la siguente
