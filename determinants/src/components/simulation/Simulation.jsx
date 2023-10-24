@@ -13,6 +13,8 @@ import MobileCalculator from "./TTAlgorithm/mobileCalculator";
 import Explication from "./TTAlgorithm/Explication";
 //Se agrega el modulo para laplace 4x4
 import Laplace4x4 from "./Laplace/Laplace4x4";
+//Se agrega el modulo para la explicación de Laplace
+import ExplicationLaplace from "./Laplace/ExplicationLaplace";
 
 function Simulation() {
   const [matrixSize, setMatrixSize] = useState(0);
@@ -124,13 +126,24 @@ function Simulation() {
 
   const autoRunSimulation = async () => {
     if (matrixSize === 4) {
-      for (let step = currentStep; step < 21; step++) {
-        if (!isSimulationRunning.current) {
-          // Si la simulación se detiene, salir del bucle
-          break;
+      if (method === 1) {
+        for (let step = currentStep; step < 21; step++) {
+          if (!isSimulationRunning.current) {
+            // Si la simulación se detiene, salir del bucle
+            break;
+          }
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          setCurrentStep(step + 1); // Actualizar el paso actual
         }
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        setCurrentStep(step + 1); // Actualizar el paso actual
+      } else {
+        for (let step = currentStep; step < 38; step++) {
+          if (!isSimulationRunning.current) {
+            // Si la simulación se detiene, salir del bucle
+            break;
+          }
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          setCurrentStep(step + 1); // Actualizar el paso actual
+        }
       }
     } else if (matrixSize === 5) {
       for (let step = currentStep; step < 33; step++) {
@@ -226,24 +239,28 @@ function Simulation() {
                   </button>
                 )
               ) : null}
-              {matrixSize === 4 ? method === 1 ? (
-                currentStep < 21 ? (
-                  !startSimulation ? null : simulationInProgress ? null : (
-                    <button className="button" onClick={handleNextStep}>
-                      Siguiente Paso
-                    </button>
-                  )
+              {matrixSize === 4 ? (
+                method === 1 ? (
+                  currentStep < 21 ? (
+                    !startSimulation ? null : simulationInProgress ? null : (
+                      <button className="button" onClick={handleNextStep}>
+                        Siguiente Paso
+                      </button>
+                    )
+                  ) : null
                 ) : null
-              ) : null : null}
-              {matrixSize === 4 ? method === 2 ? (
-                currentStep < 100 ? (
-                  !startSimulation ? null : simulationInProgress ? null : (
-                    <button className="button" onClick={handleNextStep}>
-                      Siguiente Paso
-                    </button>
-                  )
+              ) : null}
+              {matrixSize === 4 ? (
+                method === 2 ? (
+                  currentStep < 38 ? (
+                    !startSimulation ? null : simulationInProgress ? null : (
+                      <button className="button" onClick={handleNextStep}>
+                        Siguiente Paso
+                      </button>
+                    )
+                  ) : null
                 ) : null
-              ) : null : null}
+              ) : null}
               {matrixSize === 5 ? (
                 currentStep < 33 ? (
                   !startSimulation ? null : simulationInProgress ? null : (
@@ -281,6 +298,34 @@ function Simulation() {
                   )
                 ) : null
               ) : null}
+              {matrixSize === 4 ? (
+                method === 1 ? (
+                  currentStep < 21 ? (
+                    !startSimulation ? null : simulationInProgress ? null : (
+                      <button
+                        className="button"
+                        onClick={handleRunSimulationClick}
+                      >
+                        Correr Simulación
+                      </button>
+                    )
+                  ) : null
+                ) : null
+              ) : null}
+              {matrixSize === 4 ? (
+                method === 2 ? (
+                  currentStep < 38 ? (
+                    !startSimulation ? null : simulationInProgress ? null : (
+                      <button
+                        className="button"
+                        onClick={handleRunSimulationClick}
+                      >
+                        Correr Simulación
+                      </button>
+                    )
+                  ) : null
+                ) : null
+              ) : null}
               {matrixSize === 5 ? (
                 currentStep < 33 ? (
                   !startSimulation ? null : simulationInProgress ? null : (
@@ -310,6 +355,30 @@ function Simulation() {
                   <button className="button" onClick={handleSimulationRestart}>
                     Nueva Simulación
                   </button>
+                ) : null
+              ) : null}
+              {matrixSize === 4 ? (
+                method === 1 ? (
+                  currentStep === 21 ? (
+                    <button
+                      className="button"
+                      onClick={handleSimulationRestart}
+                    >
+                      Nueva Simulación
+                    </button>
+                  ) : null
+                ) : null
+              ) : null}
+              {matrixSize === 4 ? (
+                method === 2 ? (
+                  currentStep === 38 ? (
+                    <button
+                      className="button"
+                      onClick={handleSimulationRestart}
+                    >
+                      Nueva Simulación
+                    </button>
+                  ) : null
                 ) : null
               ) : null}
               {matrixSize === 5 ? (
@@ -2392,13 +2461,18 @@ function Simulation() {
       }
     };
 
-    const shouldHighlightCell = () =>{
+    const shouldHighlightCell = () => {
       return null;
+    };
+
+    const Explication_Step = (step) => {
+      return <ExplicationLaplace parametro1={matrixSize} parametro2={step} />;
     };
 
     return (
       <div className="">
         <div className="explication">
+          {Explication_Step(currentStep)}
           <div className="determinant__after">
             {matrix.map((row, rowIndex) => (
               <div key={rowIndex} className="matrix-row">
