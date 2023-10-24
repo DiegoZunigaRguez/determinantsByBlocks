@@ -111,6 +111,23 @@ public class Interfaz {
         return det;
     }
 
+    public static void WolframString(int[][] matrix){
+        System.out.print("{{");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j]);
+                if (j < matrix[i].length - 1) {
+                    System.out.print(", ");
+                }
+            }
+            if (i < matrix.length - 1) {
+                System.out.print("}, {");
+            } else {
+                System.out.print("}}");
+            }
+        }
+    }
+
     public Interfaz() {
         // Crea una interfaz gráfica con un tablero de texto de tamaño 4x4 inicialmente
         dimension = 4;
@@ -201,6 +218,7 @@ public class Interfaz {
 
                 if (isValidInput) {
                     //System.out.println("El valor del determinante es "+Determinant(matrix, dimension));
+                    WolframString(matrix);
                     Resultado=Determinant(matrix, dimension);
                     SwingUtilities.invokeLater(() -> {
                         textFieldResultado.setText(String.valueOf(Resultado));
