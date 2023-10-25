@@ -267,7 +267,7 @@ const Explication = (props) => {
               <br />
               <p>
                 Si quieres ingresar un nuevo determinante, puedes dar click en
-                el boton "Nueva simulación".
+                el botón "Nueva simulación".
               </p>
             </div>
           );
@@ -998,9 +998,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1008,9 +1010,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1018,9 +1022,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1028,9 +1034,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1038,9 +1046,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1048,9 +1058,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1058,9 +1070,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1068,9 +1082,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1078,9 +1094,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1088,9 +1106,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1098,9 +1118,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1108,9 +1130,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1118,9 +1142,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1128,9 +1154,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1138,9 +1166,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1148,9 +1178,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1158,9 +1190,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );
@@ -1168,9 +1202,11 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda que si quieres ver la explicación del determinante de
-                dimensión 4x4 puedes abrir una nueva ventana y colocar los valores del determinante para conocer como se resolvió
-                utilizando este algoritmo.
+                Procediendo con el segundo producto de determinantes, recuerda
+                que si quieres ver la explicación del determinante de dimensión
+                4x4 puedes abrir una nueva ventana y colocar los valores del
+                determinante para conocer como se resolvió utilizando este
+                algoritmo.
               </p>
             </div>
           );

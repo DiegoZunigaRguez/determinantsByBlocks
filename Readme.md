@@ -60,6 +60,7 @@ En la presente rama se anexan la bitacora para la pagina web y tener un control 
 >24-10-2023
 1. Se termina la expansión de Laplace.
 2. Se coloca el botón para correr los pasos por si solos.
+3. Se termina la primera version de Laplace de 4x4.
 
 ## Pasos para la ejecución del proyecto en react
 1. Para iniciar la aplicación se requiere del cómando "npm start"

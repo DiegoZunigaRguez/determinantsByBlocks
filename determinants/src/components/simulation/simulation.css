@@ -148,6 +148,10 @@ input[type="text"] {
   background-color: #E19031;
 }
 
+.highlight__laplace{
+  background-color: #872600;
+}
+
 .expansion {
   display: grid;
   grid-template-columns: repeat(15, 1fr); /* Divide el grid en 5 columnas de igual tamaño */

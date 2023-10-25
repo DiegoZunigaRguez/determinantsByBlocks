@@ -216,30 +216,6 @@ function Simulation() {
           <div className="button-container">
             <div className="button-wrapper">
               {matrixSize === 4 ? (
-                currentStep ===
-                0 ? null : !startSimulation ? null : simulationInProgress ? null : (
-                  <button className="button" onClick={handleSimulationPrevious}>
-                    Paso Anterior
-                  </button>
-                )
-              ) : null}
-              {matrixSize === 5 ? (
-                currentStep ===
-                0 ? null : !startSimulation ? null : simulationInProgress ? null : (
-                  <button className="button" onClick={handleSimulationPrevious}>
-                    Paso Anterior
-                  </button>
-                )
-              ) : null}
-              {matrixSize === 6 ? (
-                currentStep ===
-                0 ? null : !startSimulation ? null : simulationInProgress ? null : (
-                  <button className="button" onClick={handleSimulationPrevious}>
-                    Paso Anterior
-                  </button>
-                )
-              ) : null}
-              {matrixSize === 4 ? (
                 method === 1 ? (
                   currentStep < 21 ? (
                     !startSimulation ? null : simulationInProgress ? null : (
@@ -279,6 +255,30 @@ function Simulation() {
                   )
                 ) : null
               ) : null}
+              {matrixSize === 4 ? (
+                currentStep ===
+                0 ? null : !startSimulation ? null : simulationInProgress ? null : (
+                  <button className="button" onClick={handleSimulationPrevious}>
+                    Paso Anterior
+                  </button>
+                )
+              ) : null}
+              {matrixSize === 5 ? (
+                currentStep ===
+                0 ? null : !startSimulation ? null : simulationInProgress ? null : (
+                  <button className="button" onClick={handleSimulationPrevious}>
+                    Paso Anterior
+                  </button>
+                )
+              ) : null}
+              {matrixSize === 6 ? (
+                currentStep ===
+                0 ? null : !startSimulation ? null : simulationInProgress ? null : (
+                  <button className="button" onClick={handleSimulationPrevious}>
+                    Paso Anterior
+                  </button>
+                )
+              ) : null}
               {simulationInProgress ? (
                 <button className="button" onClick={handleStopSimulationClick}>
                   Detener Simulacion
@@ -286,18 +286,6 @@ function Simulation() {
               ) : null}
             </div>
             <div className="button-wrapper">
-              {matrixSize === 4 ? (
-                currentStep < 21 ? (
-                  !startSimulation ? null : simulationInProgress ? null : (
-                    <button
-                      className="button"
-                      onClick={handleRunSimulationClick}
-                    >
-                      Correr Simulación
-                    </button>
-                  )
-                ) : null
-              ) : null}
               {matrixSize === 4 ? (
                 method === 1 ? (
                   currentStep < 21 ? (
@@ -2461,8 +2449,241 @@ function Simulation() {
       }
     };
 
-    const shouldHighlightCell = () => {
-      return null;
+    const shouldHighlightCell = (rowIndex, columnIndex, step) => {
+      if (matrixSize === 4) {
+        switch (step) {
+          case 1:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__laplace";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 2:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight__laplace";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 3:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight__laplace";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+          case 4:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight__laplace";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
+        }
+      } else if (matrixSize === 5) {
+        return null;
+      }
     };
 
     const Explication_Step = (step) => {
@@ -2491,6 +2712,12 @@ function Simulation() {
                             currentStep
                           ) === "highlight__down"
                         ? "highlight__down"
+                        : shouldHighlightCell(
+                            rowIndex,
+                            columnIndex,
+                            currentStep
+                          ) === "highlight__laplace"
+                        ? "highlight__laplace"
                         : ""
                     }`}
                     key={columnIndex}
@@ -2602,48 +2829,52 @@ function Simulation() {
                 )}
               </>
             )}
-            {method === 2 && (
-              <>
-                <select
-                  className="simulation__options"
-                  value={matrixSize}
-                  onChange={handleMatrixSizeChange}
-                >
-                  <option value={0} defaultChecked>
-                    Selecciona
-                  </option>
-                  <option value={4}>Matriz 4x4</option>
-                  <option value={5}>Matriz 5x5</option>
-                </select>
-                <br />
-                <br />
-                {matrixSize !== 0 && (
-                  <>
-                    <div className="determinant">
-                      {matrix.map((row, rowIndex) => (
-                        <div key={rowIndex} className="matrix-row">
-                          {row.map((cell, columnIndex) => (
-                            <input
-                              key={columnIndex}
-                              type="text"
-                              value={cell}
-                              onChange={(e) => {
-                                const updatedMatrix = [...matrix];
-                                updatedMatrix[rowIndex][columnIndex] =
-                                  e.target.value;
-                                setMatrix(updatedMatrix);
-                              }}
-                            />
-                          ))}
-                        </div>
-                      ))}
-                    </div>
-                    <br />
-                    {renderButtons()}
-                  </>
-                )}
-              </>
-            )}
+            {method === 2 ? (
+              matrixSize > 5 ? (
+                setMatrixSize(0)
+              ) : (
+                <>
+                  <select
+                    className="simulation__options"
+                    value={matrixSize}
+                    onChange={handleMatrixSizeChange}
+                  >
+                    <option value={0} defaultChecked>
+                      Selecciona
+                    </option>
+                    <option value={4}>Matriz 4x4</option>
+                    <option value={5}>Matriz 5x5</option>
+                  </select>
+                  <br />
+                  <br />
+                  {matrixSize !== 0 && (
+                    <>
+                      <div className="determinant">
+                        {matrix.map((row, rowIndex) => (
+                          <div key={rowIndex} className="matrix-row">
+                            {row.map((cell, columnIndex) => (
+                              <input
+                                key={columnIndex}
+                                type="text"
+                                value={cell}
+                                onChange={(e) => {
+                                  const updatedMatrix = [...matrix];
+                                  updatedMatrix[rowIndex][columnIndex] =
+                                    e.target.value;
+                                  setMatrix(updatedMatrix);
+                                }}
+                              />
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                      <br />
+                      {renderButtons()}
+                    </>
+                  )}
+                </>
+              )
+            ) : null}
           </div>
         )}
         {method === 1
