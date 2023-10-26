@@ -136,7 +136,7 @@ function Simulation() {
           setCurrentStep(step + 1); // Actualizar el paso actual
         }
       } else {
-        for (let step = currentStep; step < 38; step++) {
+        for (let step = currentStep; step < 41; step++) {
           if (!isSimulationRunning.current) {
             // Si la simulación se detiene, salir del bucle
             break;
@@ -228,7 +228,7 @@ function Simulation() {
               ) : null}
               {matrixSize === 4 ? (
                 method === 2 ? (
-                  currentStep < 38 ? (
+                  currentStep < 41 ? (
                     !startSimulation ? null : simulationInProgress ? null : (
                       <button className="button" onClick={handleNextStep}>
                         Siguiente Paso
@@ -302,7 +302,7 @@ function Simulation() {
               ) : null}
               {matrixSize === 4 ? (
                 method === 2 ? (
-                  currentStep < 38 ? (
+                  currentStep < 41 ? (
                     !startSimulation ? null : simulationInProgress ? null : (
                       <button
                         className="button"
@@ -359,7 +359,7 @@ function Simulation() {
               ) : null}
               {matrixSize === 4 ? (
                 method === 2 ? (
-                  currentStep === 38 ? (
+                  currentStep === 41 ? (
                     <button
                       className="button"
                       onClick={handleSimulationRestart}
