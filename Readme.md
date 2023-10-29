@@ -21,6 +21,9 @@ En la presente rama se realizaran los cambios para el codigo de escritorio.
 >17-10-2023
 1. Se agrega el icono a la aplicacion
 
+>28-10-2023
+1. Se agrega el archivo de las aproximaciones
+
 ## Pasos para compilación de código en C++
 compilar con g++ -std=c++11 DeterminantLagrange.h DeterminantUtils.h Matriz.h main.cpp -o <nombre>
 ejecutar con .\<nombre> <n>

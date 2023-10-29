@@ -112,7 +112,7 @@ public class Interfaz {
     }
 
     public static void WolframString(int[][] matrix){
-        System.out.print("{{");
+        System.out.print("det{{");
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j]);
@@ -126,6 +126,34 @@ public class Interfaz {
                 System.out.print("}}");
             }
         }
+        System.out.println();
+    }
+
+    public static int[][] getComplementaryMatrixLagrange(int[][] mtz, int n, int currJ){
+        int[][] comp=new int[n-1][n-1];
+        for(int i=1, auxI=0; i<n; i++, auxI++){
+            for (int j = 0, auxJ = 0; j < n; j++) {
+                if(j==currJ){
+                    continue;
+                }
+                comp[auxI][auxJ++]=mtz[i][j];
+            }
+        }
+        return comp;
+    }
+
+    public static long lagrangeCofDeterminant(int[][] mtz, int n){
+        long det=0;
+        if(n==2){
+            det = mtz[0][0] * mtz[1][1] - mtz[0][1] * mtz[1][0];
+        }else{
+            for (int i = 0; i < n; i++) {
+                int pivot=mtz[0][i];
+                int[][] aux = getComplementaryMatrixLagrange(mtz, n, i);
+                det+=getSign(i) * pivot * lagrangeCofDeterminant(aux, n-1);
+            }
+        }
+        return det;
     }
 
     public Interfaz() {
@@ -218,8 +246,11 @@ public class Interfaz {
 
                 if (isValidInput) {
                     //System.out.println("El valor del determinante es "+Determinant(matrix, dimension));
-                    WolframString(matrix);
+                    //WolframString(matrix);
+                    long startTime = System.nanoTime();
                     Resultado=Determinant(matrix, dimension);
+                    long endTime = System.nanoTime() - startTime;
+                    System.out.println("El tiempo de ejecucion es: "+endTime/1e6+" milisegundos");
                     SwingUtilities.invokeLater(() -> {
                         textFieldResultado.setText(String.valueOf(Resultado));
                     });
