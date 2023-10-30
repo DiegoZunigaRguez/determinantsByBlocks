@@ -13,6 +13,8 @@ import MobileCalculator from "./TTAlgorithm/mobileCalculator";
 import Explication from "./TTAlgorithm/Explication";
 //Se agrega el modulo para laplace 4x4
 import Laplace4x4 from "./Laplace/Laplace4x4";
+//Se agrega el modulo para laplace 5x5
+import Laplace5x5 from "./Laplace/Laplace5x5";
 //Se agrega el modulo para la explicación de Laplace
 import ExplicationLaplace from "./Laplace/ExplicationLaplace";
 
@@ -237,13 +239,26 @@ function Simulation() {
                   ) : null
                 ) : null
               ) : null}
+             {matrixSize === 5 ? (
+                method === 1 ? (
+                  currentStep < 33 ? (
+                    !startSimulation ? null : simulationInProgress ? null : (
+                      <button className="button" onClick={handleNextStep}>
+                        Siguiente Paso
+                      </button>
+                    )
+                  ) : null
+                ) : null
+              ) : null}
               {matrixSize === 5 ? (
-                currentStep < 33 ? (
-                  !startSimulation ? null : simulationInProgress ? null : (
-                    <button className="button" onClick={handleNextStep}>
-                      Siguiente Paso
-                    </button>
-                  )
+                method === 2 ? (
+                  currentStep < 100 ? (
+                    !startSimulation ? null : simulationInProgress ? null : (
+                      <button className="button" onClick={handleNextStep}>
+                        Siguiente Paso
+                      </button>
+                    )
+                  ) : null
                 ) : null
               ) : null}
               {matrixSize === 6 ? (
@@ -2445,7 +2460,11 @@ function Simulation() {
           </>
         );
       } else {
-        return null;
+        return(
+          <>
+            <Laplace5x5 parametro1={matrix} parametro2={step} />
+          </>
+        );
       }
     };
 

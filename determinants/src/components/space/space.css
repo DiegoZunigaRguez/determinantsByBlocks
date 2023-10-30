@@ -1,6 +1,6 @@
 .space {
   width: 100%;
-  height: 110vh;
+  height: 200vh;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 1599px) {
   .space {
-    height: 200vh;
+    height: 300vh;
   }
 }
 
