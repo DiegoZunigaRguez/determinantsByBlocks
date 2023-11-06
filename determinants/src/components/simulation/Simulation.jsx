@@ -252,7 +252,7 @@ function Simulation() {
               ) : null}
               {matrixSize === 5 ? (
                 method === 2 ? (
-                  currentStep < 100 ? (
+                  currentStep < 150 ? (
                     !startSimulation ? null : simulationInProgress ? null : (
                       <button className="button" onClick={handleNextStep}>
                         Siguiente Paso

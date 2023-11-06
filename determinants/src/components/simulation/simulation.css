@@ -351,7 +351,7 @@ input[type="text"] {
 
 .laplace__5{
   display: grid;
-  grid-template-columns: repeat(22, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
+  grid-template-columns: repeat(18, 1fr); /* Divide el grid en 5 columnas de igual tamaño */
   align-items: center; /* Alinea verticalmente los elementos al centro */
   margin-bottom: 3rem;
   max-width: 100vw;
