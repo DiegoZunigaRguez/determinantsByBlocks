@@ -148,14 +148,26 @@ function Simulation() {
         }
       }
     } else if (matrixSize === 5) {
-      for (let step = currentStep; step < 33; step++) {
-        if (!isSimulationRunning.current) {
-          // Si la simulación se detiene, salir del bucle
-          break;
+      if(method===1){
+        for (let step = currentStep; step < 33; step++) {
+          if (!isSimulationRunning.current) {
+            // Si la simulación se detiene, salir del bucle
+            break;
+          }
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          setCurrentStep(step + 1); // Actualizar el paso actual
         }
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        setCurrentStep(step + 1); // Actualizar el paso actual
+      }else{
+        for (let step = currentStep; step < 150; step++) {
+          if (!isSimulationRunning.current) {
+            // Si la simulación se detiene, salir del bucle
+            break;
+          }
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          setCurrentStep(step + 1); // Actualizar el paso actual
+        }
       }
+      
     } else {
       for (let step = currentStep; step < 56; step++) {
         if (!isSimulationRunning.current) {
@@ -351,13 +363,6 @@ function Simulation() {
                       Correr Simulación
                     </button>
                   )
-                ) : null
-              ) : null}
-              {matrixSize === 4 ? (
-                currentStep === 21 ? (
-                  <button className="button" onClick={handleSimulationRestart}>
-                    Nueva Simulación
-                  </button>
                 ) : null
               ) : null}
               {matrixSize === 4 ? (
@@ -2790,7 +2795,7 @@ function Simulation() {
             <h1 className="simulation__title">Simulación</h1>
             <p className="simulation__text">
               Aquí tienes la simulación haciendo uso del algoritmo que se te
-              presentó anteriormente. Por favor, selecciona la dimensión de la
+              presentó anteriormente. Por favor, selecciona el método, la dimensión de la
               matriz y completa los datos. La matriz debe ser de dimensión 4x4 o
               superior.
             </p>
