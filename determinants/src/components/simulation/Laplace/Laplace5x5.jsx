@@ -1972,6 +1972,1008 @@ const Laplace5x5 = (props) => {
                 default:
                   return false;
               }
+              case 85:
+                switch (rowIndex) {
+                  case 0:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight__laplace";
+                      case 1:
+                        return "highlight";
+                      case 2:
+                        return "highlight";
+                      case 3:
+                        return "highlight";
+                      default:
+                        return "";
+                    }
+                  case 1:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight";
+                      case 1:
+                        return "highlight__down";
+                      case 2:
+                        return "highlight__down";
+                      case 3:
+                        return "highlight__down";
+                      default:
+                        return "";
+                    }
+                  case 2:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight";
+                      case 1:
+                        return "highlight__down";
+                      case 2:
+                        return "highlight__down";
+                      case 3:
+                        return "highlight__down";
+                      default:
+                        return "";
+                    }
+                  case 3:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight";
+                      case 1:
+                        return "highlight__down";
+                      case 2:
+                        return "highlight__down";
+                      case 3:
+                        return "highlight__down";
+                      default:
+                        return "";
+                    }
+                  default:
+                    return false;
+                }
+              case 86:
+                switch (rowIndex) {
+                  case 0:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight";
+                      case 1:
+                        return "highlight__laplace";
+                      case 2:
+                        return "highlight";
+                      case 3:
+                        return "highlight";
+                      default:
+                        return "";
+                    }
+                  case 1:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight__down";
+                      case 1:
+                        return "highlight";
+                      case 2:
+                        return "highlight__down";
+                      case 3:
+                        return "highlight__down";
+                      default:
+                        return "";
+                    }
+                  case 2:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight__down";
+                      case 1:
+                        return "highlight";
+                      case 2:
+                        return "highlight__down";
+                      case 3:
+                        return "highlight__down";
+                      default:
+                        return "";
+                    }
+                  case 3:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight__down";
+                      case 1:
+                        return "highlight";
+                      case 2:
+                        return "highlight__down";
+                      case 3:
+                        return "highlight__down";
+                      default:
+                        return "";
+                    }
+                  default:
+                    return false;
+                }
+              case 87:
+                switch (rowIndex) {
+                  case 0:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight";
+                      case 1:
+                        return "highlight";
+                      case 3:
+                        return "highlight__laplace";
+                      default:
+                        return "";
+                    }
+                  case 1:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight__down";
+                      case 1:
+                        return "highlight__down";
+                      case 3:
+                        return "highlight__down";
+                      default:
+                        return "";
+                    }
+                  case 2:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight__down";
+                      case 1:
+                        return "highlight__down";
+                      case 2:
+                        return "highlight";
+                      case 3:
+                        return "highlight__down";
+                      default:
+                        return "";
+                    }
+                  case 3:
+                    switch (columnIndex) {
+                      case 0:
+                        return "highlight__down";
+                      case 1:
+                        return "highlight__down";
+                      case 2:
+                        return "highlight";
+                      case 3:
+                        return "highlight__down";
+                      default:
+                        return "";
+                    }
+                  default:
+                    return false;
+                }
+                case 94:
+                  switch (rowIndex) {
+                    case 0:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight__laplace";
+                        case 1:
+                          return "highlight";
+                        case 2:
+                          return "highlight";
+                        case 3:
+                          return "highlight";
+                        default:
+                          return "";
+                      }
+                    case 1:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight";
+                        case 1:
+                          return "highlight__down";
+                        case 2:
+                          return "highlight__down";
+                        case 3:
+                          return "highlight__down";
+                        default:
+                          return "";
+                      }
+                    case 2:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight";
+                        case 1:
+                          return "highlight__down";
+                        case 2:
+                          return "highlight__down";
+                        case 3:
+                          return "highlight__down";
+                        default:
+                          return "";
+                      }
+                    case 3:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight";
+                        case 1:
+                          return "highlight__down";
+                        case 2:
+                          return "highlight__down";
+                        case 3:
+                          return "highlight__down";
+                        default:
+                          return "";
+                      }
+                    default:
+                      return false;
+                  }
+                case 95:
+                  switch (rowIndex) {
+                    case 0:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight";
+                        case 1:
+                          return "highlight__laplace";
+                        case 2:
+                          return "highlight";
+                        case 3:
+                          return "highlight";
+                        default:
+                          return "";
+                      }
+                    case 1:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight__down";
+                        case 1:
+                          return "highlight";
+                        case 2:
+                          return "highlight__down";
+                        case 3:
+                          return "highlight__down";
+                        default:
+                          return "";
+                      }
+                    case 2:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight__down";
+                        case 1:
+                          return "highlight";
+                        case 2:
+                          return "highlight__down";
+                        case 3:
+                          return "highlight__down";
+                        default:
+                          return "";
+                      }
+                    case 3:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight__down";
+                        case 1:
+                          return "highlight";
+                        case 2:
+                          return "highlight__down";
+                        case 3:
+                          return "highlight__down";
+                        default:
+                          return "";
+                      }
+                    default:
+                      return false;
+                  }
+                case 96:
+                  switch (rowIndex) {
+                    case 0:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight";
+                        case 1:
+                          return "highlight";
+                        case 3:
+                          return "highlight__laplace";
+                        default:
+                          return "";
+                      }
+                    case 1:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight__down";
+                        case 1:
+                          return "highlight__down";
+                        case 3:
+                          return "highlight__down";
+                        default:
+                          return "";
+                      }
+                    case 2:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight__down";
+                        case 1:
+                          return "highlight__down";
+                        case 2:
+                          return "highlight";
+                        case 3:
+                          return "highlight__down";
+                        default:
+                          return "";
+                      }
+                    case 3:
+                      switch (columnIndex) {
+                        case 0:
+                          return "highlight__down";
+                        case 1:
+                          return "highlight__down";
+                        case 2:
+                          return "highlight";
+                        case 3:
+                          return "highlight__down";
+                        default:
+                          return "";
+                      }
+                    default:
+                      return false;
+                  }
+                  case 104:
+                    switch (rowIndex) {
+                      case 0:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__laplace";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight";
+                          case 3:
+                            return "highlight";
+                          default:
+                            return "";
+                        }
+                      case 1:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          case 3:
+                            return "highlight__down";
+                          default:
+                            return "";
+                        }
+                      case 2:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          case 3:
+                            return "highlight__down";
+                          default:
+                            return "";
+                        }
+                      case 3:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          case 3:
+                            return "highlight__down";
+                          default:
+                            return "";
+                        }
+                      default:
+                        return false;
+                    }
+                  case 105:
+                    switch (rowIndex) {
+                      case 0:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight__laplace";
+                          case 2:
+                            return "highlight";
+                          case 3:
+                            return "highlight";
+                          default:
+                            return "";
+                        }
+                      case 1:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight__down";
+                          case 3:
+                            return "highlight__down";
+                          default:
+                            return "";
+                        }
+                      case 2:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight__down";
+                          case 3:
+                            return "highlight__down";
+                          default:
+                            return "";
+                        }
+                      case 3:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight__down";
+                          case 3:
+                            return "highlight__down";
+                          default:
+                            return "";
+                        }
+                      default:
+                        return false;
+                    }
+                  case 106:
+                    switch (rowIndex) {
+                      case 0:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight";
+                          case 3:
+                            return "highlight__laplace";
+                          default:
+                            return "";
+                        }
+                      case 1:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 3:
+                            return "highlight__down";
+                          default:
+                            return "";
+                        }
+                      case 2:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight";
+                          case 3:
+                            return "highlight__down";
+                          default:
+                            return "";
+                        }
+                      case 3:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight";
+                          case 3:
+                            return "highlight__down";
+                          default:
+                            return "";
+                        }
+                      default:
+                        return false;
+                    }
+                      case 113:
+                        switch (rowIndex) {
+                          case 0:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__laplace";
+                              case 1:
+                                return "highlight";
+                              case 2:
+                                return "highlight";
+                              case 3:
+                                return "highlight";
+                              default:
+                                return "";
+                            }
+                          case 1:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight__down";
+                              case 3:
+                                return "highlight__down";
+                              default:
+                                return "";
+                            }
+                          case 2:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight__down";
+                              case 3:
+                                return "highlight__down";
+                              default:
+                                return "";
+                            }
+                          case 3:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight__down";
+                              case 3:
+                                return "highlight__down";
+                              default:
+                                return "";
+                            }
+                          default:
+                            return false;
+                        }
+                      case 114:
+                        switch (rowIndex) {
+                          case 0:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight__laplace";
+                              case 2:
+                                return "highlight";
+                              case 3:
+                                return "highlight";
+                              default:
+                                return "";
+                            }
+                          case 1:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight";
+                              case 2:
+                                return "highlight__down";
+                              case 3:
+                                return "highlight__down";
+                              default:
+                                return "";
+                            }
+                          case 2:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight";
+                              case 2:
+                                return "highlight__down";
+                              case 3:
+                                return "highlight__down";
+                              default:
+                                return "";
+                            }
+                          case 3:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight";
+                              case 2:
+                                return "highlight__down";
+                              case 3:
+                                return "highlight__down";
+                              default:
+                                return "";
+                            }
+                          default:
+                            return false;
+                        }
+                      case 115:
+                        switch (rowIndex) {
+                          case 0:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight";
+                              case 3:
+                                return "highlight__laplace";
+                              default:
+                                return "";
+                            }
+                          case 1:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight__down";
+                              case 3:
+                                return "highlight__down";
+                              default:
+                                return "";
+                            }
+                          case 2:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight";
+                              case 3:
+                                return "highlight__down";
+                              default:
+                                return "";
+                            }
+                          case 3:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight";
+                              case 3:
+                                return "highlight__down";
+                              default:
+                                return "";
+                            }
+                          default:
+                            return false;
+                        }
+                        case 122:
+                          switch (rowIndex) {
+                            case 0:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__laplace";
+                                case 1:
+                                  return "highlight";
+                                case 2:
+                                  return "highlight";
+                                case 3:
+                                  return "highlight";
+                                default:
+                                  return "";
+                              }
+                            case 1:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                case 1:
+                                  return "highlight__down";
+                                case 2:
+                                  return "highlight__down";
+                                case 3:
+                                  return "highlight__down";
+                                default:
+                                  return "";
+                              }
+                            case 2:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                case 1:
+                                  return "highlight__down";
+                                case 2:
+                                  return "highlight__down";
+                                case 3:
+                                  return "highlight__down";
+                                default:
+                                  return "";
+                              }
+                            case 3:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                case 1:
+                                  return "highlight__down";
+                                case 2:
+                                  return "highlight__down";
+                                case 3:
+                                  return "highlight__down";
+                                default:
+                                  return "";
+                              }
+                            default:
+                              return false;
+                          }
+                        case 123:
+                          switch (rowIndex) {
+                            case 0:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                case 1:
+                                  return "highlight__laplace";
+                                case 2:
+                                  return "highlight";
+                                case 3:
+                                  return "highlight";
+                                default:
+                                  return "";
+                              }
+                            case 1:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                case 1:
+                                  return "highlight";
+                                case 2:
+                                  return "highlight__down";
+                                case 3:
+                                  return "highlight__down";
+                                default:
+                                  return "";
+                              }
+                            case 2:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                case 1:
+                                  return "highlight";
+                                case 2:
+                                  return "highlight__down";
+                                case 3:
+                                  return "highlight__down";
+                                default:
+                                  return "";
+                              }
+                            case 3:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                case 1:
+                                  return "highlight";
+                                case 2:
+                                  return "highlight__down";
+                                case 3:
+                                  return "highlight__down";
+                                default:
+                                  return "";
+                              }
+                            default:
+                              return false;
+                          }
+                        case 124:
+                          switch (rowIndex) {
+                            case 0:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                case 1:
+                                  return "highlight";
+                                case 3:
+                                  return "highlight__laplace";
+                                default:
+                                  return "";
+                              }
+                            case 1:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                case 1:
+                                  return "highlight__down";
+                                case 3:
+                                  return "highlight__down";
+                                default:
+                                  return "";
+                              }
+                            case 2:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                case 1:
+                                  return "highlight__down";
+                                case 2:
+                                  return "highlight";
+                                case 3:
+                                  return "highlight__down";
+                                default:
+                                  return "";
+                              }
+                            case 3:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                case 1:
+                                  return "highlight__down";
+                                case 2:
+                                  return "highlight";
+                                case 3:
+                                  return "highlight__down";
+                                default:
+                                  return "";
+                              }
+                            default:
+                              return false;
+                          }
+                          case 131:
+                            switch (rowIndex) {
+                              case 0:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__laplace";
+                                  case 1:
+                                    return "highlight";
+                                  case 2:
+                                    return "highlight";
+                                  case 3:
+                                    return "highlight";
+                                  default:
+                                    return "";
+                                }
+                              case 1:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 2:
+                                    return "highlight__down";
+                                  case 3:
+                                    return "highlight__down";
+                                  default:
+                                    return "";
+                                }
+                              case 2:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 2:
+                                    return "highlight__down";
+                                  case 3:
+                                    return "highlight__down";
+                                  default:
+                                    return "";
+                                }
+                              case 3:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 2:
+                                    return "highlight__down";
+                                  case 3:
+                                    return "highlight__down";
+                                  default:
+                                    return "";
+                                }
+                              default:
+                                return false;
+                            }
+                          case 132:
+                            switch (rowIndex) {
+                              case 0:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  case 1:
+                                    return "highlight__laplace";
+                                  case 2:
+                                    return "highlight";
+                                  case 3:
+                                    return "highlight";
+                                  default:
+                                    return "";
+                                }
+                              case 1:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  case 1:
+                                    return "highlight";
+                                  case 2:
+                                    return "highlight__down";
+                                  case 3:
+                                    return "highlight__down";
+                                  default:
+                                    return "";
+                                }
+                              case 2:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  case 1:
+                                    return "highlight";
+                                  case 2:
+                                    return "highlight__down";
+                                  case 3:
+                                    return "highlight__down";
+                                  default:
+                                    return "";
+                                }
+                              case 3:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  case 1:
+                                    return "highlight";
+                                  case 2:
+                                    return "highlight__down";
+                                  case 3:
+                                    return "highlight__down";
+                                  default:
+                                    return "";
+                                }
+                              default:
+                                return false;
+                            }
+                          case 133:
+                            switch (rowIndex) {
+                              case 0:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  case 1:
+                                    return "highlight";
+                                  case 3:
+                                    return "highlight__laplace";
+                                  default:
+                                    return "";
+                                }
+                              case 1:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 3:
+                                    return "highlight__down";
+                                  default:
+                                    return "";
+                                }
+                              case 2:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 2:
+                                    return "highlight";
+                                  case 3:
+                                    return "highlight__down";
+                                  default:
+                                    return "";
+                                }
+                              case 3:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 2:
+                                    return "highlight";
+                                  case 3:
+                                    return "highlight__down";
+                                  default:
+                                    return "";
+                                }
+                              default:
+                                return false;
+                            }
       }
     };
 
@@ -2902,6 +3904,807 @@ const Laplace5x5 = (props) => {
                     default:
                       return false;
                   }
+                  case 85:
+                    switch (rowIndex) {
+                      case 0:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight";
+                          default:
+                            return false;
+                        }
+                      case 1:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 2:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 3:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      default:
+                        return false;
+                    }
+                  case 86:
+                    switch (rowIndex) {
+                      case 0:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__laplace";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight";
+                          default:
+                            return false;
+                        }
+                      case 1:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 2:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 3:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      default:
+                        return false;
+                    }
+                  case 87:
+                    switch (rowIndex) {
+                      case 0:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight__laplace";
+                          case 2:
+                            return "highlight";
+                          default:
+                            return false;
+                        }
+                      case 1:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 2:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 3:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      default:
+                        return false;
+                    }
+                    case 94:
+                      switch (rowIndex) {
+                        case 0:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight";
+                            case 1:
+                              return "highlight";
+                            case 2:
+                              return "highlight";
+                            default:
+                              return false;
+                          }
+                        case 1:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight__down";
+                            case 1:
+                              return "highlight__down";
+                            case 2:
+                              return "highlight__down";
+                            default:
+                              return false;
+                          }
+                        case 2:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight__down";
+                            case 1:
+                              return "highlight__down";
+                            case 2:
+                              return "highlight__down";
+                            default:
+                              return false;
+                          }
+                        case 3:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight__down";
+                            case 1:
+                              return "highlight__down";
+                            case 2:
+                              return "highlight__down";
+                            default:
+                              return false;
+                          }
+                        default:
+                          return false;
+                      }
+                    case 95:
+                      switch (rowIndex) {
+                        case 0:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight__laplace";
+                            case 1:
+                              return "highlight";
+                            case 2:
+                              return "highlight";
+                            default:
+                              return false;
+                          }
+                        case 1:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight";
+                            case 1:
+                              return "highlight__down";
+                            case 2:
+                              return "highlight__down";
+                            default:
+                              return false;
+                          }
+                        case 2:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight";
+                            case 1:
+                              return "highlight__down";
+                            case 2:
+                              return "highlight__down";
+                            default:
+                              return false;
+                          }
+                        case 3:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight";
+                            case 1:
+                              return "highlight__down";
+                            case 2:
+                              return "highlight__down";
+                            default:
+                              return false;
+                          }
+                        default:
+                          return false;
+                      }
+                    case 96:
+                      switch (rowIndex) {
+                        case 0:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight";
+                            case 1:
+                              return "highlight__laplace";
+                            case 2:
+                              return "highlight";
+                            default:
+                              return false;
+                          }
+                        case 1:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight__down";
+                            case 1:
+                              return "highlight";
+                            case 2:
+                              return "highlight__down";
+                            default:
+                              return false;
+                          }
+                        case 2:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight__down";
+                            case 1:
+                              return "highlight";
+                            case 2:
+                              return "highlight__down";
+                            default:
+                              return false;
+                          }
+                        case 3:
+                          switch (columnIndex) {
+                            case 0:
+                              return "highlight__down";
+                            case 1:
+                              return "highlight";
+                            case 2:
+                              return "highlight__down";
+                            default:
+                              return false;
+                          }
+                        default:
+                          return false;
+                      }
+                      case 113:
+                        switch (rowIndex) {
+                          case 0:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight";
+                              case 2:
+                                return "highlight";
+                              default:
+                                return false;
+                            }
+                          case 1:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight__down";
+                              default:
+                                return false;
+                            }
+                          case 2:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight__down";
+                              default:
+                                return false;
+                            }
+                          case 3:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight__down";
+                              default:
+                                return false;
+                            }
+                          default:
+                            return false;
+                        }
+                      case 114:
+                        switch (rowIndex) {
+                          case 0:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__laplace";
+                              case 1:
+                                return "highlight";
+                              case 2:
+                                return "highlight";
+                              default:
+                                return false;
+                            }
+                          case 1:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight__down";
+                              default:
+                                return false;
+                            }
+                          case 2:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight__down";
+                              default:
+                                return false;
+                            }
+                          case 3:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight__down";
+                              case 2:
+                                return "highlight__down";
+                              default:
+                                return false;
+                            }
+                          default:
+                            return false;
+                        }
+                      case 115:
+                        switch (rowIndex) {
+                          case 0:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight";
+                              case 1:
+                                return "highlight__laplace";
+                              case 2:
+                                return "highlight";
+                              default:
+                                return false;
+                            }
+                          case 1:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight";
+                              case 2:
+                                return "highlight__down";
+                              default:
+                                return false;
+                            }
+                          case 2:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight";
+                              case 2:
+                                return "highlight__down";
+                              default:
+                                return false;
+                            }
+                          case 3:
+                            switch (columnIndex) {
+                              case 0:
+                                return "highlight__down";
+                              case 1:
+                                return "highlight";
+                              case 2:
+                                return "highlight__down";
+                              default:
+                                return false;
+                            }
+                          default:
+                            return false;
+                        }
+                        case 122:
+                          switch (rowIndex) {
+                            case 0:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                case 1:
+                                  return "highlight";
+                                case 2:
+                                  return "highlight";
+                                default:
+                                  return false;
+                              }
+                            case 1:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                case 1:
+                                  return "highlight__down";
+                                case 2:
+                                  return "highlight__down";
+                                default:
+                                  return false;
+                              }
+                            case 2:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                case 1:
+                                  return "highlight__down";
+                                case 2:
+                                  return "highlight__down";
+                                default:
+                                  return false;
+                              }
+                            case 3:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                case 1:
+                                  return "highlight__down";
+                                case 2:
+                                  return "highlight__down";
+                                default:
+                                  return false;
+                              }
+                            default:
+                              return false;
+                          }
+                        case 123:
+                          switch (rowIndex) {
+                            case 0:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                default:
+                                  return false;
+                              }
+                            case 1:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                default:
+                                  return false;
+                              }
+                            case 2:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__down";
+                                default:
+                                  return false;
+                              }
+                            case 3:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                case 1:
+                                  return "highlight__down";
+                                case 2:
+                                  return "highlight__down";
+                                default:
+                                  return false;
+                              }
+                            default:
+                              return false;
+                          }
+                        case 124:
+                          switch (rowIndex) {
+                            case 0:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight__laplace";
+                                default:
+                                  return false;
+                              }
+                            case 1:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                default:
+                                  return false;
+                              }
+                            case 2:
+                              switch (columnIndex) {
+                                case 0:
+                                  return "highlight";
+                                default:
+                                  return false;
+                              }
+                            default:
+                              return false;
+                          }
+                          case 131:
+                            switch (rowIndex) {
+                              case 0:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  case 1:
+                                    return "highlight";
+                                  case 2:
+                                    return "highlight";
+                                  default:
+                                    return false;
+                                }
+                              case 1:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 2:
+                                    return "highlight__down";
+                                  default:
+                                    return false;
+                                }
+                              case 2:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 2:
+                                    return "highlight__down";
+                                  default:
+                                    return false;
+                                }
+                              case 3:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 2:
+                                    return "highlight__down";
+                                  default:
+                                    return false;
+                                }
+                              default:
+                                return false;
+                            }
+                          case 132:
+                            switch (rowIndex) {
+                              case 0:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  default:
+                                    return false;
+                                }
+                              case 1:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  default:
+                                    return false;
+                                }
+                              case 2:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__down";
+                                  default:
+                                    return false;
+                                }
+                              case 3:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  case 1:
+                                    return "highlight__down";
+                                  case 2:
+                                    return "highlight__down";
+                                  default:
+                                    return false;
+                                }
+                              default:
+                                return false;
+                            }
+                          case 133:
+                            switch (rowIndex) {
+                              case 0:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight__laplace";
+                                  default:
+                                    return false;
+                                }
+                              case 1:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  default:
+                                    return false;
+                                }
+                              case 2:
+                                switch (columnIndex) {
+                                  case 0:
+                                    return "highlight";
+                                  default:
+                                    return false;
+                                }
+                              default:
+                                return false;
+                            }
+      }
+    };
+
+    const shouldHighlightCell3 = (rowIndex, columnIndex, step) => {
+      switch (step) {
+                  case 85:
+                    switch (rowIndex) {
+                      case 0:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight";
+                          default:
+                            return false;
+                        }
+                      case 1:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 2:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 3:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      default:
+                        return false;
+                    }
+                  case 86:
+                    switch (rowIndex) {
+                      case 0:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          case 1:
+                            return "highlight";
+                          case 2:
+                            return "highlight";
+                          default:
+                            return false;
+                        }
+                      case 1:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 2:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      case 3:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__down";
+                          case 1:
+                            return "highlight__down";
+                          case 2:
+                            return "highlight__down";
+                          default:
+                            return false;
+                        }
+                      default:
+                        return false;
+                    }
+                  case 87:
+                    switch (rowIndex) {
+                      case 0:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight__laplace";
+                          default:
+                            return false;
+                        }
+                      case 1:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          default:
+                            return false;
+                        }
+                      case 2:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          default:
+                            return false;
+                        }
+                      case 3:
+                        switch (columnIndex) {
+                          case 0:
+                            return "highlight";
+                          default:
+                            return false;
+                        }
+                      default:
+                        return false;
+                    }
       }
     };
 
@@ -2968,6 +4771,16 @@ const Laplace5x5 = (props) => {
       [matrix[4][0], matrix[4][3]],
     ];
 
+    const det_9 = [
+      [matrix[3][0], matrix[3][2]],
+      [matrix[4][0], matrix[4][2]],
+    ];
+
+    const det_10 = [
+      [matrix[3][0], matrix[3][1]],
+      [matrix[4][0], matrix[4][1]],
+    ];
+
     const sum1_4=[];
     sum1_4[0]=calculateMult([matrix[1][1]],
       calculatSum1(calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_1)), 1)
@@ -2992,6 +4805,36 @@ const Laplace5x5 = (props) => {
       calculatSum1(calculateMult([matrix[2][2]], calculateDeterminant(det_1)),
             calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_2)), -1)
             ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_3)), 1)));
+    sum2_4[1]=calculateMult([matrix[1][2]],
+      calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_1)),
+            calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_7)), -1),
+            calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_8)), 1)));
+    sum2_4[2]=calculateMult([matrix[1][3]],
+      calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_2)),
+            calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_7)), -1),
+            calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_9)), 1)));
+    sum2_4[3]=calculateMult([matrix[1][4]],
+      calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_3))
+            ,calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_8)), -1),
+            calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_9)), 1)));
+
+    const sum3_4=[];
+    sum3_4[0]=calculateMult([matrix[1][0]],
+      calculatSum1(calculateMult([matrix[2][1]], calculateDeterminant(det_1))
+            ,calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_4)), -1)
+            ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_5)), 1)));
+    sum3_4[1]=calculateMult([matrix[1][1]],
+      calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_1))
+            ,calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_7)), -1)
+            ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_8)), 1)));
+    sum3_4[2]=calculateMult([matrix[1][3]],
+      calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_4))
+            ,calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_7)), -1)
+            ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_10)), 1)));
+    sum3_4[3]=calculateMult([matrix[1][4]],
+      calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_5))
+            ,calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_8)), -1)
+            ,calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_10)), 1)))
 
     switch (step) {
       case 1:
@@ -11529,6 +13372,2668 @@ const Laplace5x5 = (props) => {
               ))}
             </>
             <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_1)),
+            calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_7)), -1),
+            calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_8)), 1))}</p>
+            <p>)</p>
+          </div>
+        );
+      case 84:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_1)),
+            calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_7)), -1),
+            calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_8)), 1))}</p>
+            <p>)</p>
+            <p>=</p>
+            <p>{sum2_4[1]}</p>
+          </div>
+        );
+      case 85:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell3(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell3(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell3(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 86:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell3(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell3(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell3(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 87:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell3(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell3(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell3(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 88:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>)</p>
+          </div>
+        );
+      case 89:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_2)}</p>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_7)}</p>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_9)}</p>
+            <p>)</p>
+          </div>
+        );
+      case 90:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>({calculateMult([matrix[2][0]], calculateDeterminant(det_2))})</p>
+            <p>-</p>
+            <p>({calculateMult([matrix[2][2]], calculateDeterminant(det_7))})</p>
+            <p>+</p>
+            <p>({calculateMult([matrix[2][4]], calculateDeterminant(det_9))})</p>
+            <p>)</p>
+          </div>
+        );
+      case 91:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculateMult([matrix[2][0]], calculateDeterminant(det_2))}</p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_7)), -1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_7)), -1)}`
+                : calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_7)), -1)}
+            </p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_9)), 1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_9)), 1)}`
+                : calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_9)), 1)}
+            </p>
+            <p>)</p>
+          </div>
+        );
+      case 92:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_2)),
+            calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_7)), -1),
+            calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_9)), 1))}</p>
+            <p>)</p>
+          </div>
+        );
+      case 93:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_2)),
+            calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_7)), -1),
+            calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_9)), 1))}</p>
+            <p>)</p>
+            <p>=</p>
+            <p>{sum2_4[2]}</p>
+          </div>
+        );
+      case 94:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                                        <div
+                                        className={`matrix-cell ${
+                                          shouldHighlightCell(rowIndex, columnIndex, step) ===
+                                          "highlight"
+                                            ? "highlight"
+                                            : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                                              "highlight__down"
+                                            ? "highlight__down"
+                                            : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                                              "highlight__laplace"
+                                            ? "highlight__laplace"
+                                            : ""
+                                        }`}
+                                        key={columnIndex}
+                                      >
+                                        <input type="text" value={cell} readOnly />
+                                      </div>
+                  ))}
+                  {row.slice(2, 4).map((cell, columnIndex) => (
+                                        <div
+                                        className={`matrix-cell ${
+                                          shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                                          "highlight"
+                                            ? "highlight"
+                                            : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                                              "highlight__down"
+                                            ? "highlight__down"
+                                            : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                                              "highlight__laplace"
+                                            ? "highlight__laplace"
+                                            : ""
+                                        }`}
+                                        key={columnIndex}
+                                      >
+                                        <input type="text" value={cell} readOnly />
+                                      </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(2, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 95:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                                        <div
+                                        className={`matrix-cell ${
+                                          shouldHighlightCell(rowIndex, columnIndex, step) ===
+                                          "highlight"
+                                            ? "highlight"
+                                            : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                                              "highlight__down"
+                                            ? "highlight__down"
+                                            : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                                              "highlight__laplace"
+                                            ? "highlight__laplace"
+                                            : ""
+                                        }`}
+                                        key={columnIndex}
+                                      >
+                                        <input type="text" value={cell} readOnly />
+                                      </div>
+                  ))}
+                  {row.slice(2, 4).map((cell, columnIndex) => (
+                                        <div
+                                        className={`matrix-cell ${
+                                          shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                                          "highlight"
+                                            ? "highlight"
+                                            : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                                              "highlight__down"
+                                            ? "highlight__down"
+                                            : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                                              "highlight__laplace"
+                                            ? "highlight__laplace"
+                                            : ""
+                                        }`}
+                                        key={columnIndex}
+                                      >
+                                        <input type="text" value={cell} readOnly />
+                                      </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(2, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 96:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                                        <div
+                                        className={`matrix-cell ${
+                                          shouldHighlightCell(rowIndex, columnIndex, step) ===
+                                          "highlight"
+                                            ? "highlight"
+                                            : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                                              "highlight__down"
+                                            ? "highlight__down"
+                                            : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                                              "highlight__laplace"
+                                            ? "highlight__laplace"
+                                            : ""
+                                        }`}
+                                        key={columnIndex}
+                                      >
+                                        <input type="text" value={cell} readOnly />
+                                      </div>
+                  ))}
+                  {row.slice(2, 4).map((cell, columnIndex) => (
+                                        <div
+                                        className={`matrix-cell ${
+                                          shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                                          "highlight"
+                                            ? "highlight"
+                                            : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                                              "highlight__down"
+                                            ? "highlight__down"
+                                            : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                                              "highlight__laplace"
+                                            ? "highlight__laplace"
+                                            : ""
+                                        }`}
+                                        key={columnIndex}
+                                      >
+                                        <input type="text" value={cell} readOnly />
+                                      </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(2, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 97:
+        return (
+          <div className="laplace">
+             <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(2, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>)</p>
+          </div>
+        );
+      case 98:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_3)}</p>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_8)}</p>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_9)}</p>
+            <p>)</p>
+          </div>
+        );
+      case 99:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>({calculateMult([matrix[2][0]], calculateDeterminant(det_3))})</p>
+            <p>-</p>
+            <p>({calculateMult([matrix[2][2]], calculateDeterminant(det_8))})</p>
+            <p>+</p>
+            <p>({calculateMult([matrix[2][3]], calculateDeterminant(det_9))})</p>
+            <p>)</p>
+          </div>
+        );
+      case 100:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculateMult([matrix[2][0]], calculateDeterminant(det_3))}</p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_8)), -1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_8)), -1)}`
+                : calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_8)), -1)}
+            </p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_9)), 1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_9)), 1)}`
+                : calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_9)), 1)}
+            </p>
+            <p>)</p>
+          </div>
+        );
+      case 101:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_3))
+            ,calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_8)), -1),
+            calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_9)), 1))}</p>
+            <p>)</p>
+          </div>
+        );
+      case 102:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_3))
+            ,calculateMult(calculateMult([matrix[2][2]], calculateDeterminant(det_8)), -1),
+            calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_9)), 1))}</p>
+            <p>)</p>
+            <p>=</p>
+            <p>{sum2_4[3]}</p>
+          </div>
+        );
+      case 103:
+        return (
+          <div className="laplace__4">
+            <p>=</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <p>({sum1_4[0]})</p>
+              <p>-</p>
+              <p>({sum1_4[1]})</p>
+              <p>+</p>
+              <p>({sum1_4[2]})</p>
+              <p>-</p>
+              <p>({sum1_4[3]})</p>
+              <p>]</p>
+            </>
+            <p>-</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <p>({sum2_4[0]})</p>
+              <p>-</p>
+              <p>({sum2_4[1]})</p>
+              <p>+</p>
+              <p>({sum2_4[2]})</p>
+              <p>-</p>
+              <p>({sum2_4[3]})</p>
+              <p>]</p>
+            </>
+            <p>+</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row ">
+                    {row.slice(1, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(3, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(1, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row ">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(3, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>+</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(3, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(3, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>]</p>
+            </>
+            <p>-</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row ">
+                    {row.slice(1, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(1, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row ">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(2, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>+</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(2, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>]</p>
+            </>
+            <p>+</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(1, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(1, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(2, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>+</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(2, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(3, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(3, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>]</p>
+            </>
+          </div>
+        );
+      case 104:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 105:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 106:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 107:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>)</p>
+          </div>
+        );
+      case 108:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_1)}</p>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_4)}</p>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_5)}</p>
+            <p>)</p>
+          </div>
+        );
+      case 109:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>({calculateMult([matrix[2][1]], calculateDeterminant(det_1))})</p>
+            <p>-</p>
+            <p>({calculateMult([matrix[2][3]], calculateDeterminant(det_4))})</p>
+            <p>+</p>
+            <p>({calculateMult([matrix[2][4]], calculateDeterminant(det_5))})</p>
+            <p>)</p>
+          </div>
+        );
+      case 110:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculateMult([matrix[2][1]], calculateDeterminant(det_1))}</p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_4)), -1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_4)), -1)}`
+                : calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_4)), -1)}
+            </p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_5)), 1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_5)), 1)}`
+                : calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_5)), 1)}
+            </p>
+            <p>)</p>
+          </div>
+        );
+      case 111:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][1]], calculateDeterminant(det_1))
+            ,calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_4)), -1)
+            ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_5)), 1))}</p>
+            <p>)</p>
+          </div>
+        );
+      case 112:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][1]], calculateDeterminant(det_1))
+            ,calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_4)), -1)
+            ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_5)), 1))}</p>
+            <p>)</p>
+            <p>=</p>
+            <p>{sum3_4[0]}</p>
+          </div>
+        );
+      case 113:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 114:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 115:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 116:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(3, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>)</p>
+          </div>
+        );
+      case 117:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_1)}</p>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_7)}</p>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_8)}</p>
+            <p>)</p>
+          </div>
+        );
+      case 118:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>({calculateMult([matrix[2][0]], calculateDeterminant(det_1))})</p>
+            <p>-</p>
+            <p>({calculateMult([matrix[2][3]], calculateDeterminant(det_7))})</p>
+            <p>+</p>
+            <p>({calculateMult([matrix[2][4]], calculateDeterminant(det_8))})</p>
+            <p>)</p>
+          </div>
+        );
+      case 119:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
             <p>{calculateMult([matrix[2][0]], calculateDeterminant(det_1))}</p>
             <p>
               {calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_7)), -1) >= 0
@@ -11541,6 +16046,1484 @@ const Laplace5x5 = (props) => {
                 : calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_8)), 1)}
             </p>
             <p>)</p>
+          </div>
+        );
+      case 120:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_1))
+            ,calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_7)), -1)
+            ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_8)), 1))}</p>
+            <p>)</p>
+          </div>
+        );
+      case 121:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_1))
+            ,calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_7)), -1)
+            ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_8)), 1))}</p>
+            <p>)</p>
+            <p>=</p>
+            <p>{sum3_4[1]}</p>
+          </div>
+        );
+      case 122:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 123:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 124:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 125:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>)</p>
+          </div>
+        );
+      case 126:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_4)}</p>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_7)}</p>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_10)}</p>
+            <p>)</p>
+          </div>
+        );
+      case 127:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>({calculateMult([matrix[2][0]], calculateDeterminant(det_4))})</p>
+            <p>-</p>
+            <p>({calculateMult([matrix[2][1]], calculateDeterminant(det_7))})</p>
+            <p>+</p>
+            <p>({calculateMult([matrix[2][4]], calculateDeterminant(det_10))})</p>
+            <p>)</p>
+          </div>
+        );
+      case 128:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculateMult([matrix[2][0]], calculateDeterminant(det_4))}</p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_7)), -1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_7)), -1)}`
+                : calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_7)), -1)}
+            </p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_10)), 1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_10)), 1)}`
+                : calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_10)), 1)}
+            </p>
+            <p>)</p>
+          </div>
+        );
+      case 129:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_4))
+            ,calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_7)), -1)
+            ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_10)), 1))}</p>
+            <p>)</p>
+          </div>
+        );
+      case 130:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_4))
+            ,calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_7)), -1)
+            ,calculateMult(calculateMult([matrix[2][4]], calculateDeterminant(det_10)), 1))}</p>
+            <p>)</p>
+            <p>=</p>
+            <p>{sum3_4[2]}</p>
+          </div>
+        );
+      case 131:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 132:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 133:
+        return (
+          <div className="laplace">
+            <div className="determinant">
+              {matrix.slice(2, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div
+                    className={`matrix-cell ${
+                      shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                      "highlight"
+                        ? "highlight"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__down"
+                        ? "highlight__down"
+                        : shouldHighlightCell2(rowIndex, columnIndex, step) ===
+                          "highlight__laplace"
+                        ? "highlight__laplace"
+                        : ""
+                    }`}
+                    key={columnIndex}
+                  >
+                    <input type="text" value={cell} readOnly />
+                  </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>=</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__laplace">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row highlight__down">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 134:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <div className="determinant">
+              {matrix.slice(3, 5).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <p>)</p>
+          </div>
+        );
+      case 135:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_5)}</p>
+            <p>-</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_8)}</p>
+            <p>+</p>
+            <>
+              {matrix.slice(2, 3).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>* {calculateDeterminant(det_10)}</p>
+            <p>)</p>
+          </div>
+        );
+      case 136:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>({calculateMult([matrix[2][0]], calculateDeterminant(det_5))})</p>
+            <p>-</p>
+            <p>({calculateMult([matrix[2][1]], calculateDeterminant(det_8))})</p>
+            <p>+</p>
+            <p>({calculateMult([matrix[2][3]], calculateDeterminant(det_10))})</p>
+            <p>)</p>
+          </div>
+        );
+      case 137:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculateMult([matrix[2][0]], calculateDeterminant(det_5))}</p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_8)), -1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_8)), -1)}`
+                : calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_8)), -1)}
+            </p>
+            <p>
+              {calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_10)), 1) >= 0
+                ? `+${calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_10)), 1)}`
+                : calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_10)), 1)}
+            </p>
+            <p>)</p>
+          </div>
+        );
+      case 138:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_5))
+            ,calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_8)), -1)
+            ,calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_10)), 1))}</p>
+            <p>)</p>
+          </div>
+        );
+      case 139:
+        return (
+          <div className="laplace">
+            <>
+              {matrix.slice(1, 2).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <p>(</p>
+            <p>{calculatSum1(calculateMult([matrix[2][0]], calculateDeterminant(det_5))
+            ,calculateMult(calculateMult([matrix[2][1]], calculateDeterminant(det_8)), -1)
+            ,calculateMult(calculateMult([matrix[2][3]], calculateDeterminant(det_10)), 1))}</p>
+            <p>)</p>
+            <p>=</p>
+            <p>{sum3_4[3]}</p>
+          </div>
+        );
+      case 140:
+        return (
+          <div className="laplace__4">
+            <p>=</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row ">
+                  {row.slice(0, 1).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <p>({sum1_4[0]})</p>
+              <p>-</p>
+              <p>({sum1_4[1]})</p>
+              <p>+</p>
+              <p>({sum1_4[2]})</p>
+              <p>-</p>
+              <p>({sum1_4[3]})</p>
+              <p>]</p>
+            </>
+            <p>-</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(1, 2).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <p>({sum2_4[0]})</p>
+              <p>-</p>
+              <p>({sum2_4[1]})</p>
+              <p>+</p>
+              <p>({sum2_4[2]})</p>
+              <p>-</p>
+              <p>({sum2_4[3]})</p>
+              <p>]</p>
+            </>
+            <p>+</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(2, 3).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <p>({sum3_4[0]})</p>
+              <p>-</p>
+              <p>({sum3_4[1]})</p>
+              <p>+</p>
+              <p>({sum3_4[2]})</p>
+              <p>-</p>
+              <p>({sum3_4[3]})</p>
+              <p>]</p>
+            </>
+            <p>-</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(3, 4).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row ">
+                    {row.slice(1, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(1, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row ">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(2, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>+</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(2, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(4, 5).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>]</p>
+            </>
+            <p>+</p>
+            <>
+              {matrix.slice(0, 1).map((row, rowIndex) => (
+                <div key={rowIndex} className="matrix-row">
+                  {row.slice(4, 5).map((cell, columnIndex) => (
+                    <div className="matrix-cell" key={columnIndex}>
+                      <input type="text" value={cell} readOnly />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </>
+            <>
+              <p>[</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(1, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(1, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 1).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(2, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>+</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(2, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 2).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                    {row.slice(3, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>-</p>
+              <>
+                {matrix.slice(1, 2).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(3, 4).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </>
+              <div className="determinant">
+                {matrix.slice(2, 5).map((row, rowIndex) => (
+                  <div key={rowIndex} className="matrix-row">
+                    {row.slice(0, 3).map((cell, columnIndex) => (
+                      <div className="matrix-cell" key={columnIndex}>
+                        <input type="text" value={cell} readOnly />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <p>]</p>
+            </>
           </div>
         );
       default:
