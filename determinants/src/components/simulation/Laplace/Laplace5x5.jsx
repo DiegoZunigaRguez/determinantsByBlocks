@@ -7675,6 +7675,7 @@ const Laplace5x5 = (props) => {
             </div>
           </div>
         );
+      //Primera expansión 4x4
       case 7:
         return (
           <div className="laplace">
@@ -8050,6 +8051,7 @@ const Laplace5x5 = (props) => {
             </div>
           </div>
         );
+      //Fin de la primera expansión 4x4
       case 11:
         return (
           <div className="laplace__4">

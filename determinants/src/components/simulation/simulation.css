@@ -99,7 +99,7 @@ input[type="text"] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 6rem;
-  margin-left: 7rem;
+  margin-left: 6rem;
 }
 
 .button-wrapper {
@@ -117,6 +117,7 @@ input[type="text"] {
   display: flex;
   width: 100%;
 }
+
 .explication__step {
   position: relative;
   top: 3.5rem;
@@ -126,7 +127,6 @@ input[type="text"] {
   height: fit-content; /* Cambia la altura a fit-content para que se ajuste al contenido */
   border-radius: 10px;
   font-weight: bold;
-  margin-right: 3rem;
   padding: 1rem;
 }
 
@@ -417,6 +417,14 @@ input[type="text"] {
 
   .expansion__2{
     grid-template-columns: repeat(15,1fr);
+  }
+
+  .laplace{
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .laplace__2{
+    grid-template-columns: repeat(9, 1fr);
   }
 
 }
