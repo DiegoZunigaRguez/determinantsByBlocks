@@ -1231,7 +1231,361 @@ const ExplicationLaplace = (props) => {
               </p>
             </div>
           );
-        //Fin del quinto determinante 3x3 del primer corchete
+        //Segundo corchete
+        //Primer determinante 3x3  
+        case 32:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el primer determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la primera columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  primera columna.
+                </p>
+              </div>
+            );
+        case 33:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el primer determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la segunda columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  segunda columna.
+                </p>
+              </div>
+            );
+        case 34:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el primer determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la tercera columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  tercera columna.
+                </p>
+              </div>
+            );
+        case 35:
+          return (
+            <div className="explication__step">
+              <p>
+                Retomando el valor que multiplica al determinante, colocamos la expansión 2x2 dentro de los
+                parentesis, como siguiente paso, mediante la siguiente expresión, calculamos el determinante 2x2:
+              </p>
+              <br />
+              <img src={Det2x2} alt="" className="formula" />
+            </div>
+          );
+        case 36:
+          return (
+            <div className="explication__step">
+              <p>
+                Se multiplican el valor calculado del determinante 2x2, por el valor que multiplicaba a dicho
+                determinante.
+              </p>
+            </div>
+          );
+        case 37:
+          return (
+            <div className="explication__step">
+              <p>
+                Se realiza la multiplicación de signos.
+              </p>
+            </div>
+          );
+        case 38:
+          return (
+            <div className="explication__step">
+              <p>
+                Se suman los valores dentro del paréntesis.
+              </p>
+            </div>
+          );
+        case 39:
+          return (
+            <div className="explication__step">
+              <p>
+                Finalmente, se multiplica el valor fuera del paréntesis, por el que está
+                dentro del mismo y obtenemos el primer valor del determinante 3x3.
+              </p>
+            </div>
+          );
+        //Fin del primer determinante 3x3 del primer corchete
+        case 40:
+          return (
+            <div className="explication__step">
+              <p>
+                Ahora, tomando el segundo determinante 3x3 del primer corchete, procedemos 
+                a realizar la expansión 2x2.
+              </p>
+            </div>
+          );
+        //Inicio del segundo determinante 3x3 del primer corchete
+        case 41:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el segundo determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la primera columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  primera columna.
+                </p>
+              </div>
+            );
+        case 42:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el segundo determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la segunda columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  segunda columna.
+                </p>
+              </div>
+            );
+        case 43:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el segundo determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la tercera columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  tercera columna.
+                </p>
+              </div>
+            );
+        case 44:
+          return (
+            <div className="explication__step">
+              <p>
+                Retomando el valor que multiplica al determinante, colocamos la expansión 2x2 dentro de los
+                parentesis, como siguiente paso, mediante la siguiente expresión, calculamos el determinante 2x2:
+              </p>
+              <br />
+              <img src={Det2x2} alt="" className="formula" />
+            </div>
+          );
+        case 45:
+          return (
+            <div className="explication__step">
+              <p>
+                Se multiplican el valor calculado del determinante 2x2, por el valor que multiplicaba a dicho
+                determinante.
+              </p>
+            </div>
+          );
+        case 46:
+          return (
+            <div className="explication__step">
+              <p>
+                Se realiza la multiplicación de signos.
+              </p>
+            </div>
+          );
+        case 47:
+          return (
+            <div className="explication__step">
+              <p>
+                Se suman los valores dentro del paréntesis.
+              </p>
+            </div>
+          );
+        case 48:
+          return (
+            <div className="explication__step">
+              <p>
+                Finalmente, se multiplica el valor fuera del paréntesis, por el que está
+                dentro del mismo y obtenemos el primer valor del determinante 3x3.
+              </p>
+            </div>
+          );
+        //Fin del segundo determinante 3x3 del primer corchete
+        //Inicio del tercer determinante 3x3 del primer corchete
+        case 49:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el tercer determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la primera columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  primera columna.
+                </p>
+              </div>
+            );
+        case 50:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el tercer determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la segunda columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  segunda columna.
+                </p>
+              </div>
+            );
+        case 51:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el tercer determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la tercera columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  tercera columna.
+                </p>
+              </div>
+            );
+        case 52:
+          return (
+            <div className="explication__step">
+              <p>
+                Retomando el valor que multiplica al determinante, colocamos la expansión 2x2 dentro de los
+                parentesis, como siguiente paso, mediante la siguiente expresión, calculamos el determinante 2x2:
+              </p>
+              <br />
+              <img src={Det2x2} alt="" className="formula" />
+            </div>
+          );
+        case 53:
+          return (
+            <div className="explication__step">
+              <p>
+                Se multiplican el valor calculado del determinante 2x2, por el valor que multiplicaba a dicho
+                determinante.
+              </p>
+            </div>
+          );
+        case 54:
+          return (
+            <div className="explication__step">
+              <p>
+                Se realiza la multiplicación de signos.
+              </p>
+            </div>
+          );
+        case 55:
+          return (
+            <div className="explication__step">
+              <p>
+                Se suman los valores dentro del paréntesis.
+              </p>
+            </div>
+          );
+        case 56:
+          return (
+            <div className="explication__step">
+              <p>
+                Finalmente, se multiplica el valor fuera del paréntesis, por el que está
+                dentro del mismo y obtenemos el primer valor del determinante 3x3.
+              </p>
+            </div>
+          );
+        //Fin del tercer determinante 3x3 del primer corchete
+        //Inicio del cuarto determinante 3x3 del primer corchete
+        case 57:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el cuarto determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la primera columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  primera columna.
+                </p>
+              </div>
+            );
+        case 58:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el cuarto determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la segunda columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  segunda columna.
+                </p>
+              </div>
+            );
+        case 59:
+            return (
+              <div className="explication__step">
+                <p>
+                  Para el cuarto determinante 3x3, se realiza el mismo
+                  procedimiento, se toma la primera fila y la tercera columna, por
+                  lo que el determinante 2x2 que se obtiene es lo que no esta
+                  dentro de esta intersección. El elemento que multiplica a este
+                  determinante es la intersección de la primera fila con la
+                  tercera columna.
+                </p>
+              </div>
+            );
+        case 60:
+          return (
+            <div className="explication__step">
+              <p>
+                Retomando el valor que multiplica al determinante, colocamos la expansión 2x2 dentro de los
+                parentesis, como siguiente paso, mediante la siguiente expresión, calculamos el determinante 2x2:
+              </p>
+              <br />
+              <img src={Det2x2} alt="" className="formula" />
+            </div>
+          );
+        case 61:
+          return (
+            <div className="explication__step">
+              <p>
+                Se multiplican el valor calculado del determinante 2x2, por el valor que multiplicaba a dicho
+                determinante.
+              </p>
+            </div>
+          );
+        case 62:
+          return (
+            <div className="explication__step">
+              <p>
+                Se realiza la multiplicación de signos.
+              </p>
+            </div>
+          );
+        case 63:
+          return (
+            <div className="explication__step">
+              <p>
+                Se suman los valores dentro del paréntesis.
+              </p>
+            </div>
+          );
+        case 64:
+          return (
+            <div className="explication__step">
+              <p>
+                Finalmente, se multiplica el valor fuera del paréntesis, por el que está
+                dentro del mismo y obtenemos el primer valor del determinante 3x3.
+              </p>
+            </div>
+          );
+        //Fin del cuarto determinante 3x3 del primer corchete
+        
         default:
           return false;
       }
