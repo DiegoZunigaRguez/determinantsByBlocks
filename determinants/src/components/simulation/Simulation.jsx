@@ -28,6 +28,7 @@ function Simulation() {
   const [productMatrices, setProductMatrices] = useState([]);
   const [submatrices, setSubmatrices] = useState([]);
   const [method, setMethod] = useState(0);
+  const [speed, setSpeed] = useState(0);
 
   const handleMethodChange = (event) => {
     const selectedMethod = parseInt(event.target.value, 10);
@@ -119,6 +120,7 @@ function Simulation() {
       setProductMatrices(productDeterminants);
       setSubmatrices(submatrices);
       setCurrentStep(0);
+      setSpeed(1000);
     }
   };
 
@@ -126,61 +128,49 @@ function Simulation() {
     setCurrentStep(currentStep + 1);
   };
 
+  const updateSpeed = (newSpeed) => {
+    setSpeed(newSpeed);
+  };
+  
+  const handleIncreaseSpeed = () => {
+    updateSpeed(speed - 1000);
+  };
+  
+  const handleDecreasedSpeed = () => {
+    updateSpeed(speed + 1000);
+  };
+
+
   const autoRunSimulation = async () => {
-    if (matrixSize === 4) {
-      if (method === 1) {
-        for (let step = currentStep; step < 21; step++) {
-          if (!isSimulationRunning.current) {
-            // Si la simulación se detiene, salir del bucle
-            break;
-          }
-          await new Promise((resolve) => setTimeout(resolve, 1000));
-          setCurrentStep(step + 1); // Actualizar el paso actual
-        }
-      } else {
-        for (let step = currentStep; step < 41; step++) {
-          if (!isSimulationRunning.current) {
-            // Si la simulación se detiene, salir del bucle
-            break;
-          }
-          await new Promise((resolve) => setTimeout(resolve, 1000));
-          setCurrentStep(step + 1); // Actualizar el paso actual
-        }
-      }
-    } else if (matrixSize === 5) {
-      if(method===1){
-        for (let step = currentStep; step < 33; step++) {
-          if (!isSimulationRunning.current) {
-            // Si la simulación se detiene, salir del bucle
-            break;
-          }
-          await new Promise((resolve) => setTimeout(resolve, 1000));
-          setCurrentStep(step + 1); // Actualizar el paso actual
-        }
-      }else{
-        for (let step = currentStep; step < 150; step++) {
-          if (!isSimulationRunning.current) {
-            // Si la simulación se detiene, salir del bucle
-            break;
-          }
-          await new Promise((resolve) => setTimeout(resolve, 1000));
-          setCurrentStep(step + 1); // Actualizar el paso actual
-        }
+    let totalSteps;
+    
+    switch (matrixSize) {
+      case 4:
+        totalSteps = method === 1 ? 21 : 41;
+        break;
+      case 5:
+        totalSteps = method === 1 ? 33 : 219;
+        break;
+      default:
+        totalSteps = 56;
+    }
+  
+    for (let step = currentStep; step < totalSteps; step++) {
+      if (!isSimulationRunning.current) {
+        // Si la simulación se detiene, salir del bucle
+        break;
       }
       
-    } else {
-      for (let step = currentStep; step < 56; step++) {
-        if (!isSimulationRunning.current) {
-          // Si la simulación se detiene, salir del bucle
-          break;
-        }
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        setCurrentStep(step + 1); // Actualizar el paso actual
-      }
+
+      //if(speed>1000||speed<5000)
+      await new Promise((resolve) => setTimeout(resolve, 2500));
+      setCurrentStep(step + 1); // Actualizar el paso actual
     }
+  
     setSimulationInProgress(false);
     isSimulationRunning.current = false;
   };
+  
 
   useEffect(() => {
     if (simulationInProgress) {
@@ -251,7 +241,7 @@ function Simulation() {
                   ) : null
                 ) : null
               ) : null}
-             {matrixSize === 5 ? (
+              {matrixSize === 5 ? (
                 method === 1 ? (
                   currentStep < 33 ? (
                     !startSimulation ? null : simulationInProgress ? null : (
@@ -264,7 +254,7 @@ function Simulation() {
               ) : null}
               {matrixSize === 5 ? (
                 method === 2 ? (
-                  currentStep < 250 ? (
+                  currentStep < 219 ? (
                     !startSimulation ? null : simulationInProgress ? null : (
                       <button className="button" onClick={handleNextStep}>
                         Siguiente Paso
@@ -342,15 +332,31 @@ function Simulation() {
                 ) : null
               ) : null}
               {matrixSize === 5 ? (
-                currentStep < 33 ? (
-                  !startSimulation ? null : simulationInProgress ? null : (
-                    <button
-                      className="button"
-                      onClick={handleRunSimulationClick}
-                    >
-                      Correr Simulación
-                    </button>
-                  )
+                method === 1 ? (
+                  currentStep < 33 ? (
+                    !startSimulation ? null : simulationInProgress ? null : (
+                      <button
+                        className="button"
+                        onClick={handleRunSimulationClick}
+                      >
+                        Correr Simulación
+                      </button>
+                    )
+                  ) : null
+                ) : null
+              ) : null}
+              {matrixSize === 5 ? (
+                method === 2 ? (
+                  currentStep < 219 ? (
+                    !startSimulation ? null : simulationInProgress ? null : (
+                      <button
+                        className="button"
+                        onClick={handleRunSimulationClick}
+                      >
+                        Correr Simulación
+                      </button>
+                    )
+                  ) : null
                 ) : null
               ) : null}
               {matrixSize === 6 ? (
@@ -390,10 +396,27 @@ function Simulation() {
                 ) : null
               ) : null}
               {matrixSize === 5 ? (
-                currentStep === 33 ? (
-                  <button className="button" onClick={handleSimulationRestart}>
-                    Nueva Simulación
-                  </button>
+                method === 1 ? (
+                  currentStep === 33 ? (
+                    <button
+                      className="button"
+                      onClick={handleSimulationRestart}
+                    >
+                      Nueva Simulación
+                    </button>
+                  ) : null
+                ) : null
+              ) : null}
+              {matrixSize === 5 ? (
+                method === 2 ? (
+                  currentStep === 219 ? (
+                    <button
+                      className="button"
+                      onClick={handleSimulationRestart}
+                    >
+                      Nueva Simulación
+                    </button>
+                  ) : null
                 ) : null
               ) : null}
               {matrixSize === 6 ? (
@@ -402,6 +425,16 @@ function Simulation() {
                     Nueva Simulación
                   </button>
                 ) : null
+              ) : null}
+              {simulationInProgress ? (
+                <button className="button" onClick={handleIncreaseSpeed}>
+                  Aumentar Velocidad
+                </button>
+              ) : null}
+              {simulationInProgress ? (
+                <button className="button" onClick={handleDecreasedSpeed}>
+                  Disminuir Velocidad
+                </button>
               ) : null}
             </div>
           </div>
@@ -2465,7 +2498,7 @@ function Simulation() {
           </>
         );
       } else {
-        return(
+        return (
           <>
             <Laplace5x5 parametro1={matrix} parametro2={step} />
           </>
@@ -2737,7 +2770,7 @@ function Simulation() {
                   case 3:
                     return "highlight__down";
                   case 4:
-                      return "highlight__down";
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -2752,7 +2785,7 @@ function Simulation() {
                   case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down"
+                    return "highlight__down";
                   default:
                     return "";
                 }
@@ -2767,25 +2800,25 @@ function Simulation() {
                   case 3:
                     return "highlight__down";
                   case 4:
-                    return "highlight__down"
+                    return "highlight__down";
                   default:
                     return "";
                 }
-                case 4:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight";
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight__down"
-                    default:
-                      return "";
-                  }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
               default:
                 return false;
             }
@@ -2851,21 +2884,21 @@ function Simulation() {
                   default:
                     return "";
                 }
-                case 4:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
               default:
                 return false;
             }
@@ -2931,21 +2964,21 @@ function Simulation() {
                   default:
                     return "";
                 }
-                case 4:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
               default:
                 return false;
             }
@@ -3011,104 +3044,104 @@ function Simulation() {
                   default:
                     return "";
                 }
-                case 4:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight";
-                    case 4:
-                      return "highlight__down";
-                    default:
-                      return "";
-                  }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight";
+                  case 4:
+                    return "highlight__down";
+                  default:
+                    return "";
+                }
               default:
                 return false;
             }
-            case 5:
-              switch (rowIndex) {
-                case 0:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight";
-                    case 1:
-                      return "highlight";
-                    case 2:
-                      return "highlight";
-                    case 3:
-                      return "highlight";
-                    case 4:
-                      return "highlight__laplace"
-                    default:
-                      return "";
-                  }
-                case 1:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight";
-                    default:
-                      return "";
-                  }
-                case 2:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight";
-                    default:
-                      return "";
-                  }
-                case 3:
-                  switch (columnIndex) {
-                    case 0:
-                      return "highlight__down";
-                    case 1:
-                      return "highlight__down";
-                    case 2:
-                      return "highlight__down";
-                    case 3:
-                      return "highlight__down";
-                    case 4:
-                      return "highlight";
-                    default:
-                      return "";
-                  }
+          case 5:
+            switch (rowIndex) {
+              case 0:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight";
+                  case 1:
+                    return "highlight";
+                  case 2:
+                    return "highlight";
+                  case 3:
+                    return "highlight";
                   case 4:
-                    switch (columnIndex) {
-                      case 0:
-                        return "highlight__down";
-                      case 1:
-                        return "highlight__down";
-                      case 2:
-                        return "highlight__down";
-                      case 3:
-                        return "highlight__down";
-                      case 4:
-                        return "highlight";
-                      default:
-                        return "";
-                    }
-                default:
-                  return false;
-              }
+                    return "highlight__laplace";
+                  default:
+                    return "";
+                }
+              case 1:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 2:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 3:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              case 4:
+                switch (columnIndex) {
+                  case 0:
+                    return "highlight__down";
+                  case 1:
+                    return "highlight__down";
+                  case 2:
+                    return "highlight__down";
+                  case 3:
+                    return "highlight__down";
+                  case 4:
+                    return "highlight";
+                  default:
+                    return "";
+                }
+              default:
+                return false;
+            }
           default:
             break;
         }
@@ -3200,9 +3233,9 @@ function Simulation() {
             <h1 className="simulation__title">Simulación</h1>
             <p className="simulation__text">
               Aquí tienes la simulación haciendo uso del algoritmo que se te
-              presentó anteriormente. Por favor, selecciona el método, la dimensión de la
-              matriz y completa los datos. La matriz debe ser de dimensión 4x4 o
-              superior.
+              presentó anteriormente. Por favor, selecciona el método, la
+              dimensión de la matriz y completa los datos. La matriz debe ser de
+              dimensión 4x4 o superior.
             </p>
             <select
               className="simulation__options"

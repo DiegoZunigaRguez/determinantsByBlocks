@@ -28,7 +28,7 @@ const MobileCalculator = (props) => {
         comp[auxI][auxJ++] = mtz[i][j];
       }
     }
-    printMatrix(comp);
+    //printMatrix(comp);
     return comp;
   };
 
