@@ -1022,7 +1022,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el tercer producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1034,7 +1034,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el cuarto producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1046,7 +1046,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el quinto producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1058,7 +1058,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el sexto producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1070,7 +1070,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el séptimo producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1082,7 +1082,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el octavo producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1094,7 +1094,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el noveno producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1106,7 +1106,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el décimo producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1118,7 +1118,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el onceavo producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1130,7 +1130,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el doceavo producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1142,7 +1142,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el treceavo producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1154,7 +1154,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el catorceavo producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1166,7 +1166,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
+                Procediendo con el quinceavo producto de determinantes, recuerda
                 que si quieres ver la explicación del determinante de dimensión
                 4x4 puedes abrir una nueva ventana y colocar los valores del
                 determinante para conocer como se resolvió utilizando este
@@ -1178,11 +1178,7 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
-                que si quieres ver la explicación del determinante de dimensión
-                4x4 puedes abrir una nueva ventana y colocar los valores del
-                determinante para conocer como se resolvió utilizando este
-                algoritmo.
+                Se realizan los productos dentro de cada uno de los paréntesis.
               </p>
             </div>
           );
@@ -1190,11 +1186,8 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
-                que si quieres ver la explicación del determinante de dimensión
-                4x4 puedes abrir una nueva ventana y colocar los valores del
-                determinante para conocer como se resolvió utilizando este
-                algoritmo.
+                Una vez realizado esto, se hace la multiplicación de signos entre el signo fuera del paréntesis 
+                y el signo dentro del paréntesis.
               </p>
             </div>
           );
@@ -1202,11 +1195,14 @@ const Explication = (props) => {
           return (
             <div className="explication__step">
               <p>
-                Procediendo con el segundo producto de determinantes, recuerda
-                que si quieres ver la explicación del determinante de dimensión
-                4x4 puedes abrir una nueva ventana y colocar los valores del
-                determinante para conocer como se resolvió utilizando este
-                algoritmo.
+                Finalmente,puedes ver el resultado del determinante que
+                colocaste, puedes comprobar el resultado en la calculadora de tu
+                preferencia.
+              </p>
+              <br />
+              <p>
+                Si quieres ingresar un nuevo determinante, puedes dar click en
+                el botón "Nueva simulación".
               </p>
             </div>
           );

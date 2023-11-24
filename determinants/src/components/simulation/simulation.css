@@ -1,4 +1,4 @@
-/* Estilo general del contenedor */
+ /* Estilo general del contenedor */
 .simulation__container {
   width: 100%;
   height: 100vh;
@@ -128,6 +128,7 @@ input[type="text"] {
   border-radius: 10px;
   font-weight: bold;
   padding: 1rem;
+  margin-right: 2rem;
 }
 
 .formula {

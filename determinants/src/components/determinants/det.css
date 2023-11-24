@@ -18,7 +18,7 @@
 
 /* Estilo del párrafo */
 .dev__text {
-  font-size: 33px;
+  font-size: 25px;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -80,7 +80,7 @@
 
 /* Estilo de los títulos de las tarjetas */
 .dev__card-content h2 {
-  font-size: 20px;
+  font-size: 30px;
   /* Tamaño de fuente del título de la tarjeta */
   margin-bottom: 10px;
   /* Espaciado inferior */
@@ -90,7 +90,7 @@
 
 /* Estilo del texto de las tarjetas */
 .dev__card-content p {
-  font-size: 16px;
+  font-size: 18px;
   /* Tamaño de fuente del texto de la tarjeta */
   margin-bottom: 20px;
   /* Espaciado inferior */
