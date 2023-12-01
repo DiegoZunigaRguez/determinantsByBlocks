@@ -163,7 +163,7 @@ function Simulation() {
       
 
       //if(speed>1000||speed<5000)
-      await new Promise((resolve) => setTimeout(resolve, 2500));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       setCurrentStep(step + 1); // Actualizar el paso actual
     }
   
@@ -425,16 +425,6 @@ function Simulation() {
                     Nueva Simulación
                   </button>
                 ) : null
-              ) : null}
-              {simulationInProgress ? (
-                <button className="button" onClick={handleIncreaseSpeed}>
-                  Aumentar Velocidad
-                </button>
-              ) : null}
-              {simulationInProgress ? (
-                <button className="button" onClick={handleDecreasedSpeed}>
-                  Disminuir Velocidad
-                </button>
               ) : null}
             </div>
           </div>
